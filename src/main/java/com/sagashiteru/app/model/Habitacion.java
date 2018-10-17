@@ -12,47 +12,46 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="habitaciones")
-public class Habitacion implements Serializable{
+@Table(name = "habitaciones")
+public class Habitacion implements Serializable {
 	@Id
-	@Column(name="id_habitacion")
+	@Column(name = "id_habitacion")
 	private String id_habitacion;
-	
-	@Column(name="cif")
+
+	@Column(name = "cif")
 	private String cif;
-	
-	@Column(name="descripcion")
+
+	@Column(name = "descripcion")
 	private String descripcion;
-	
-	@Column(name="tipo_cama")
+
+	@Column(name = "tipo_cama")
 	private String tipo_cama;
-	
-	@Column(name="precio")
+
+	@Column(name = "precio")
 	private double precio;
-	
-	@Column(name="fumador")
+
+	@Column(name = "fumador")
 	private boolean fumador;
-	
-	@Column(name="personas")
+
+	@Column(name = "personas")
 	private int personas;
-	
-	@Column(name="secador")
+
+	@Column(name = "secador")
 	private boolean secador;
-	
-	@Column(name="tv")
+
+	@Column(name = "tv")
 	private boolean tv;
-	
-	@Column(name="aire")
+
+	@Column(name = "aire")
 	private boolean aire;
-	
+
 	@ManyToOne
-	@JoinColumn(name="cif", insertable=false, updatable=false)
+	@JoinColumn(name = "cif", insertable = false, updatable = false)
 	private Hotel hotel;
-	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="id_habitacion")
+
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_habitacion")
 	private List<Reserva> reservas;
 
 	public String getId_habitacion() {
@@ -151,8 +150,6 @@ public class Habitacion implements Serializable{
 		this.reservas = reservas;
 	}
 
-
-
 	public Habitacion(String id_habitacion, String cif, String descripcion, String tipo_cama, double precio,
 			boolean fumador, int personas, boolean secador, boolean tv, boolean aire) {
 		super();
@@ -171,7 +168,5 @@ public class Habitacion implements Serializable{
 	public Habitacion() {
 		super();
 	}
-	
-	
-	
+
 }

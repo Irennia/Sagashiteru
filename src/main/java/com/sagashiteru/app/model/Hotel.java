@@ -13,51 +13,48 @@ import javax.persistence.Table;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-
-
-
 @Entity
-@Table(name="hoteles")
-public class Hotel implements Serializable{
+@Table(name = "hoteles")
+public class Hotel implements Serializable {
 	@Id
-	@Column(name="cif")
+	@Column(name = "cif")
 	private String cif;
-	
-	@Column(name="password")
+
+	@Column(name = "password")
 	private String password;
-	
-	@Column(name="localizacion")
+
+	@Column(name = "localizacion")
 	private String localizacion;
-	
-	@Column(name="nombre")
+
+	@Column(name = "nombre")
 	private String nombre;
-	
-	@Column(name="descripcion")
-	private String descripcion; 
-	
-	@Column(name="telefono")
+
+	@Column(name = "descripcion")
+	private String descripcion;
+
+	@Column(name = "telefono")
 	private int telefono;
-	
-	@Column(name="email")
+
+	@Column(name = "email")
 	private String email;
-	
-	@Column(name="estrellas")
+
+	@Column(name = "estrellas")
 	private int estrellas;
-	
-	@Column(name="wifi")
+
+	@Column(name = "wifi")
 	private boolean wifi;
-	
-	@Column(name="piscina")
+
+	@Column(name = "piscina")
 	private boolean piscina;
-	
-	@Column(name="servicio_habitancion")
+
+	@Column(name = "servicio_habitancion")
 	private boolean servicio_habitacion;
-	
-	@Column(name="animales")
-	private boolean animales; 
-	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="cif")
+
+	@Column(name = "animales")
+	private boolean animales;
+
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "cif")
 	private List<Habitacion> habitaciones;
 
 	public String getCif() {
@@ -184,6 +181,5 @@ public class Hotel implements Serializable{
 	public Hotel() {
 		super();
 	}
-	
-	
+
 }
