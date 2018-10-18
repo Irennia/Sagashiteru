@@ -2,12 +2,12 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<link href = "css/footer.css" rel= "stylesheet" type="text/css"/>
-<meta charset="TF-8">
-<title>Politica privacidad</title>
+<%@ include file="plantillas/head.jsp"%> 
 </head>
 <body>
+	<%@ include file="plantillas/header.jsp"%> 
+	
+	<div class="container" style="margin-top: 200px; margin-bottom: 100px;">
 	<h1>Política de privacidad</h1>
 	<p>Lo primero es lo primero: nos importa mucho tu privacidad.
 		Sabemos que esto es lo que dicen siempre este tipo de publicaciones,
@@ -134,6 +134,7 @@
 		Sagashiteru SA., ubicada en Madrid, España, controla el
 		procesamiento de datos personales en su página web
 	</p>
+	</div>
 	<%@ include file="plantillas/footer.jsp" %>
 </body>
 </html>

@@ -95,7 +95,7 @@ section {
 	color: #000;
 }
 .top-bar a.navbar-brand span {
-	color: #0297ff;
+	color: #D59C01;
 }
 .top-bar .nav-link {
 	color: #fff;
@@ -131,6 +131,7 @@ section {
 	text-align: center;
 	font-size: 18px;
 	background: #fff;
+	opacity: 1;
 	/* Center slide text vertically */
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -145,6 +146,12 @@ section {
 	-webkit-align-items: center;
 	align-items: center;
 }
+
+div.swiper-slide h2 {
+
+	font-weight: bold;
+    color: #D59C01;	
+	}	
 .main-slider .slider-bg-position {
 	background-size: cover!important;
 	background-position: center center!important;
@@ -221,7 +228,8 @@ section {
 /* ABOUT SECTION
 -------------------------------------------------- */
 .about-sec {
-	background: url('http://grafreez.com/wp-content/temp_demos/burnout/img/para-01.jpg') no-repeat center center;
+	background-img: url(img/secabout.jpg);
+	/* background: url('http://grafreez.com/wp-content/temp_demos/burnout/img/para-01.jpg') no-repeat center center; */
 	background-size: cover;
 	color: #fff;
 	position: relative;
@@ -231,7 +239,7 @@ section {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: rgba(22,122,192,0.8);
+	background: #03418C;
 	top: 0;
 	left: 0
 }

@@ -14,4 +14,10 @@ public class ControladorIndex {
 		return "index";
 	}
 	
+	@RequestMapping("/index")
+	public String index1(HttpServletRequest req) {
+		System.err.println("entra");
+		return index(req);
+	}
+	
 }
