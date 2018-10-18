@@ -6,12 +6,12 @@
 		<meta charset="ISO-8859-1">
 		<title>Sagashiteru</title>
 		<link rel="shortcut icon" href="img/favicon.png"/>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-		<link href="css/index2.css" rel='stylesheet' type='text/css'/>
+		<link href="css/index.css" rel='stylesheet' type='text/css'/>
 		<link href="css/footer.css" rel='stylesheet' type='text/css'/>
-		<script src="js/index2.js"></script>
+		<script src="js/index.js"></script>
 		
 	</head>
 	<body>
@@ -54,21 +54,28 @@
 		
 		<!-- About 
 		    ================================================== -->
-		<section class="about-sec parallax-section" style="margin-top: 50px;"id="about">
+		<section class="about-sec parallax-section" style="margin-top: 50px; magin-bottom: 50px;"id="about">
 		  <div class="container">
 		    <div class="row">
-		      <div class="col-md-3">
-		        <h2><small>Who We Are</small>About<br>
-		          Our Blog</h2>
+		      <div class="col-md-3" style="margin-right: 50px;">
+		        <h2>Quienes Somos</h2>
 		      </div>
 		      <div class="col-md-4">
-		        <p>To enjoy good health, to bring true happiness to one's family, to bring peace to all, one must first discipline and control one's own mind. If a man can control his mind he can find the way to Enlightenment, and all wisdom and virtue will naturally come to him.</p>
-		        <p>Saving our planet, lifting people out of poverty, advancing economic growth... these are one and the same fight. We must connect the dots between climate change, water scarcity, energy shortages, global health, food security and women's empowerment. Solutions to one problem must be solutions for all.</p>
+		        <p>Sagashiteru, cuya misión es <strong>Buscar alojamiento en tu destino
+					ideal</strong>, apuesta por la tecnología digital para que viajar sea más
+					fácil. En Sagashiteru conectamos a los viajeros con ofertas de
+					alojamientos increíbles. La web de Sagashiteru esta disponible en
+					Español, y ofrece diversas opciones de alojamiento, en varios destinos
+					de diferentes países y territorios en todo el mundo.
+		        </p>
 		      </div>
 		      <div class="col-md-4">
-		        <p>Our greatest happiness does not depend on the condition of life in which chance has placed us, but is always the result of a good conscience, good health, occupation, and freedom in all just pursuits.</p>
-		        <p>Being in control of your life and having realistic expectations about your day-to-day challenges are the keys to stress management, which is perhaps the most important ingredient to living a happy, healthy and rewarding life.</p>
-		        <p><a href="#" class="btn btn-transparent-white btn-capsul">Explore More</a></p>
+		        <p>Sagashiteru se fundó en Madrid en 2018 como parte de un
+					proyecto, es una pequeña start-up española con vistas a convertirse a
+					una de las mayores empresas e-commerce de viajes de todo el mundo.
+					Sagashiteru forma parte de Sagashiteru SA., y cuenta con 3
+					trabajadores en 1 oficina</p>
+		        <p><a href="/contacto" class="btn btn-transparent-white btn-capsul">Saber Más</a></p>
 		      </div>
 		    </div>
 		  </div>

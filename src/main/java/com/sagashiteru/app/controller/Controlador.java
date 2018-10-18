@@ -19,7 +19,7 @@ public class Controlador {
 	@Autowired
 	public IHotelService hotelservice;
 	
-	@RequestMapping("/")
+	@RequestMapping("/añadir")
 	public String añadir(HttpServletRequest req) {
 		
 		Hotel h = new Hotel("ooo", "dasdsasd", "dasdasd", "fede", "jose", 4444, "pedro", 5, true, false, true, true);

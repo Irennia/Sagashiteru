@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ControladorIndex {
 
-	@RequestMapping("/index")
-	public String listCategorias(HttpServletRequest req) {
+	@RequestMapping("/")
+	public String index(HttpServletRequest req) {
 		System.err.println("entra");
-		return "index2";
+		return "index";
 	}
+	
 }

@@ -1,6 +1,7 @@
+
 <footer>
 
-	<div class="container-fluid">
+	<!-- <div class="container-fluid">
 	    <div class="row footer-top">
 	        <div class="col-sm-4 text-center">
 	            <h4 class="ft-text-title">Media Name</h4>
@@ -38,14 +39,15 @@
 	                <br><br><br><br><br><br><br>
 	            </div>
 	        </div>
-	    </div>
+	    </div> -->
 		<div class="row ft-copyright pt-2 pb-2" style="padding-left: 25px;">
-			<div class="col-sm-4 text-pp-crt">cpoyright 2018 All  Rights Reserved</div>
-			<div class="col-sm-4 text-pp-crt-rg">Department of Information Reg No :</div>
-			<div class="col-sm-4 developer">
-				<a href="https://topline-tech.com" target="_blank" class="text-pp-crt">By : <b>T</b>op<b>L</b>ine</a>
+			<div class="col-sm-4 text-pp-crt" style="margin-left: 330px;">2018 &nbsp;| &nbsp; Todos los derechos reservados</div>
+			<div class="col-sm-4 developer" style="margin-right: 100px;">
+				<a href="/contacto" class="text-pp-crt" style="margin-right: 100px;">Contacto&nbsp;</a>
+				<a href="#" class="text-pp-crt" style="margin-right: 100px;">Politica de Privacidad&nbsp;</a>
+				<a href="#" class="text-pp-crt">Terminos y Condiciones&nbsp;</a>
 			</div>
 		</div>
-	</div>
+	
 
 </footer>
