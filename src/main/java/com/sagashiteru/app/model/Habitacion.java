@@ -6,59 +6,65 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name = "habitaciones")
-public class Habitacion implements Serializable {
+@Table(name="habitaciones")
+public class Habitacion implements Serializable{
 	@Id
-	@Column(name = "id_habitacion")
-	private String id_habitacion;
-
-	@Column(name = "cif")
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id_habitacion")
+	private int id_habitacion;
+	
+	@Column(name="cif")
 	private String cif;
-
-	@Column(name = "descripcion")
+	
+	@Column(name="descripcion")
 	private String descripcion;
-
-	@Column(name = "tipo_cama")
+	
+	@Column(name="tipo_cama")
 	private String tipo_cama;
-
-	@Column(name = "precio")
+	
+	@Column(name="precio")
 	private double precio;
-
-	@Column(name = "fumador")
+	
+	@Column(name="fumador")
 	private boolean fumador;
-
-	@Column(name = "personas")
+	
+	@Column(name="personas")
 	private int personas;
-
-	@Column(name = "secador")
+	
+	@Column(name="secador")
 	private boolean secador;
-
-	@Column(name = "tv")
+	
+	@Column(name="tv")
 	private boolean tv;
-
-	@Column(name = "aire")
+	
+	@Column(name="aire")
 	private boolean aire;
-
+	
 	@ManyToOne
-	@JoinColumn(name = "cif", insertable = false, updatable = false)
+	@JoinColumn(name="cif",insertable=false, updatable=false)
 	private Hotel hotel;
-
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_habitacion")
+	
+	@OneToMany
+	@JoinColumn(name="id_habitacion", insertable=false, updatable=false)
 	private List<Reserva> reservas;
 
-	public String getId_habitacion() {
+
+
+	public int getId_habitacion() {
 		return id_habitacion;
 	}
 
-	public void setId_habitacion(String id_habitacion) {
+	public void setId_habitacion(int id_habitacion) {
 		this.id_habitacion = id_habitacion;
 	}
 
@@ -150,7 +156,9 @@ public class Habitacion implements Serializable {
 		this.reservas = reservas;
 	}
 
-	public Habitacion(String id_habitacion, String cif, String descripcion, String tipo_cama, double precio,
+
+
+	public Habitacion(int id_habitacion, String cif, String descripcion, String tipo_cama, double precio,
 			boolean fumador, int personas, boolean secador, boolean tv, boolean aire) {
 		super();
 		this.id_habitacion = id_habitacion;
@@ -168,5 +176,7 @@ public class Habitacion implements Serializable {
 	public Habitacion() {
 		super();
 	}
-
+	
+	
+	
 }

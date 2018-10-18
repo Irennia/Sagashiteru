@@ -1,7 +1,9 @@
 package com.sagashiteru.app.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -11,51 +13,55 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CollectionId;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+
+
+
 @Entity
-@Table(name = "hoteles")
-public class Hotel implements Serializable {
+@Table(name="hoteles")
+public class Hotel implements Serializable{
 	@Id
-	@Column(name = "cif")
+	@Column(name="cif")
 	private String cif;
-
-	@Column(name = "password")
+	
+	@Column(name="password")
 	private String password;
-
-	@Column(name = "localizacion")
+	
+	@Column(name="localizacion")
 	private String localizacion;
-
-	@Column(name = "nombre")
+	
+	@Column(name="nombre")
 	private String nombre;
-
-	@Column(name = "descripcion")
-	private String descripcion;
-
-	@Column(name = "telefono")
+	
+	@Column(name="descripcion")
+	private String descripcion; 
+	
+	@Column(name="telefono")
 	private int telefono;
-
-	@Column(name = "email")
+	
+	@Column(name="email")
 	private String email;
-
-	@Column(name = "estrellas")
+	
+	@Column(name="estrellas")
 	private int estrellas;
-
-	@Column(name = "wifi")
+	
+	@Column(name="wifi")
 	private boolean wifi;
-
-	@Column(name = "piscina")
+	
+	@Column(name="piscina")
 	private boolean piscina;
-
-	@Column(name = "servicio_habitancion")
+	
+	@Column(name="animales")
+	private boolean animales; 
+	
+	@Column(name="servicio_habitacion")
 	private boolean servicio_habitacion;
-
-	@Column(name = "animales")
-	private boolean animales;
-
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "cif")
-	private List<Habitacion> habitaciones;
+	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="cif")
+	private Set<Habitacion> habitaciones = new HashSet();
 
 	public String getCif() {
 		return cif;
@@ -137,13 +143,8 @@ public class Hotel implements Serializable {
 		this.piscina = piscina;
 	}
 
-	public boolean isServicio_habitacion() {
-		return servicio_habitacion;
-	}
-
-	public void setServicio_habitacion(boolean servicio_habitacion) {
-		this.servicio_habitacion = servicio_habitacion;
-	}
+	
+	
 
 	public boolean isAnimales() {
 		return animales;
@@ -153,16 +154,30 @@ public class Hotel implements Serializable {
 		this.animales = animales;
 	}
 
-	public List<Habitacion> getHabitaciones() {
+
+
+	public Set<Habitacion> getHabitaciones() {
 		return habitaciones;
 	}
 
-	public void setHabitaciones(List<Habitacion> habitaciones) {
+	public void setHabitaciones(Set<Habitacion> habitaciones) {
 		this.habitaciones = habitaciones;
 	}
 
+	public boolean isServicio_habitacion() {
+		return servicio_habitacion;
+	}
+
+	public void setServicio_habitacion(boolean servicio_habitacion) {
+		this.servicio_habitacion = servicio_habitacion;
+	}
+
+	public Hotel() {
+		super();
+	}
+
 	public Hotel(String cif, String password, String localizacion, String nombre, String descripcion, int telefono,
-			String email, int estrellas, boolean wifi, boolean piscina, boolean servicio_habitacion, boolean animales) {
+			String email, int estrellas, boolean wifi, boolean piscina, boolean animales, boolean servicio_habitacion) {
 		super();
 		this.cif = cif;
 		this.password = password;
@@ -174,12 +189,12 @@ public class Hotel implements Serializable {
 		this.estrellas = estrellas;
 		this.wifi = wifi;
 		this.piscina = piscina;
-		this.servicio_habitacion = servicio_habitacion;
 		this.animales = animales;
+		this.servicio_habitacion = servicio_habitacion;
 	}
 
-	public Hotel() {
-		super();
-	}
 
+	
+	
+	
 }
