@@ -56,105 +56,201 @@ public class Habitacion implements Serializable{
 	
 	@OneToMany
 	@JoinColumn(name="id_habitacion", insertable=false, updatable=false)
-	private List<Reserva> reservas;
+	private List<Calendario> fechas;
 
+	
 
+	
 
 	public int getId_habitacion() {
 		return id_habitacion;
 	}
 
+
+
+
+
 	public void setId_habitacion(int id_habitacion) {
 		this.id_habitacion = id_habitacion;
 	}
+
+
+
+
 
 	public String getCif() {
 		return cif;
 	}
 
+
+
+
+
 	public void setCif(String cif) {
 		this.cif = cif;
 	}
+
+
+
+
 
 	public String getDescripcion() {
 		return descripcion;
 	}
 
+
+
+
+
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+
+
+
+
 
 	public String getTipo_cama() {
 		return tipo_cama;
 	}
 
+
+
+
+
 	public void setTipo_cama(String tipo_cama) {
 		this.tipo_cama = tipo_cama;
 	}
+
+
+
+
 
 	public double getPrecio() {
 		return precio;
 	}
 
+
+
+
+
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
+
+
+
+
 
 	public boolean isFumador() {
 		return fumador;
 	}
 
+
+
+
+
 	public void setFumador(boolean fumador) {
 		this.fumador = fumador;
 	}
+
+
+
+
 
 	public int getPersonas() {
 		return personas;
 	}
 
+
+
+
+
 	public void setPersonas(int personas) {
 		this.personas = personas;
 	}
+
+
+
+
 
 	public boolean isSecador() {
 		return secador;
 	}
 
+
+
+
+
 	public void setSecador(boolean secador) {
 		this.secador = secador;
 	}
+
+
+
+
 
 	public boolean isTv() {
 		return tv;
 	}
 
+
+
+
+
 	public void setTv(boolean tv) {
 		this.tv = tv;
 	}
+
+
+
+
 
 	public boolean isAire() {
 		return aire;
 	}
 
+
+
+
+
 	public void setAire(boolean aire) {
 		this.aire = aire;
 	}
+
+
+
+
 
 	public Hotel getHotel() {
 		return hotel;
 	}
 
+
+
+
+
 	public void setHotel(Hotel hotel) {
 		this.hotel = hotel;
 	}
 
-	public List<Reserva> getReservas() {
-		return reservas;
+
+
+
+
+	public List<Calendario> getFechas() {
+		return fechas;
 	}
 
-	public void setReservas(List<Reserva> reservas) {
-		this.reservas = reservas;
+
+
+
+
+	public void setFechas(List<Calendario> fechas) {
+		this.fechas = fechas;
 	}
+
+	
 
 
 
@@ -172,6 +268,10 @@ public class Habitacion implements Serializable{
 		this.tv = tv;
 		this.aire = aire;
 	}
+
+
+
+
 
 	public Habitacion() {
 		super();

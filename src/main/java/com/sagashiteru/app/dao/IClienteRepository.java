@@ -7,4 +7,6 @@ import com.sagashiteru.app.model.Cliente;
 
 public interface IClienteRepository extends CrudRepository<Cliente, String> {
 
+	
+	
 }

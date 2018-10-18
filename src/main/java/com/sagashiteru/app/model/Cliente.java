@@ -1,7 +1,9 @@
 package com.sagashiteru.app.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -35,21 +37,23 @@ public class Cliente implements Serializable{
 	@Column(name="telefono")
 	private int telefono; 
 	
-	@Column(name="mail")
-	private String mail;
+	@Column(name="email")
+	private String email;
 	
 	@Column(name="tarjeta")
 	private int tarjeta;
 	
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="dni")
-	List<Reserva> reservas;
+	Set<Reserva> reservas = new HashSet();
 
-	public List<Reserva> getReservas() {
+	
+
+	public Set<Reserva> getReservas() {
 		return reservas;
 	}
 
-	public void setReservas(List<Reserva> reservas) {
+	public void setReservas(Set<Reserva> reservas) {
 		this.reservas = reservas;
 	}
 
@@ -94,11 +98,11 @@ public class Cliente implements Serializable{
 	}
 
 	public String getMail() {
-		return mail;
+		return email;
 	}
 
 	public void setMail(String mail) {
-		this.mail = mail;
+		this.email = mail;
 	}
 
 	public int getTarjeta() {
@@ -109,7 +113,7 @@ public class Cliente implements Serializable{
 		this.tarjeta = tarjeta;
 	}
 
-	public Cliente(String dni, String password, String nombre, String apellidos, int telefono, String mail,
+	public Cliente(String dni, String password, String nombre, String apellidos, int telefono, String email,
 			int tarjeta) {
 		super();
 		this.dni = dni;
@@ -117,7 +121,7 @@ public class Cliente implements Serializable{
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.telefono = telefono;
-		this.mail = mail;
+		this.email = email;
 		this.tarjeta = tarjeta;
 	}
 

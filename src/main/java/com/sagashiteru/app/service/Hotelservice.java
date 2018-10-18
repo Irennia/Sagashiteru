@@ -1,5 +1,7 @@
 package com.sagashiteru.app.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,4 +22,46 @@ public class Hotelservice implements IHotelService {
 
 	}
 
+	@Override
+	public void delete(Hotel hotel) {
+		hotelrepository.delete(hotel);
+		
+	}
+
+	@Override
+	public Hotel findbycif(String cif) {
+		
+		
+		
+		return hotelrepository.findById(cif).get();
+	}
+
+	
+
+	@Override
+	public List<Hotel> listHotel(String nombre) {
+		
+		
+		return hotelrepository.listbynombre(nombre).get();
+	}
+
+	@Override
+	public void update(Hotel hotel) {
+	    
+		hotelrepository.save(hotel);
+	}
+
+	@Override
+	public List<Hotel> listHotelbyanimales(boolean animales) {
+		
+		return hotelrepository.listbyanimales(animales).get();
+	}
+
+	@Override
+	public List<Hotel> listHotelbyestrellas(int estrellas) {
+		
+		return hotelrepository.listbyestrellas(estrellas).get();
+	}
+
+	
 }
