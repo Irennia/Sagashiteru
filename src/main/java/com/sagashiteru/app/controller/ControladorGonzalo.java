@@ -31,4 +31,9 @@ public class ControladorGonzalo {
 		System.out.println("entra register");	
 		return "contacto";
 	}
+	@RequestMapping("/gestionhotel")
+	public String gestionhotel(HttpServletRequest req) {
+		System.out.println("entra register");	
+		return "gestionhotel";
+	}
 }
