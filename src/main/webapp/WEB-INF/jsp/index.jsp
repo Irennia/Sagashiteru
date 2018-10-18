@@ -20,49 +20,34 @@
 	         <li class="nav-item"> <a style="text-decoration: none;" href="/registrohotel"><button class="btn btn-outline-warning" style="border-button: none; margin-top: 5px; margin-left: 25px; margin-right: 15px;">¡Anunciate Aquí!</button></a>
 	         <li class="nav-item"> 
 	         	<div class="dropdown">
-	         	   	<a href="#" style="text-decoration: none;"><button class="btn btn-light dropdown-toggle" style="margin-top: 5px; margin-right: -150px; color: #022557;">Login</button></a>
-	         	   	
-	         	   	<ul id="login-dp" class="dropdown-menu">
-						<li>
-							 <div class="row">
-									<div class="col-md-12">
-										Login via
-										<div class="social-buttons">
-											<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-											<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-										</div>
-					                             or
-										 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-												<div class="form-group">
-													 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-													 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-												</div>
-												<div class="form-group">
-													 <label class="sr-only" for="exampleInputPassword2">Password</label>
-													 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-					                                          <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-												</div>
-												<div class="form-group">
-													 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-												</div>
-												<div class="checkbox">
-													 <label>
-													 <input type="checkbox"> keep me logged-in
-													 </label>
-												</div>
-										 </form>
-									</div>
-									<div class="bottom text-center">
-										New here ? <a href="#"><b>Join Us</b></a>
-									</div>
-							 </div>
-						</li>
-					</ul>
-	         	   	
-	        	</div>
-	        </ul>
+	         	   	<!-- <a href="#" style="text-decoration: none;"> --><button class="btn btn-warning dropdown-toggle" 
+	         	   	data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: 5px; margin-right: -150px; color: #022557;">Login</button><!-- </a> -->
+
+				
+					<div id="login-dp" class="dropdown-menu" style="width: 500px; margin-right: 100px;">
+						<form class="dropdown-item" action="" method="post">
+						 <input type="hidden" name="idanuncio" value="">
+						  <input type="hidden" name="emailusuario" value="">
+						  <div class="form-group">
+						    <label>Email:</label>
+						    <input type="email" class="form-control" name="email" placeholder="Introduzca su Email">	
+						  </div>
+						  <div class="form-group">
+						    <label>Nombre:</label>
+						    <input type="text" class="form-control" name="nombre" placeholder="Introduzca su Email">	
+						  </div>
+						  <div class="form-group">
+						    <label>Mensaje</label>
+						    <textarea class="form-control" name="mensaje" placeholder="Introduzca Mensaje"></textarea>
+						  </div>
+						  <button type="submit" class="btn btn-primary">ENVIAR</button>
+						</form>	
+					</div>	
+				</div>
+				</li>
+			 </ul>
+			</div>
 	      </div>
-	    </div>
 	    </nav> 
 	
 	
@@ -100,7 +85,7 @@
 		<!-- About 
 		    ================================================== -->
 		<section class="about-sec parallax-section" style="margin-top: 50px; magin-bottom: 50px;" id="about">
-		  <div class="container" style="margin-left: 400px;">
+		  <div class="container" style="margin-left: 295px;">
 		    <div class="row">
 		      <div class="col-md-3" style="margin-right: 30px;">
 		        <h2>Quienes Somos</h2>
