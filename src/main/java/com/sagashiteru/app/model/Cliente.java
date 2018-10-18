@@ -13,33 +13,36 @@ import javax.persistence.Table;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+
+
+
 @Entity
-@Table(name = "clientes")
-public class Cliente implements Serializable {
+@Table(name="clientes")
+public class Cliente implements Serializable{
 	@Id
-	@Column(name = "dni")
+	@Column(name="dni")
 	private String dni;
-
-	@Column(name = "password")
+	
+	@Column(name="password")
 	private String password;
-
-	@Column(name = "nombre")
+	
+	@Column(name="nombre")
 	private String nombre;
-
-	@Column(name = "apellidos")
+	
+	@Column(name="apellidos")
 	private String apellidos;
-
-	@Column(name = "telefono")
-	private int telefono;
-
-	@Column(name = "mail")
+	
+	@Column(name="telefono")
+	private int telefono; 
+	
+	@Column(name="mail")
 	private String mail;
-
-	@Column(name = "tarjeta")
+	
+	@Column(name="tarjeta")
 	private int tarjeta;
-
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "dni")
+	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="dni")
 	List<Reserva> reservas;
 
 	public List<Reserva> getReservas() {
@@ -122,4 +125,9 @@ public class Cliente implements Serializable {
 		super();
 	}
 
+	
+	
+	
+	
+	
 }
