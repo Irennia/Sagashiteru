@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href = "css/footer.css" rel= "stylesheet" type="text/css"/>
 <meta charset="UTF-8">
 <title>Contacto</title>
 </head>
@@ -50,5 +51,6 @@ Fax: <span class="contact-phone--inline">+34 77 777 7799</span><br />
 E-mail: <span class="encrypted">atencion.cliente@sagashiteru.com</span>
 </p>
 		
+<%@ include file="plantillas/footer.jsp" %>
 </body>
 </html>

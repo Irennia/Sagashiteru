@@ -8,6 +8,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta charset="ISO-8859-1">
 <link href = "css/registrohotel.css" rel= "stylesheet" type="text/css"/>
+<link href = "css/footer.css" rel= "stylesheet" type="text/css"/>
 <title>Registra tu Hotel</title>
 </head>
 <body>
@@ -80,6 +81,6 @@
                     </div>
                 </div>
             </div>
-
+<%@ include file="plantillas/footer.jsp" %>
 </body>
 </html>

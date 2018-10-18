@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href = "css/footer.css" rel= "stylesheet" type="text/css"/>
 <meta charset="TF-8">
 <title>Politica privacidad</title>
 </head>
@@ -133,5 +134,6 @@
 		Sagashiteru SA., ubicada en Madrid, España, controla el
 		procesamiento de datos personales en su página web
 	</p>
+	<%@ include file="plantillas/footer.jsp" %>
 </body>
 </html>

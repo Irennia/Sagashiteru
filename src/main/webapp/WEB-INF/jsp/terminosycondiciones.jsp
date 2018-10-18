@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href = "css/footer.css" rel= "stylesheet" type="text/css"/>
 <meta charset="UTF-8">
 <title>Termino y condiciones</title>
 </head>
@@ -438,5 +439,7 @@
 		realidad.</p>
 	<p>Nos reservamos todos los derechos no otorgados expresamente en
 		las presentes Condiciones.</p>
+		
+		<%@ include file="plantillas/footer.jsp" %>
 </body>
 </html>
