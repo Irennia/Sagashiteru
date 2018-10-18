@@ -323,11 +323,22 @@ div.swiper-slide h2 {
 
 /*********************************/
 
-#login-dp{
+/* #login-dp{
 	
     padding: 14px 14px 14px;
     overflow:hidden;
     background-color:rgba(255,255,255,.8);
+} */
+
+.dropdown-menu.form-group{
+	
+	left:0;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 
