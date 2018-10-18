@@ -36,12 +36,12 @@ h1, h2, h3, h4, h5 {
 	color: #fff;
 }
 .btn-transparent-white {
-	border: 2px solid #fff;
-	color: #fff;
+	border: 2px solid #D59C01;
+	color: #D59C01;
 }
 .btn-transparent-white:hover, .btn-transparent-white:focus {
-	background: #fff;
-	color: #0297FF
+	background: #D59C01;
+	color: white;
 }
 .relative-box {
 	position: relative
@@ -50,6 +50,13 @@ section {
 	float: left;
 	width: 100%;
 	padding: 80px 0;
+}
+
+.btn-light{
+	
+	color: white;
+	background-color: #D59C01;
+	border-color: none;
 }
 
 
@@ -257,6 +264,58 @@ div.swiper-slide h2 {
 .about-sec p {
 	font-size: 16px;
 }
+
+
+/*****************/
+
+	.container{
+	
+		float: inherit;
+	}
+	
+	#custom-search-input {
+        margin:0;
+        margin-top: 10px;
+        padding: 0;
+    }
+ 
+    #custom-search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    #custom-search-input button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color:#D9230F;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
+
+
+
+
+/*********************************/
 
 
 .action-sec{width:100%; float:left; background:#222}

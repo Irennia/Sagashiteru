@@ -1,3 +1,8 @@
+footer {
+	width: 100%;
+	bottom:0;
+}
+
 .ft-copyright {
 		background-color: #022557;
 		display: flex;
