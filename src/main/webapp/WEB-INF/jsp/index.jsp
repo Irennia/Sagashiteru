@@ -23,25 +23,24 @@
 	      </div>
 	    </div>
 	    </nav> 
-	    
-	    <div class="container">
-		        <div id="custom-search-input">
-	              <div class="input-group col-md-12">
-	                  <input type="text" class="  search-query form-control" placeholder="Search" />
-	                  <span class="input-group-btn">
-	                      <button class="btn btn-danger" type="button">
-	                          <span class=" glyphicon glyphicon-search"></span>
-	                      </button>
-	                  </span>
-	              </div>
-	          </div>
-			</div>
-		 </div>
+	
 	
 		<!-- Swiper Silder
 		    ================================================== --> 
 		<!-- Slider main container -->
 		<div class="swiper-container main-slider" id="myCarousel">
+		<div class="container buscador">
+	        <div id="custom-search-input">
+              <div class="input-group col-md-12">
+                  <input type="text" class="search-query form-control" placeholder="¿Dónde Vas?"/>
+                  <form action="#" method="post">
+	                  <span class="input-group-btn">
+	                      <button type="submit" class="btn btn-warning">Buscar</button>
+	                  </span>
+	              </form>
+              </div>
+          </div>
+		</div>
 		  <div class="swiper-wrapper">
 		    <div class="swiper-slide slider-bg-position" style="background:url(img/slider4.jpg)" data-hash="slide1">
 		      <h2>tú web de hoteles</h2>
@@ -60,9 +59,9 @@
 		<!-- About 
 		    ================================================== -->
 		<section class="about-sec parallax-section" style="margin-top: 50px; magin-bottom: 50px;" id="about">
-		  <div class="container">
+		  <div class="container" style="margin-left: 400px;">
 		    <div class="row">
-		      <div class="col-md-3" style="margin-right: 50px;">
+		      <div class="col-md-3" style="margin-right: 30px;">
 		        <h2>Quienes Somos</h2>
 		      </div>
 		      <div class="col-md-4">

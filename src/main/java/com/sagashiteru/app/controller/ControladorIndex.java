@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ControladorIndex {
 
-	@RequestMapping("/")
+	@RequestMapping("/noentras")
 	public String index(HttpServletRequest req) {
 		System.err.println("entra");
 		return "index";
