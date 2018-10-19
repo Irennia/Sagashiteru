@@ -42,9 +42,7 @@ private Date fecha_reserva;
 @JoinColumn(name="dni" ,insertable=false, updatable=false)
 private Cliente cliente;	
 
-@OneToMany(cascade=CascadeType.ALL)
-@JoinColumn(name="id_reserva")
-Set<Calendario> fechas = new HashSet();
+
 
 
 
@@ -151,16 +149,6 @@ public void setCliente(Cliente cliente) {
 
 
 
-public Set<Calendario> getFechas() {
-	return fechas;
-}
-
-
-
-
-public void setFechas(Set<Calendario> fechas) {
-	this.fechas = fechas;
-}
 
 
 

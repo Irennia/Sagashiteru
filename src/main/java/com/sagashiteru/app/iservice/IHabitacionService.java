@@ -22,4 +22,5 @@ public interface IHabitacionService {
 	
 	public List<Habitacion> listbypersonas(int personas);
 	
+	public void deletebycifall(String cif);
 }

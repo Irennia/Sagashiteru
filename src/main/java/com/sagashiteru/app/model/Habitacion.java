@@ -54,9 +54,7 @@ public class Habitacion implements Serializable{
 	@JoinColumn(name="cif",insertable=false, updatable=false)
 	private Hotel hotel;
 	
-	@OneToMany
-	@JoinColumn(name="id_habitacion", insertable=false, updatable=false)
-	private List<Calendario> fechas;
+	
 
 	
 
@@ -238,19 +236,7 @@ public class Habitacion implements Serializable{
 
 
 
-	public List<Calendario> getFechas() {
-		return fechas;
-	}
 
-
-
-
-
-	public void setFechas(List<Calendario> fechas) {
-		this.fechas = fechas;
-	}
-
-	
 
 
 

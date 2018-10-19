@@ -23,9 +23,9 @@ public class Hotelservice implements IHotelService {
 	}
 
 	@Override
-	public void delete(Hotel hotel) {
-		hotelrepository.delete(hotel);
+	public void delete(String cif) {
 		
+hotelrepository.deleteById(cif);		
 	}
 
 	@Override

@@ -56,4 +56,17 @@ public class ReservaService implements IReservaService {
 		return reservaRepository.findById(id_reserva).get();
 	}
 
-}
+	@Override
+	public List<Reserva> listbyDni(String dni) {
+
+		
+		return reservaRepository.listbydni(dni).get();
+	}
+
+
+	}
+	
+
+	
+
+

@@ -21,6 +21,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @Entity
 @Table(name="clientes")
 public class Cliente implements Serializable{
+	
 	@Id
 	@Column(name="dni")
 	private String dni;

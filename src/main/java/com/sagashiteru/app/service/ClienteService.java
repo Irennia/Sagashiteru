@@ -35,5 +35,11 @@ public class ClienteService implements IClienteService {
 		return clienteRepository.findById(dni).get();
 	}
 
+	@Override
+	public void deletebyid(String dni) {
+		clienteRepository.deleteById(dni);
+		
+	}
+
 	
 }

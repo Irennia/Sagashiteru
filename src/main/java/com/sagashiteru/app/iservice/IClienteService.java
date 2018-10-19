@@ -13,5 +13,5 @@ public interface IClienteService {
 	
 	public Cliente findByDni(String dni);
 	
-	
+	public void deletebyid(String dni);
 }

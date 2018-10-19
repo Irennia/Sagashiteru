@@ -8,7 +8,7 @@ public interface IHotelService {
 	
 	public void Add(Hotel hotel);
 	
-	public void delete(Hotel hotel);
+	public void delete(String cif);
 	
 	public Hotel findbycif(String cif);
 	

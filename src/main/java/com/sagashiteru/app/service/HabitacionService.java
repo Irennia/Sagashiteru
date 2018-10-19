@@ -1,6 +1,7 @@
 package com.sagashiteru.app.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -63,6 +64,21 @@ public class HabitacionService implements IHabitacionService {
 	public void update(Habitacion habitacion) {
 		
 		habitacionRepository.save(habitacion);
+		
+	}
+
+	@Override
+	public void deletebycifall(String cif) {
+    
+			Optional habitaciones  = habitacionRepository.listbycif(cif);
+			
+			if(habitaciones.isPresent()) 
+			{
+				List<Habitacion> h = (List<Habitacion>) habitaciones.get();
+				for (Habitacion ha : h) {
+					habitacionRepository.delete(ha);
+				}
+			}
 		
 	}
 

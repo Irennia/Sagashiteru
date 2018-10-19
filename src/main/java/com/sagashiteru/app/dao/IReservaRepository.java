@@ -1,6 +1,4 @@
 package com.sagashiteru.app.dao;
-
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,6 +13,12 @@ public interface IReservaRepository extends CrudRepository<Reserva, Integer> {
 	
 	
 
+
+
+	@Query(value= "SELECT * FROM Reservas WHERE dni= :dni" , nativeQuery=true)
+	public  Optional<List<Reserva>> listbydni(@Param("dni")String dni);
+	
+	
 	
 
 }

@@ -17,7 +17,6 @@ public interface IReservaService {
 		
 		public List<Reserva> ListbyidReserva(int id_reserva);
 		
-		
-		
+		public List<Reserva> listbyDni(String dni);
 		
 }
