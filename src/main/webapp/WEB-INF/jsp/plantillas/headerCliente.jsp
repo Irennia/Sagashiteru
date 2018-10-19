@@ -12,14 +12,14 @@
 		     <li class="nav-item"> <a class="nav-link" href="/contacto" style="color: white;">Nosotros</a> </li>
 		     <li class="nav-item"> 
 		     	<ul class="nav navbar-nav">
-			        <li class="dropdown" style="margin-top: 10px; margin-left: 30px;">
+			        <li class="dropdown" style="margin-top: 8px; margin-left: 30px; line-height: 2;">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cliente</a>
 			          <ul class="dropdown-menu" style="padding: 20px;">
-			            <li><a href="#">Perfil</a></li>
+			            <li><a href="#" style="color: #022557; text-decoration: none;">Perfil</a></li>
 			            <li class="divider"></li>
-			            <li><a href="#">Mis Reservas</a></li>
-			            <li class="divider"></li>
-			            <li><a href="#">Cerrar Sesión</a></li>
+			            <li><a href="#" style="color: #022557; text-decoration: none;">Mis Reservas</a></li>
+			            <li class="divider" style="margin-top: 10px;"></li>
+			            <li><a href="/cerrarsesion"><button class="btn btn-danger" style="height: 40px;">Cerrar Sesión</button></a></li>
 			          </ul>
 			        </li>
 			      </ul>

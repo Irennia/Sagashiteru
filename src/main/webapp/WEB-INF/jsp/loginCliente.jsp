@@ -16,7 +16,7 @@
 	
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<div class="container register" style="margin-top: 120px; margin-bottom: 191px;">
+	<div class="container register" style="margin-top: 120px; margin-bottom: 201px;">
          <div class="row">
              <div class="col-md-3 register-left">
                  <img src="img/hellohotel.svg" alt=""/>
