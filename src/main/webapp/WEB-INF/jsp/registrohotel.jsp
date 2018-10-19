@@ -37,7 +37,7 @@
                      <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="home-tab">
                          <h3 class="register-heading">Hola de nuevo!</h3>
                          
-                         <form class="row register-form" action="#lo" method="post">
+                         <form class="row register-form" action="/loginHotel" method="post">
                          <div class="col-md-6">
                          <p>¿Nos echabas de menos?</p>
                          <p>Nosotros a ti si</p>
@@ -45,10 +45,10 @@
                          
                              <div class="col-md-6">
                                  <div class="form-group">
-                                     <input type="text" class="form-control" placeholder="CIF *" value="" />
+                                     <input type="text" name="cif" class="form-control" placeholder="CIF *"  ></input>
                                  </div>
                                  <div class="form-group">
-                                     <input type="password" class="form-control" placeholder="Password *" value="" />
+                                     <input type="password" name="password"class="form-control" placeholder="Password *"  ></input>
                                  </div>
                                 <input type="submit" class="btnRegister"  value="Log In"/>
                              </div>
@@ -57,22 +57,22 @@
                      </div>
                      <div class="tab-pane fade show" id="registro" role="tabpanel" aria-labelledby="profile-tab">
                          <h3  class="register-heading">Nuevo en Sagashiteru? Registrate aquí</h3>
-                         <form class="row register-form" action="#re" method="post">
+                         <form class="row register-form" action="/registroHotel" method="post">
                          
                             <div class="col-md-6">
                                  <div class="form-group">
-                                     <input type="text" class="form-control" placeholder="CIF *" value="" />
+                                     <input type="text" name="cif" class="form-control" placeholder="CIF *"  ></input>
                                  </div>
                                  <div class="form-group">
-                                     <input type="email" class="form-control" placeholder="Email *" value="" />
+                                     <input type="email" name="email" class="form-control" placeholder="Email *" ></input>
                                  </div>
                              </div>
                              <div class="col-md-6">
                                  <div class="form-group">
-                                     <input type="password" class="form-control" placeholder="Password *" value="" />
+                                     <input type="password"  name="password" class="form-control" placeholder="Password *"  ></input>
                                  </div>
                                  <div class="form-group">
-                                     <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                     <input type="password" name="verificacion" class="form-control" placeholder="Confirm Password *" ></input>
                                  </div>
                                  <input type="submit" class="btnRegister"  value="Registrate"/>
                              </div>

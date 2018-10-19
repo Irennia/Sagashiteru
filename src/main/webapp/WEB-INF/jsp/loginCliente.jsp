@@ -37,7 +37,7 @@
                      <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="home-tab">
                          <h3 class="register-heading">Hola de nuevo!</h3>
                          
-                         <form class="row register-form" action="#lo" method="post">
+                         <form class="row register-form" action="/login" method="post">
                          <div class="col-md-6">
                          <p>¿Nos echabas de menos?</p>
                          <p>Nosotros a ti si</p>
@@ -45,10 +45,10 @@
                          
                              <div class="col-md-6">
                                  <div class="form-group">
-                                     <input type="text" name ="dni" class="form-control" placeholder="DNI *"  />
+                                     <input type="text" name ="dni" class="form-control" placeholder="DNI *"  ></input>
                                  </div>
                                  <div class="form-group">
-                                     <input type="password" name ="password" class="form-control" placeholder="Password *"  />
+                                     <input type="password" name ="password" class="form-control" placeholder="Password *"  ></input>
                                  </div>
                                 <input type="submit" class="btnRegister"  value="Log In"/>
                              </div>
@@ -72,7 +72,7 @@
                                      <input type="password" name ="password" class="form-control" placeholder="Password *"  ></input>
                                  </div>
                                  <div class="form-group">
-                                     <input type="password"  name ="verificacion" class="form-control" placeholder="Confirm Password *" />
+                                    <input type="password" name ="verificacion" class="form-control" placeholder="Password *"  ></input>
                                  </div>
                                  <input type="submit" class="btnRegister"  value="Registrate"/>
                              </div>
