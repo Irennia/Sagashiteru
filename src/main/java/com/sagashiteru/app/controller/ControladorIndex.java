@@ -1,6 +1,7 @@
 package com.sagashiteru.app.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,5 +26,26 @@ public class ControladorIndex {
 		System.err.println("entra");
 		return "loginCliente";
 	}
+	
+	@RequestMapping("/cerrarsesion")
+	public String cerrarsesion(HttpServletRequest req) {
+		System.err.println("entra");
+		
+		HttpSession session = req.getSession(true);
+		session.invalidate();
+		
+		return index(req);
+	}
+	
+	@RequestMapping("/pruebaheader")
+	public String prueba(HttpServletRequest req) {
+		System.err.println("entra");
+		
+		
+		return "prueba";
+	}
+	
+	
+	
 	
 }

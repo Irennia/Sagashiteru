@@ -33,11 +33,9 @@
 		<div class="container buscador">
 	        <div id="custom-search-input">
               <div class="input-group col-md-12">
-                  <input type="text" class="search-query form-control" placeholder="¿Dónde Vas?"/>
                   <form action="/filtroBusqueda" method="post">
-	                  <span class="input-group-btn">
-	                      <button type="submit" name="nombre" class="btn btn-warning">Buscar</button>
-	                  </span>
+	                  <input type="text" name="nombre" class="search-query form-control" placeholder="¿Dónde Vas?" style="width: 1100px;"/>
+		              <button type="submit" class="btn btn-warning" style="margin-left: 1100px; margin-top: -66px;">Buscar</button> 
 	              </form>
               </div>
           </div>
@@ -47,7 +45,7 @@
 		      <h2>tú web de hoteles</h2>
 		    </div>
 		    <div class="swiper-slide slider-bg-position" style="background:url(img/slider3.jpg)" data-hash="slide2">
-		      <h2>Happiness is nothing more than good health and a bad memory</h2>
+		      <h2></h2>
 		    </div>
 		  </div>
 		  <!-- Add Pagination -->

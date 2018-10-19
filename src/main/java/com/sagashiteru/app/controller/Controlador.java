@@ -45,9 +45,15 @@ public class Controlador {
 		System.err.println("entra");
 		
 		String nombre = req.getParameter("nombre");
-		req.setAttribute("filtroBusqueda", hotelservice.listHotel(nombre));
+		System.out.println(nombre);
+		List<Hotel> h;
+		h = hotelservice.listHotel(nombre);
 		
+		if(h == null) {
+			System.out.println("nulo");
+		}
 		
+		req.setAttribute("filtroBusqueda", h);	
 		return "filtroBusqueda";
 	}
 	

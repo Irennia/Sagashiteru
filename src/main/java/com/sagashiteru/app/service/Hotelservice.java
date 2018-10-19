@@ -40,8 +40,12 @@ public class Hotelservice implements IHotelService {
 	@Override
 	public List<Hotel> listHotel(String nombre) {
 		
+		if(hotelrepository.listbynombre(nombre).isPresent()) {
 		
-		return hotelrepository.listbynombre(nombre).get();
+			return hotelrepository.listbynombre(nombre).get();
+		}else {
+			return null;
+		}
 	}
 
 	@Override
@@ -60,10 +64,6 @@ public class Hotelservice implements IHotelService {
 	public List<Hotel> listHotelbyestrellas(int estrellas) {
 		
 		return hotelrepository.listbyestrellas(estrellas).get();
-	}
-
-
-	
 	}
 
 	
