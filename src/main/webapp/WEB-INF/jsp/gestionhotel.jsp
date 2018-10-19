@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,10 +11,13 @@
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta charset="UTF-8">
 
+	<link href="css/footer.css" rel='stylesheet' type='text/css'/>
 <title>Gestiona tu hotel</title>
 
 </head>
 <body>
+<%@ include file="plantillas/header.jsp"%>
+
 	<script
 		src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script
@@ -23,9 +26,9 @@
 		<div class="col-md-9 register-right">
 			<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
 
-				<li class="nav-item"><a class="nav-link active" id="home-tab"
+				<li class="nav-item"><a class="nav-link" id="profile-tab"
 					data-toggle="tab" href="#hotel" role="tab" aria-controls="home"
-					aria-selected="true"> Información general hotel </a></li>
+					aria-selected="false"> Información general hotel </a></li>
 
 
 				<li class="nav-item"><a class="nav-link" id="profile-tab"
@@ -37,11 +40,18 @@
 				<li class="nav-item"><a class="nav-link" id="profile-tab"
 					data-toggle="tab" href="#reservas" role="tab"
 					aria-controls="profile" aria-selected="false"> Reservas </a></li>
+					
+					<li class="nav-item"></li>
 			</ul>
 
 
+
 			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade show active" id="hotel" role="tabpanel"
+
+				<div class="tab-pane fade show active" id="#inicio" role="tabpanel">
+					Bienvenido a la gestion de tu hotel</div>
+
+				<div class="tab-pane fade show" id="hotel" role="tabpanel"
 					aria-labelledby="home-tab">
 					<h3 class="register-heading">Tu hotel</h3>
 
@@ -386,44 +396,154 @@
 
 								</div>
 								<div class="row">
-								<label>Wifi</label>
-        						<div class="form-group col-sm-6">
-								<div class="radio-block" id="wifi">
-								<div class="radio">
-									<label> <input type="radio" name="wifi"
-										value="1"> <span>Sí</span>
-									</label>
+									<div class="form-group col-sm-4">
+										<label>Servicio de Habitaciones</label>
+									</div>
+									<div class="form-group col-sm-4">
+										<div class="radio-block" id="servhabitaciones">
+											<div class="radio">
+												<label> <input type="radio" name="servhabitaciones"
+													value="1"> <span>Sí</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group col-sm-4">
+										<div class="radio">
+											<label> <input type="radio" name="servhabitaciones"
+												value="0" checked> <span>No</span>
+											</label>
+										</div>
+									</div>
 								</div>
-								
-								
-								<div class="radio">
-									<label> <input type="radio" name="wifi"
-										value="0" checked> <span>No</span>
-									</label>
+
+								<div class="row">
+									<div class="form-group col-sm-4">
+										<label>Wifi</label>
+									</div>
+									<div class="form-group col-sm-4">
+										<div class="radio-block" id="wifi">
+											<div class="radio">
+												<label> <input type="radio" name="wifi" value="1">
+													<span>Sí</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group col-sm-4">
+										<div class="radio">
+											<label> <input type="radio" name="wifi" value="0"
+												checked> <span>No</span>
+											</label>
+										</div>
+									</div>
 								</div>
+
+								<div class="row">
+									<div class="form-group col-sm-4">
+										<label>Admite animales</label>
+									</div>
+									<div class="form-group col-sm-4">
+										<div class="radio-block" id="animales">
+											<div class="radio">
+												<label> <input type="radio" name="animales"
+													value="1"> <span>Sí</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group col-sm-4">
+										<div class="radio">
+											<label> <input type="radio" name="animales" value="0"
+												checked> <span>No</span>
+											</label>
+										</div>
+									</div>
 								</div>
+
+								<div class="row">
+									<div class="form-group col-sm-4">
+										<label>Piscina</label>
+									</div>
+									<div class="form-group col-sm-4">
+										<div class="radio-block" id="piscina">
+											<div class="radio">
+												<label> <input type="radio" name="piscina" value="1">
+													<span>Sí</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group col-sm-4">
+										<div class="radio">
+											<label> <input type="radio" name="piscina" value="0"
+												checked> <span>No</span>
+											</label>
+										</div>
+									</div>
 								</div>
-								</div>
+
+
+
 							</fieldset>
 
-							<input type="submit" class="btnRegister" value="Log In" />
+							<input type="submit" class="" value="Cambiar" />
 						</div>
 					</form>
+
+
+
 
 				</div>
 				<div class="tab-pane fade show " id="habitaciones" role="tabpanel"
 					aria-labelledby="home-tab">
 					<h3 class="register-heading">Habitaciones</h3>
+					<div class="col-md-6">
+						<p>Gestiona tus habitaciones</p>
+					</div>
 
+					<c:forEach var="habit" items="">
+
+						<tr>
+						<tr>
+							<td>Habitacion</td>
+							<td><a href="/modihabi?id_habi=">Modificar</a></td>
+							<td><a href="/borrarhabi?id_habi=">Eliminar</a></td>
+						</tr>
+
+					</c:forEach>
+					<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+					<li class="nav-item"><a class="nav-link" id="profile-tab" data-toggle="tab"
+						href="#regihabi" role="tab" aria-controls="profile"
+						aria-selected="false"> Añadir habitacion </a></li>
+	</ul>
+
+				</div>
+
+				<div class="tab-pane fade show " id="regihabi" role="tabpanel"
+					aria-labelledby="home-tab">
+					<h3 class="register-heading">Habitaciones</h3>
+					<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+					<li class="nav-item"><a class="nav-link" id="profile-tab" data-toggle="tab"
+						href="#habitaciones" role="tab" aria-controls="profile"
+						aria-selected="false"> volver al resumen </a></li>
+					</ul>
+					<p>Añade los datos de tu habitacion</p>	
 					<form class="row register-form" action="#lo" method="post">
 						<div class="col-md-6">
-							<p>Gestiona tus habitaciones</p>
+							<p>Habitaciones reservadas en tu hotel</p>
 						</div>
 
 
 					</form>
 
 				</div>
+
+
 
 				<div class="tab-pane fade show " id="reservas" role="tabpanel"
 					aria-labelledby="home-tab">
@@ -441,5 +561,6 @@
 			</div>
 		</div>
 	</div>
+	<%@ include file="plantillas/footer.jsp" %>
 </body>
 </html>

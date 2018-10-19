@@ -8,7 +8,7 @@
 		<div class="container" style="margin-top: 200px; margin-bottom: 100px;">
 		<h1 class="h1">Condiciones de uso</h1>
 		<h3>Sagashiteru</h3>
-		<h2>ACUERDO ENTRE EL USUARIO Y TRIVAGO N.V.</h2>
+		<h2>ACUERDO ENTRE EL USUARIO Y Sagashiteru SA.</h2>
 		<h3>1. General</h3>
 		<p>
 			Te damos la bienvenida al sitio web de Sagashiteru (el «sitio web»).
