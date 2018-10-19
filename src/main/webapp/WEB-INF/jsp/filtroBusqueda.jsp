@@ -28,9 +28,9 @@
 									<img src="img/fotohotel.jpg" class="img-responsive img-fluid" alt="fotohotel">
 								</div>
 								<div class="thumb-content">
-									<h4 style="text-align:center;">${o.nombre }</h4>
-									<p  style="text-align:center;"> <span>${o.descripcion }</span></p>
-								</div>	
+									<h4 style="text-align:left;"><a href="#" style="color: black; text-decoration: none">${o.nombre }</a></h4>
+									<p style="text-align:left;"><img src="img/localizacion.png" style="max-width: 20px; max-height: 20px; margin-right: 5px; margin-bottom: 5px;">${o.localizacion }</p>
+								</div><br>
 								<div style="text-align:center;">
 								<a href="#" class="btn btn-warning">Ver Hotel</a>
 								</div>					

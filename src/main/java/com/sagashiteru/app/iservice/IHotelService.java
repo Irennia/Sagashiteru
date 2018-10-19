@@ -14,7 +14,7 @@ public interface IHotelService {
 	
 	public void update(Hotel hotel);
 	
-	public List<Hotel> listHotel(String nombre);
+	public List<Hotel> listHotel(String localizacion);
 
 	public List<Hotel> listHotelbyanimales(boolean animales);
 	

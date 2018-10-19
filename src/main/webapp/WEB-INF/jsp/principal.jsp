@@ -34,7 +34,7 @@
 	        <div id="custom-search-input">
               <div class="input-group col-md-12">
                   <form action="/filtroBusqueda" method="post">
-	                  <input type="text" name="nombre" class="search-query form-control" placeholder="¿Dónde Vas?" style="width: 1100px;"/>
+	                  <input type="text" name="localizacion" class="search-query form-control" placeholder="¿Dónde Vas?" style="width: 1100px;"/>
 		              <button type="submit" class="btn btn-warning" style="margin-left: 1100px; margin-top: -66px;">Buscar</button> 
 	              </form>
               </div>

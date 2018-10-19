@@ -1,11 +1,9 @@
 package com.sagashiteru.app.controller;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,14 +14,12 @@ import com.sagashiteru.app.iservice.IClienteService;
 import com.sagashiteru.app.iservice.IHabitacionService;
 import com.sagashiteru.app.iservice.IHotelService;
 import com.sagashiteru.app.iservice.IReservaService;
-import com.sagashiteru.app.model.Calendario;
-import com.sagashiteru.app.model.Cliente;
-import com.sagashiteru.app.model.Habitacion;
 import com.sagashiteru.app.model.Hotel;
-import com.sagashiteru.app.model.Reserva;
 
 @Controller
 public class Controlador {
+
+	
 	@Autowired
 	public ICalendarioService calendarioService;
 	
@@ -40,14 +36,41 @@ public class Controlador {
 	public IHabitacionService habitacionService;
 	
 	
+	/////////////////// INDEX ////////////////////////////
+	
+	@RequestMapping("/noentras")
+	public String index(HttpServletRequest req) {
+		System.err.println("entra");
+		return "principal";
+	}
+	
+	@RequestMapping("/sagashiteru")
+	public String index1(HttpServletRequest req) {
+		System.err.println("entra");
+		return index(req);
+	}
+	
+	@RequestMapping("/loginCliente")
+	public String loginCliente(HttpServletRequest req) {
+		System.err.println("entra");
+		return "loginCliente";
+	}
+	
+	@RequestMapping("/registrohotel")
+	public String registrohotel(HttpServletRequest req) {
+		System.err.println("entra");
+		return "registrohotel";
+	}
+	
 	@RequestMapping("/filtroBusqueda")
 	public String filtroBusqueda(HttpServletRequest req) {
 		System.err.println("entra");
 		
-		String nombre = req.getParameter("nombre");
-		System.out.println(nombre);
+		String localizacion = req.getParameter("localizacion");
+		//String localizacion = req.getParameter("localizacion");
+		System.out.println(localizacion);
 		List<Hotel> h;
-		h = hotelservice.listHotel(nombre);
+		h = hotelservice.listHotel(localizacion);
 		
 		if(h == null) {
 			System.out.println("nulo");
@@ -57,106 +80,46 @@ public class Controlador {
 		return "filtroBusqueda";
 	}
 	
-	@RequestMapping("/añadirHotel")
-	public String añadir(HttpServletRequest req) {
-		try {
-		Calendario f = new Calendario();
+	@RequestMapping("/cerrarsesion")
+	public String cerrarsesion(HttpServletRequest req) {
+		System.err.println("entra");
 		
-		String sDate1="1/11/2018";  
-        Date date1;
+		HttpSession session = req.getSession(true);
+		session.invalidate();
 		
-			
-			
-					date1 = new SimpleDateFormat("dd/MM/yyyy").parse(sDate1);
-					f.setId_reserva(4);
-					f.setFecha(date1);
-					
-				
-		Hotel h = new Hotel("pppaa", "dasdsasd", "dasdasd", "fede", "jose", 4444, "pedro", 5, true, false, true, true);
-		Habitacion a = new Habitacion();
-		a.setAire(true);
-		a.setDescripcion("melon");
-		a.setCif("pppaa");
-		int id_hab = a.getId_habitacion();
-		System.out.println("pintame :" +id_hab);
-		f.setId_habitacion(id_hab);
-		System.out.println("antes de añadir a");
-		
-		h.getHabitaciones().add(a);
-		
-		System.out.println("despues de añadir a");
-		
-		hotelservice.Add(h);
-		
-		System.out.println("añadido al add");
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-		return "test";
-		
-		
+		return index(req);
 	}
 	
-	@RequestMapping("/añadirCliente")
-	public String añadir1(HttpServletRequest req) {
-		
-			
-			
-			Calendario ca = new Calendario();
-			
-			ca.setId_habitacion(32);
-			ca.setId_calendario(132);
-			
-			
-		calendarioService.add(ca);
-			
-		
-		System.out.println("entra");
-		Cliente c = new Cliente("1111", "777777", "Jose", "perez", 974440434, "jose@jose.com", 3123123);
-		System.out.println(c.getDni());
-		System.out.println("añadido");
-		Reserva r = new Reserva();
-		
-		r.setDni("1111");
-		
-		
-		
-		
-		Calendario e = new Calendario();
-		
-		
-		e.setId_habitacion(33);
-		
-		
-		System.out.println("inserta cliente");
-		
-		c.getReservas().add(r);
-		
-		Cliente ce = clienteService.findByDni("111");
-		
-		System.out.println(ce.getDni());
-		
-		
-				
-		
-		System.out.println("inserta reserva");
-		
-		
-		
-		
-			
-		
-		
-		clienteService.add(c);
-		
-		System.out.println("final");
-		
-		return "test";
-		
+	//////////////////////////////////////////////////////////
+	
+	
+	/////////////// FOOTER ///////////////////////////////////
+
+	@RequestMapping("/politicaprivacidad")
+	public String politicaprivacidad(HttpServletRequest req) {
+		System.out.println("entra register");	
+		return "politicaprivacidad";
+	}
+	
+	@RequestMapping("/terminosycondiciones")
+	public String terminosycondiciones(HttpServletRequest req) {
+		System.out.println("entra register");	
+		return "terminosycondiciones";
+	}
+	
+	@RequestMapping("/contacto")
+	public String contacto(HttpServletRequest req) {
+		System.out.println("entra register");	
+		return "contacto";
 	}
 	
 	
+	//////////////////////////////////////////////////////////
+	
+	
+	@RequestMapping("/gestionhotel")
+	public String gestionhotel(HttpServletRequest req) {
+		System.out.println("entra register");	
+		return "gestionhotel";
+	}
 }
