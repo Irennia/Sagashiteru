@@ -32,7 +32,11 @@ public class ClienteService implements IClienteService {
 	@Override
 	public Cliente findByDni(String dni) {
 		
+		if(clienteRepository.findById(dni).isPresent()) {
 		return clienteRepository.findById(dni).get();
+		}else {
+			return null;
+		}
 	}
 
 	@Override

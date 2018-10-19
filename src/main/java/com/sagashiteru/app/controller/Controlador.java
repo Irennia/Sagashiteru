@@ -71,6 +71,10 @@ public class Controlador {
 		a.setAire(true);
 		a.setDescripcion("melon");
 		a.setCif("pppaa");
+		Habitacion e = new Habitacion();
+		e.setAire(true);
+		e.setDescripcion("melon");
+		e.setCif("pppaa");
 		int id_hab = a.getId_habitacion();
 		System.out.println("pintame :" +id_hab);
 		f.setId_habitacion(id_hab);
@@ -81,6 +85,10 @@ public class Controlador {
 		System.out.println("despues de añadir a");
 		
 		hotelservice.Add(h);
+		
+		h.getHabitaciones().add(e);
+		
+		hotelservice.update(h);
 		
 		System.out.println("añadido al add");
 		} catch (ParseException e) {
