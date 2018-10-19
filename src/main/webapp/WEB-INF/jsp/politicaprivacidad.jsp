@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<%@ include file="plantillas/head.jsp"%> 
+<%@ include file="plantillas/headLogeo.jsp"%> 
 </head>
 <body>
 	<%@ include file="plantillas/header.jsp"%> 

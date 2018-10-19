@@ -18,36 +18,11 @@
 	         <li class="nav-item"> <a class="nav-link" href="/sagashiteru" href="/index">Inicio<span class="sr-only">(current)</span></a> </li>
 	         <li class="nav-item"> <a class="nav-link" href="/contacto">Nosotros</a> </li>
 	         <li class="nav-item"> <a style="text-decoration: none;" href="/registrohotel"><button class="btn btn-outline-warning" style="border-button: none; margin-top: 5px; margin-left: 25px; margin-right: 15px;">¡Anunciate Aquí!</button></a>
-	         <li class="nav-item"> 
-	         	<div class="dropdown">
-	         	   	<!-- <a href="#" style="text-decoration: none;"> --><button class="btn btn-warning dropdown-toggle" 
-	         	   	data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: 5px; margin-right: -150px; color: #022557;">Login</button><!-- </a> -->
-
-				
-					<div id="login-dp" class="dropdown-menu" style="width: 500px; margin-right: 100px;">
-						<form class="dropdown-item" action="" method="post">
-						 <input type="hidden" name="idanuncio" value="">
-						  <input type="hidden" name="emailusuario" value="">
-						  <div class="form-group">
-						    <label>Email:</label>
-						    <input type="email" class="form-control" name="email" placeholder="Introduzca su Email">	
-						  </div>
-						  <div class="form-group">
-						    <label>Nombre:</label>
-						    <input type="text" class="form-control" name="nombre" placeholder="Introduzca su Email">	
-						  </div>
-						  <div class="form-group">
-						    <label>Mensaje</label>
-						    <textarea class="form-control" name="mensaje" placeholder="Introduzca Mensaje"></textarea>
-						  </div>
-						  <button type="submit" class="btn btn-primary">ENVIAR</button>
-						</form>	
-					</div>	
-				</div>
-				</li>
-			 </ul>
-			</div>
-	      </div>
+	         <li class="nav-item"><a style="text-decoration: none;" href="/loginCliente"><button class="btn btn-warning" 
+	         	   	style="margin-top: 5px; margin-right: -150px; color: #022557;">Login</button></a></li>
+			</ul>
+		  </div>
+		</div>				
 	    </nav> 
 	
 	
@@ -85,7 +60,7 @@
 		<!-- About 
 		    ================================================== -->
 		<section class="about-sec parallax-section" style="margin-top: 50px; magin-bottom: 50px;" id="about">
-		  <div class="container" style="margin-left: 295px;">
+		  <div class="container">
 		    <div class="row">
 		      <div class="col-md-3" style="margin-right: 30px;">
 		        <h2>Quienes Somos</h2>

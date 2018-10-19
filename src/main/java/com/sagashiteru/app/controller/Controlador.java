@@ -39,6 +39,13 @@ public class Controlador {
 	@Autowired
 	public IHabitacionService habitacionService;
 	
+	
+	@RequestMapping("/buscador")
+	public String buscador(HttpServletRequest req) {
+		
+		return "filtroBusqueda";
+	}
+	
 	@RequestMapping("/añadirHotel")
 	public String añadir(HttpServletRequest req) {
 		
