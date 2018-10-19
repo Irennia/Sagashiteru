@@ -11,7 +11,7 @@
 		     <li class="nav-item"> <a class="nav-link" href="/sagashiteru" style="color: white;">Inicio<span class="sr-only">(current)</span></a> </li>
 		     <li class="nav-item"> <a class="nav-link" href="/contacto" style="color: white;">Nosotros</a> </li>
 		     <li class="nav-item"> <a style="text-decoration: none;" href="/registrohotel"><button class="btn btn-outline-warning" style="margin-top: 5px; margin-left: 25px;margin-right: 15px; color: white;">¡Anunciate Aquí!</button></a>
-		     <li class="nav-item"> <a href="#" style="text-decoration: none;"><button class="btn btn-light"style="margin-top: 5px; margin-right: -150px; color: #022557;">Login</button></a>
+		     <li class="nav-item"> <a href="/loginCliente" style="text-decoration: none;"><button class="btn btn-warning"style="margin-top: 5px; margin-right: -150px; color: #022557;">Login</button></a>
 		    </ul>
 		  </div>
 		</div>

@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-		
+		<link rel="shortcut icon" href="img/favicon1.png" />
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<meta charset="ISO-8859-1">
 		<link href = "css/registrohotel.css" rel= "stylesheet" type="text/css"/>
@@ -16,12 +16,12 @@
 	
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<div class="container register" style="margin-top: 120px; margin-bottom: 171px;">
+	<div class="container register" style="margin-top: 120px; margin-bottom: 191px;">
          <div class="row">
              <div class="col-md-3 register-left">
                  <img src="img/hellohotel.svg" alt=""/>
                  <h3>Bienvenido a Sagashiteru</h3>
-                 <p>Estas a un paso de entrar en nuestra familia.</p>
+                 <p>Tu hotel está a punto de entrar en nuestra familia.</p>
                  <p>Gracias por acompañarnos y confiar en nosotros.</p>
              </div>
              <div class="col-md-9 register-right">

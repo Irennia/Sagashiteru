@@ -1,6 +1,7 @@
 package com.sagashiteru.app.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,8 +32,6 @@ hotelrepository.deleteById(cif);
 	@Override
 	public Hotel findbycif(String cif) {
 		
-		
-		
 		return hotelrepository.findById(cif).get();
 	}
 
@@ -61,6 +60,17 @@ hotelrepository.deleteById(cif);
 	public List<Hotel> listHotelbyestrellas(int estrellas) {
 		
 		return hotelrepository.listbyestrellas(estrellas).get();
+	}
+
+	@Override
+	public Hotel datosPorNombreHotel(String nombre) {
+		
+		Optional<List<Hotel>> h = hotelrepository.findByNombre(nombre);
+		if(h.isPresent()) {
+			return (Hotel) h.get();
+		} else {
+			return null;
+		} 
 	}
 
 	

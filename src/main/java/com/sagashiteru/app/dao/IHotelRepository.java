@@ -24,5 +24,7 @@ public interface IHotelRepository extends CrudRepository<Hotel, String> {
 	public  Optional<List<Hotel>> listbyanimales(@Param("animales")boolean animales);
 	
 	
+	@Query(value= "SELECT * FROM Hoteles WHERE nombre= :nombre" , nativeQuery=true)
+	public  Optional<List<Hotel>> findByNombre(@Param("nombre")String nombre);
 	
 }

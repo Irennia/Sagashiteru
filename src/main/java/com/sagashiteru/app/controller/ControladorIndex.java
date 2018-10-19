@@ -20,8 +20,6 @@ public class ControladorIndex {
 		return index(req);
 	}
 	
-	
-	
 	@RequestMapping("/loginCliente")
 	public String loginCliente(HttpServletRequest req) {
 		System.err.println("entra");

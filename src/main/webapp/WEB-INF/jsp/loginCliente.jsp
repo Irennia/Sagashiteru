@@ -3,235 +3,86 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>Sagashiteru</title>
-		<link rel="shortcut icon" href="img/favicon1.png" />
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-			crossorigin="anonymous"></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-			crossorigin="anonymous"></script>
-			
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-			crossorigin="anonymous"></script>
-			
-		<script
-			src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-			
-		<link
-			href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-			rel="stylesheet" id="bootstrap-css">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		
-			
-		<script src="js/index.js"></script>
-		<link href="css/header.css" rel='stylesheet' type='text/css' />
-		<link href="css/footer.css" rel='stylesheet' type='text/css' />
-		<script>
-			$(function() {
-	
-			    $('#login-form-link').click(function(e) {
-					$("#login-form").delay(100).fadeIn(100);
-			 		$("#register-form").fadeOut(100);
-					$('#register-form-link').removeClass('active');
-					$(this).addClass('active');
-					e.preventDefault();
-				});
-				$('#register-form-link').click(function(e) {
-					$("#register-form").delay(100).fadeIn(100);
-			 		$("#login-form").fadeOut(100);
-					$('#login-form-link').removeClass('active');
-					$(this).addClass('active');
-					e.preventDefault();
-				});
-	
-			});
-		</script>
-		<style>
-		
-		
-			.panel-login {
-				border-color: #ccc;
-				-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-				-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-				box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-			}
-			.panel-login>.panel-heading {
-				color: #00415d;
-				background-color: #fff;
-				border-color: #fff;
-				text-align:center;
-			}
-			.panel-login>.panel-heading a{
-				text-decoration: none;
-				color: #666;
-				font-weight: bold;
-				font-size: 15px;
-				-webkit-transition: all 0.1s linear;
-				-moz-transition: all 0.1s linear;
-				transition: all 0.1s linear;
-			}
-			.panel-login>.panel-heading a.active{
-				color: #029f5b;
-				font-size: 18px;
-			}
-			.panel-login>.panel-heading hr{
-				margin-top: 10px;
-				margin-bottom: 0px;
-				clear: both;
-				border: 0;
-				height: 1px;
-				background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
-				background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-				background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-				background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-			}
-			.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
-				height: 45px;
-				border: 1px solid #ddd;
-				font-size: 16px;
-				-webkit-transition: all 0.1s linear;
-				-moz-transition: all 0.1s linear;
-				transition: all 0.1s linear;
-			}
-			.panel-login input:hover,
-			.panel-login input:focus {
-				outline:none;
-				-webkit-box-shadow: none;
-				-moz-box-shadow: none;
-				box-shadow: none;
-				border-color: #ccc;
-			}
-			.btn-login {
-				background-color: #59B2E0;
-				outline: none;
-				color: #fff;
-				font-size: 14px;
-				height: auto;
-				font-weight: normal;
-				padding: 14px 0;
-				text-transform: uppercase;
-				border-color: #59B2E6;
-			}
-			.btn-login:hover,
-			.btn-login:focus {
-				color: #fff;
-				background-color: #53A3CD;
-				border-color: #53A3CD;
-			}
-			.forgot-password {
-				text-decoration: underline;
-				color: #888;
-			}
-			.forgot-password:hover,
-			.forgot-password:focus {
-				text-decoration: underline;
-				color: #666;
-			}
-			
-			.btn-register {
-				background-color: #1CB94E;
-				outline: none;
-				color: #fff;
-				font-size: 14px;
-				height: auto;
-				font-weight: normal;
-				padding: 14px 0;
-				text-transform: uppercase;
-				border-color: #1CB94A;
-			}
-			.btn-register:hover,
-			.btn-register:focus {
-				color: #fff;
-				background-color: #1CA347;
-				border-color: #1CA347;
-			}
-			
-		
-		
-		</style>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<meta charset="ISO-8859-1">
+		<link href = "css/registrohotel.css" rel= "stylesheet" type="text/css"/>
+		<link href = "css/footer.css" rel= "stylesheet" type="text/css"/>
+		<title>Registra tu Hotel</title>
 	</head>
 	<body>
-		<%@ include file="plantillas/header.jsp"%>
-		 
-		<div class="container" style="margin-top: 200px; margin-left: 300px;">
-    	<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<div class="panel panel-login">
-					<div class="panel-heading">
-						<div class="row">
-							<div class="col-xs-6">
-								<a href="#" class="active" id="login-form-link">Login</a>
-							</div>
-							<div class="col-xs-6">
-								<a href="#" id="register-form-link">Register</a>
-							</div>
-						</div>
-						<hr>
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-lg-12">
-								<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
-									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-									</div>
-									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-									</div>
-									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-										<label for="remember"> Remember Me</label>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-12">
-												<div class="text-center">
-													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-								<form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
-									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-									</div>
-									<div class="form-group">
-										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
-									</div>
-									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-									</div>
-									<div class="form-group">
-										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<%@ include file="plantillas/header.jsp" %>
 	
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<div class="container register" style="margin-top: 120px; margin-bottom: 191px;">
+         <div class="row">
+             <div class="col-md-3 register-left">
+                 <img src="img/hellohotel.svg" alt=""/>
+                 <h3>Bienvenido a Sagashiteru</h3>
+                 <p>Estas a un paso de entrar en nuestra familia.</p>
+                 <p>Gracias por acompañarnos y confiar en nosotros.</p>
+             </div>
+             <div class="col-md-9 register-right">
+                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                     <li class="nav-item">
+                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#login" role="tab" aria-controls="home" aria-selected="true">Log In</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#registro" role="tab" aria-controls="profile" aria-selected="false">Registro</a>
+                     </li>
+                 </ul>
+                 <div class="tab-content" id="myTabContent">
+                     <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="home-tab">
+                         <h3 class="register-heading">Hola de nuevo!</h3>
+                         
+                         <form class="row register-form" action="#lo" method="post">
+                         <div class="col-md-6">
+                         <p>¿Nos echabas de menos?</p>
+                         <p>Nosotros a ti si</p>
+                         </div>
+                         
+                             <div class="col-md-6">
+                                 <div class="form-group">
+                                     <input type="text" class="form-control" placeholder="CIF *" value="" />
+                                 </div>
+                                 <div class="form-group">
+                                     <input type="password" class="form-control" placeholder="Password *" value="" />
+                                 </div>
+                                <input type="submit" class="btnRegister"  value="Log In"/>
+                             </div>
+                           </form>
+                        
+                     </div>
+                     <div class="tab-pane fade show" id="registro" role="tabpanel" aria-labelledby="profile-tab">
+                         <h3  class="register-heading">Nuevo en Sagashiteru? Registrate aquí</h3>
+                         <form class="row register-form" action="#re" method="post">
+                         
+                            <div class="col-md-6">
+                                 <div class="form-group">
+                                     <input type="text" class="form-control" placeholder="CIF *" value="" />
+                                 </div>
+                                 <div class="form-group">
+                                     <input type="email" class="form-control" placeholder="Email *" value="" />
+                                 </div>
+                             </div>
+                             <div class="col-md-6">
+                                 <div class="form-group">
+                                     <input type="password" class="form-control" placeholder="Password *" value="" />
+                                 </div>
+                                 <div class="form-group">
+                                     <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                 </div>
+                                 <input type="submit" class="btnRegister"  value="Registrate"/>
+                             </div>
+                         
+                         </form>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </div>
 	<%@ include file="plantillas/footer.jsp" %>
 	</body>
 </html>

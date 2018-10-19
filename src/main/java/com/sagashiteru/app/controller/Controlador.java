@@ -40,8 +40,13 @@ public class Controlador {
 	public IHabitacionService habitacionService;
 	
 	
-	@RequestMapping("/buscador")
-	public String buscador(HttpServletRequest req) {
+	@RequestMapping("/filtroBusqueda")
+	public String filtroBusqueda(HttpServletRequest req) {
+		System.err.println("entra");
+		
+		String nombre = req.getParameter("nombre");
+		req.setAttribute("filtroBusqueda", hotelservice.listHotel(nombre));
+	
 		
 		return "filtroBusqueda";
 	}
@@ -143,30 +148,5 @@ public class Controlador {
 		
 	}
 	
-	@RequestMapping("/listar")
-	public String listar1(HttpServletRequest req) {
-	
-		
-		clienteService.deletebyid("111");
-		
-		hotelservice.delete("pppaa");
-		
-		return "test";
-	}
-	
-	@RequestMapping("/testt")
-	public String listar12(HttpServletRequest req) {
-	
-		
-	Hotel hotel =hotelservice.findbycif("ppp");
-		
-	
-	
-	habitacionService.deletebycifall(hotel.getCif());
-		
-	
-		
-		return "test";
-	}
 	
 }
