@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -18,8 +17,7 @@
 	         <li class="nav-item"> <a class="nav-link" href="/sagashiteru" href="/index">Inicio<span class="sr-only">(current)</span></a> </li>
 	         <li class="nav-item"> <a class="nav-link" href="/contacto">Nosotros</a> </li>
 	         <li class="nav-item"> <a style="text-decoration: none;" href="/registrohotel"><button class="btn btn-outline-warning" style="border-button: none; margin-top: 5px; margin-left: 25px; margin-right: 15px;">¡Anunciate Aquí!</button></a>
-	         <li class="nav-item"><a style="text-decoration: none;" href="/loginCliente"><button class="btn btn-warning" 
-	         	   	style="margin-top: 5px; margin-right: -150px; color: #022557;">Login</button></a></li>
+	         <li class="nav-item"><a style="text-decoration: none;" href="/loginCliente"><button class="btn btn-warning" style="margin-top: 5px; margin-right: -150px; color: #022557;">Login</button></a></li>
 			</ul>
 		  </div>
 		</div>				
@@ -31,10 +29,10 @@
 		<!-- Slider main container -->
 		<div class="swiper-container main-slider" id="myCarousel">
 		<div class="container buscador">
-	        <div id="custom-search-input">
+	        <div id="custom-search-input">	        
               <div class="input-group col-md-12">
                   <form action="/filtroBusqueda" method="post">
-	                  <input type="text" name="localizacion" class="search-query form-control" placeholder="¿Dónde Vas?" style="width: 1100px;"/>
+	                  <input type="text" name="localizacion" class="search-query form-control" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¿Dónde Vas?" style="width: 1100px;"/>
 		              <button type="submit" class="btn btn-warning" style="margin-left: 1100px; margin-top: -66px;">Buscar</button> 
 	              </form>
               </div>
@@ -44,15 +42,15 @@
 		    <div class="swiper-slide slider-bg-position" style="background:url(img/slider4.jpg)" data-hash="slide1">
 		      <h2>tú web de hoteles</h2>
 		    </div>
-		    <div class="swiper-slide slider-bg-position" style="background:url(img/slider3.jpg)" data-hash="slide2">
+		    <!-- <div class="swiper-slide slider-bg-position" style="background:url(img/slider3.jpg)" data-hash="slide2">
 		      <h2></h2>
-		    </div>
+		    </div> -->
 		  </div>
-		  <!-- Add Pagination -->
+		 <!-- 
 		  <div class="swiper-pagination"></div>
-		  <!-- Add Navigation -->
+		  Add Navigation
 		  <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
-		  <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
+		  <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div> -->
 		</div>
 		
 		<!-- About 

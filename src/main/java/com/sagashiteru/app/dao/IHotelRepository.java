@@ -3,8 +3,6 @@ package com.sagashiteru.app.dao;
 import java.util.List;
 import java.util.Optional;
 
-import javax.servlet.annotation.MultipartConfig;
-
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

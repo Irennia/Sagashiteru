@@ -67,7 +67,6 @@ public class Controlador {
 		System.err.println("entra");
 		
 		String localizacion = req.getParameter("localizacion");
-		//String localizacion = req.getParameter("localizacion");
 		System.out.println(localizacion);
 		List<Hotel> h;
 		h = hotelservice.listHotel(localizacion);
