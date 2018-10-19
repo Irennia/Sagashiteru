@@ -46,7 +46,7 @@ public class Controlador {
 		
 		String nombre = req.getParameter("nombre");
 		req.setAttribute("filtroBusqueda", hotelservice.listHotel(nombre));
-	
+		
 		
 		return "filtroBusqueda";
 	}
@@ -99,9 +99,13 @@ public class Controlador {
 		
 			
 			
+			Calendario ca = new Calendario();
+			
+			ca.setId_habitacion(32);
+			ca.setId_calendario(132);
 			
 			
-		
+		calendarioService.add(ca);
 			
 		
 		System.out.println("entra");

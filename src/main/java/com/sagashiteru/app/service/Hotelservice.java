@@ -26,7 +26,7 @@ public class Hotelservice implements IHotelService {
 	@Override
 	public void delete(String cif) {
 		
-hotelrepository.deleteById(cif);		
+		hotelrepository.deleteById(cif);		
 	}
 
 	@Override
@@ -62,16 +62,9 @@ hotelrepository.deleteById(cif);
 		return hotelrepository.listbyestrellas(estrellas).get();
 	}
 
-	@Override
-	public Hotel datosPorNombreHotel(String nombre) {
-		
-		Optional<List<Hotel>> h = hotelrepository.findByNombre(nombre);
-		if(h.isPresent()) {
-			return (Hotel) h.get();
-		} else {
-			return null;
-		} 
+
+	
 	}
 
 	
-}
+

@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -19,6 +21,7 @@ public class Calendario implements Serializable{
 	
 	
 @Id
+@GeneratedValue(strategy=GenerationType.AUTO)
 @Column(name="id_calendario")
 private int id_calendario;
 
@@ -31,9 +34,7 @@ private int id_habitacion;
 @Column(name="id_reserva")
 private int id_reserva;
 
-@ManyToOne
-@JoinColumn(name="id_reserva",insertable=false, updatable=false)
-private Reserva reserva;
+
 
 
 
@@ -61,16 +62,6 @@ public int getId_reserva() {
 public void setId_reserva(int id_reserva) {
 	this.id_reserva = id_reserva;
 }
-
-public Reserva getReserva() {
-	return reserva;
-}
-
-public void setReserva(Reserva reserva) {
-	this.reserva = reserva;
-}
-
-
 
 
 public int getId_calendario() {
