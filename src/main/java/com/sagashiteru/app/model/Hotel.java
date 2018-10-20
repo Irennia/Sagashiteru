@@ -35,6 +35,10 @@ public class Hotel implements Serializable{
 	@Column(name="nombre")
 	private String nombre;
 	
+	@Column(name="direccion")
+	private String direccion;
+	
+	
 	@Column(name="descripcion")
 	private String descripcion; 
 	
@@ -171,18 +175,30 @@ public class Hotel implements Serializable{
 	public void setServicio_habitacion(boolean servicio_habitacion) {
 		this.servicio_habitacion = servicio_habitacion;
 	}
+	
+	
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
 
 	public Hotel() {
 		super();
 	}
 
-	public Hotel(String cif, String password, String localizacion, String nombre, String descripcion, int telefono,
-			String email, int estrellas, boolean wifi, boolean piscina, boolean animales, boolean servicio_habitacion) {
+	public Hotel(String cif, String password, String localizacion, String nombre, String direccion, String descripcion,
+			int telefono, String email, int estrellas, boolean wifi, boolean piscina, boolean animales,
+			boolean servicio_habitacion) {
 		super();
 		this.cif = cif;
 		this.password = password;
 		this.localizacion = localizacion;
 		this.nombre = nombre;
+		this.direccion = direccion;
 		this.descripcion = descripcion;
 		this.telefono = telefono;
 		this.email = email;
@@ -193,7 +209,8 @@ public class Hotel implements Serializable{
 		this.servicio_habitacion = servicio_habitacion;
 	}
 
-
+	
+	
 	
 	
 	
