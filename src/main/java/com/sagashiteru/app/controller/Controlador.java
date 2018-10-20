@@ -77,16 +77,8 @@ public class Controlador {
 			System.out.println("paso 2 " + localizacion);
 			h=hotelservice.listHotelNombre(localizacion);
 			System.out.println("lista ");
-			for (Hotel hotel : h) {
-				System.out.println(hotel.getNombre());
-			}
-			if(h==null) {
-				System.out.println("No hay hoteles con estas caracteristicas");
-				return "nulo";
-			}else {
-				req.setAttribute("filtroBusqueda", h);
-				return "filtroBusqueda";
-			}
+			
+			req.setAttribute("filtroBusqueda", h);
 		}
 		
 		req.setAttribute("filtroBusqueda", h);	

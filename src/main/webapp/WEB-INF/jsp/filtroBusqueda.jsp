@@ -45,9 +45,9 @@
 			 	margin: 0 auto; */
 			 	clear: both;
 			 	float: left;
-			 	margin-top: -900px;
-			 	margin-left: -205px;
-			 	max-width: 800px;
+			 	margin-top: -901px;
+			 	margin-left: -198px;
+			 	width: 37%;
 			    padding: 40px;
 				background:#212C88;
 				color: #FFF;
@@ -80,10 +80,56 @@
 	 	</c:choose>
 		
 		 <c:if test = "${empty filtroBusqueda}">
-			<h4 style="text-align: center; margin-top: 350px;">No existen hoteles</h4><br><br>
-			<div style="margin-left: 842px; margin-bottom: 385px;">
-				<h5>¿Quiéres Anunciarte?</h5><br>
-				<a href="/registrohotel"><button class="btn btn-outline-warning" style="margin-left: 35px;">¡Anunciate Aquí!</button></a>
+		 	<div class="container" style="margin-top: 350px; margin-bottom: 275px; margin-left: 26%;">
+				<h4 style="text-align: center;">No existen hoteles</h4><br><br>
+				<div style="margin-left: 40%;">
+					<h5>¿Quiéres Anunciarte?</h5><br>
+					<a href="/registrohotel"><button class="btn btn-outline-warning" style="margin-left: 5%;">¡Anunciate Aquí!</button></a>
+				</div>
+			</div>
+			
+			<div class="container">
+				<div class="main">
+					<div class="main-center" style="margin-top: -702px;">
+					<h5 style="font-weight: bold;">Filtra tu Busqueda</h5><br>
+						<form class="" method="post" action="#">
+							
+							<div>
+								<label>Nombre Hotel</label>
+								<div >
+								<input type="text" name="nombrehotel" id="name" style="width: 332px;" placeholder="Introduzca el hotel al que quiere ir"/>
+								</div>
+							</div>
+							<div>
+								<label >Estrellas</label><br>
+								<div style="margin-left: 10px;">
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="1" >&nbsp;&nbsp;1 Estrella<br>
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="2">&nbsp;&nbsp;2 Estrellas<br>
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="3">&nbsp;&nbsp;3 Estrellas<br>
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="4">&nbsp;&nbsp;4 Estrellas<br>
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="5">&nbsp;&nbsp;5 Estrellas<br><br>
+								</div>
+							</div>
+							<div>
+								<label>Tipo de Cama</label>
+								<div>
+									<input type="text" name="cama" style="width: 332px;" placeholder="¿Cómo quieres tu cama?"/>
+								</div>
+							</div>
+							<div>
+								<label>Personas</label>
+								<div>
+									<input type="tel" name="personas" style="width: 332px;" placeholder="¿Cuántos Sois?"/>
+								</div>
+							</div>
+	
+							
+							<br>
+							<button type="submit" class="btn btn-warning">Filtrar</button>
+							
+						</form>
+					</div>
+				</div>
 			</div>
 		 </c:if>
 		 
@@ -116,39 +162,37 @@
 			
 			<div class="container">
 				<div class="main">
-					<div class="main-center" style="width: 37%;">
+					<div class="main-center">
 					<h5 style="font-weight: bold;">Filtra tu Busqueda</h5><br>
 						<form class="" method="post" action="#">
 							
-							<div class="form-group">
-								<label for="name">Nombre Hotel</label>
-								<div class="input-group">
-								<input type="text" class="form-control" name="nombrehotel" id="name"  placeholder="Introduzca el hotel al que quiere ir"/>
+							<div>
+								<label>Nombre Hotel</label>
+								<div >
+								<input type="text" name="nombrehotel" id="name" style="width: 332px;" placeholder="Introduzca el hotel al que quiere ir"/>
 								</div>
 							</div>
-							<!-- <div class="list-group" style="display: block;"> -->
+							<div>
 								<label >Estrellas</label><br>
-								
-									<input type="checkbox" name="estrellas" value="1">&nbsp;&nbsp;1 Estrella<br>
-									<input type="checkbox" name="estrellas" value="2">&nbsp;&nbsp;2 Estrellas<br>
-									<input type="checkbox" name="estrellas" value="3">&nbsp;&nbsp;3 Estrellas<br>
-									<input type="checkbox" name="estrellas" value="4">&nbsp;&nbsp;4 Estrellas<br>
-									<input type="checkbox" name="estrellas" value="5">&nbsp;&nbsp;5 Estrellas<br><br>
-								
-							<!-- </div> -->
-							
-							<div class="form-group">
-								<label for="confirm">Tipo de Cama</label>
-								<div class="input-group">
-									<input type="text" class="form-control" name="cama" placeholder="¿Cómo quieres tu cama?"/>
+								<div style="margin-left: 10px;">
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="1" >&nbsp;&nbsp;1 Estrella<br>
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="2">&nbsp;&nbsp;2 Estrellas<br>
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="3">&nbsp;&nbsp;3 Estrellas<br>
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="4">&nbsp;&nbsp;4 Estrellas<br>
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="5">&nbsp;&nbsp;5 Estrellas<br><br>
 								</div>
 							</div>
-	
-							<div class="form-group">
-								<label for="password">Personas</label>
-									<div class="input-group">
-										<input type="tel" class="form-control" name="personas" placeholder="¿Cuántos Sois?"/>
-									</div>
+							<div>
+								<label>Tipo de Cama</label>
+								<div>
+									<input type="text" name="cama" style="width: 332px;" placeholder="¿Cómo quieres tu cama?"/>
+								</div>
+							</div>
+							<div>
+								<label>Personas</label>
+								<div>
+									<input type="tel" name="personas" style="width: 332px;" placeholder="¿Cuántos Sois?"/>
+								</div>
 							</div>
 	
 							
@@ -156,9 +200,9 @@
 							<button type="submit" class="btn btn-warning">Filtrar</button>
 							
 						</form>
-					</div><!--main-center"-->
-				</div><!--main-->
-			</div><!--container-->
+					</div>
+				</div>
+			</div>
 		</c:if>
 		
 		<%@ include file="plantillas/footer.jsp" %>
