@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -95,7 +95,7 @@
 				        <p class="card-text">
 				        	<span>C/ Anabel Segura, 11</span><br>
 				        	<span>28108 Alcobendas</span><br>
-				        	<span>Madrid, España</span><br>
+				        	<span>Madrid, EspaÃ±a</span><br>
 				        	<span>Tel.Hotel</span><br>
 				        	<span>Email Hotel</span><br>		        	
 				        </p>
@@ -144,7 +144,7 @@
 				      </div>
 				    </div>
 				    <div class="col-lg-7" style="padding-top: 11px; padding-left: 75px;">
-				      <h3 class="font-weight-bold mb-3">Título Habitación</h3>
+				      <h3 class="font-weight-bold mb-3">TÃ­tulo HabitaciÃ³n</h3>
 						<p>
 							Nam libero tempore, cum soluta nobis est eligendi optio
 							cumque nihil impedit quo minus id quod maxime placeat facere

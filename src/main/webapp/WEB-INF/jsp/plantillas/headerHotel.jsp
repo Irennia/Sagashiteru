@@ -24,7 +24,7 @@
 							<li class="dropdown" style="margin-top: 8px; margin-left: 30px; line-height: 2;">
 								<a href="" class="dropdown-toggle" data-toggle="dropdown">Hotel</a>
 								<ul class="dropdown-menu" style="padding: 20px;">
-									<li><a href="#" style="color: #022557; text-decoration: none;">Perfil</a></li>
+									<li><a href="/perfilhotel" style="color: #022557; text-decoration: none;">Perfil</a></li>
 									<li class="divider"></li>
 									<li><a href="/gestionhotel" style="color: #022557; text-decoration: none;">Gestión</a></li>
 									<li class="divider" style="margin-top: 10px;"></li>

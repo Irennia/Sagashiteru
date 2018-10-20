@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -28,7 +28,7 @@
 						            <li class="divider"></li>
 						            <li><a href="#" style="color: #022557; text-decoration: none;">Mis Reservas</a></li>
 						            <li class="divider" style="margin-top: 10px;"></li>
-						            <li><a href="/cerrarsesion"><button class="btn btn-danger" style="height: 40px;">Cerrar Sesión</button></a></li>
+						            <li><a href="/cerrarsesion"><button class="btn btn-danger" style="height: 40px;">Cerrar SesiÃ³n</button></a></li>
 						          </ul>
 						        </li>
 						      </ul>
@@ -64,11 +64,11 @@
 										<li class="dropdown" style="margin-top: 8px; margin-left: 30px; line-height: 2;">
 											<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #022557;">Hotel</a>
 											<ul class="dropdown-menu" style="padding: 20px;">
-												<li><a href="#" style="color: #022557; text-decoration: none;">Perfil</a></li>
+												<li><a href="/perfilhotel" style="color: #022557; text-decoration: none;">Perfil</a></li>
 												<li class="divider"></li>
-												<li><a href="/gestionhotel" style="color: #022557; text-decoration: none;">Gestión</a></li>
+												<li><a href="/gestionhotel" style="color: #022557; text-decoration: none;">Gestiï¿½n</a></li>
 												<li class="divider" style="margin-top: 10px;"></li>
-												<li><a href="/cerrarsesion"><button class="btn btn-danger" style="height: 40px;">Cerrar Sesión</button></a></li>
+												<li><a href="/cerrarsesion"><button class="btn btn-danger" style="height: 40px;">Cerrar SesiÃ³n</button></a></li>
 											</ul></li>
 									</ul>
 							</ul>
@@ -90,7 +90,7 @@
 	        
 	         <li class="nav-item"> <a class="nav-link" href="/sagashiteru" href="/index">Inicio<span class="sr-only">(current)</span></a> </li>
 	         <li class="nav-item"> <a class="nav-link" href="/contacto">Nosotros</a> </li>
-	         <li class="nav-item"> <a style="text-decoration: none;" href="/registrohotel"><button class="btn btn-outline-warning" style="border-button: none; margin-top: 5px; margin-left: 25px; margin-right: 15px;">¡Anunciate Aquí!</button></a>
+	         <li class="nav-item"> <a style="text-decoration: none;" href="/registrohotel"><button class="btn btn-outline-warning" style="border-button: none; margin-top: 5px; margin-left: 25px; margin-right: 15px;">Â¡Anunciate AquÃ­!</button></a>
 	         <li class="nav-item"><a style="text-decoration: none;" href="/loginCliente"><button class="btn btn-warning" style="margin-top: 5px; margin-right: -150px; color: #022557;">Login</button></a></li>
 			</ul>
 		  </div>
@@ -111,7 +111,7 @@
 	        <div id="custom-search-input">	        
               <div class="input-group col-md-12">
                   <form action="/filtroBusqueda" method="post">
-	                  <input type="text" name="localizacion" class="search-query form-control" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¿Dónde Vas?" style="width: 1100px;"/>
+	                  <input type="text" name="localizacion" class="search-query form-control" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Â¿DÃ³nde Vas?" style="width: 1100px;"/>
 		              <button type="submit" class="btn btn-warning" style="margin-left: 1100px; margin-top: -66px;">Buscar</button> 
 	              </form>
               </div>
@@ -119,7 +119,7 @@
 		</div>
 		  <div class="swiper-wrapper">
 		    <div class="swiper-slide slider-bg-position" style="background:url(img/slider4.jpg)" data-hash="slide1">
-		      <h2>tú web de hoteles</h2>
+		      <h2>tÃº web de hoteles</h2>
 		    </div>
 		    <!-- <div class="swiper-slide slider-bg-position" style="background:url(img/slider3.jpg)" data-hash="slide2">
 		      <h2></h2>
@@ -141,21 +141,21 @@
 		        <h2>Quienes Somos</h2>
 		      </div>
 		      <div class="col-md-4">
-		        <p>Sagashiteru, cuya misión es <strong>Buscar alojamiento en tu destino
-					ideal</strong>, apuesta por la tecnología digital para que viajar sea más
-					fácil. En Sagashiteru conectamos a los viajeros con ofertas de
-					alojamientos increíbles. La web de Sagashiteru esta disponible en
-					Español, y ofrece diversas opciones de alojamiento, en varios destinos
-					de diferentes países y territorios en todo el mundo.
+		        <p>Sagashiteru, cuya misiÃ³n es <strong>Buscar alojamiento en tu destino
+					ideal</strong>, apuesta por la tecnologÃ­a digital para que viajar sea mÃ¡s
+					fÃ¡cil. En Sagashiteru conectamos a los viajeros con ofertas de
+					alojamientos increÃ­bles. La web de Sagashiteru esta disponible en
+					EspaÃ±ol, y ofrece diversas opciones de alojamiento, en varios destinos
+					de diferentes paÃ­ses y territorios en todo el mundo.
 		        </p>
 		      </div>
 		      <div class="col-md-4">
-		        <p>Sagashiteru se fundó en Madrid en 2018 como parte de un
-					proyecto, es una pequeña start-up española con vistas a convertirse a
+		        <p>Sagashiteru se fundÃ³ en Madrid en 2018 como parte de un
+					proyecto, es una pequeÃ±a start-up espaÃ±ola con vistas a convertirse a
 					una de las mayores empresas e-commerce de viajes de todo el mundo.
 					Sagashiteru forma parte de Sagashiteru SA., y cuenta con 3
 					trabajadores en 1 oficina</p>
-		        <p><a href="/contacto" class="btn btn-transparent-white btn-capsul">Saber Más</a></p>
+		        <p><a href="/contacto" class="btn btn-transparent-white btn-capsul">Saber MÃ¡s</a></p>
 		      </div>
 		    </div>
 		  </div>

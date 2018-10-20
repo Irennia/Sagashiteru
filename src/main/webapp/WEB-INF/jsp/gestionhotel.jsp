@@ -17,24 +17,14 @@
 <meta charset="UTF-8">
 
 <link href="css/footer.css" rel='stylesheet' type='text/css' />
-
+<link href="css/gestionhotel.css" rel='stylesheet' type='text/css' />
 <title>Gestiona tu hotel</title>
 
 </head>
 <body>
-	<c:choose>
-		
-			<c:when test = "${not empty dni}">
-				<%@ include file="plantillas/headerCliente.jsp"%> 
-	 		</c:when>
-	 		<c:when test = "${not empty cif}">
 				<%@ include file="plantillas/headerHotel.jsp"%> 
-	 		</c:when>
-	 		<c:otherwise>
-           		<%@ include file="plantillas/header.jsp"%> 
-         	</c:otherwise>
-         	
-	 	</c:choose>
+	 	
+	
 
 
 	<div class="container register">
@@ -58,7 +48,8 @@
 			<div class="tab-content" id="myTabContent">
 
 				<div class="tab-pane fade show active" id="#inicio" role="tabpanel">
-					Bienvenido a la gestion de tu hotel</div>
+					<h3>Bienvenido a la gestion de tu hotel</h3>
+					Aqui podras modificar los datos de tu hotel, añadir y gestionar tus habitaciones y ver las reservas efetuadas en tu hotel</div>
 
 				<div class="tab-pane fade show" id="hotel" role="tabpanel"
 					aria-labelledby="home-tab">

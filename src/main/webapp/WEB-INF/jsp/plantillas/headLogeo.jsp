@@ -1,5 +1,5 @@
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Sagashiteru</title>
 <link rel="shortcut icon" href="img/favicon1.png" />
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
