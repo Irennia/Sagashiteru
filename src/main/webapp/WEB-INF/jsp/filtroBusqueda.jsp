@@ -80,26 +80,26 @@
 	 	</c:choose>
 		
 		 <c:if test = "${empty filtroBusqueda}">
-		 	<div class="container" style="margin-top: 350px; margin-bottom: 275px; margin-left: 26%;">
+		 	<div class="container" style="margin-top: 350px; margin-bottom: 450px; margin-left: 26%; max-width: 100%; float: right; margin-right: -163px;">
 				<h4 style="text-align: center;">No existen hoteles</h4><br><br>
-				<div style="margin-left: 40%;">
+				<div style="margin-left: 43%;">
 					<h5>¿Quiéres Anunciarte?</h5><br>
-					<a href="/registrohotel"><button class="btn btn-outline-warning" style="margin-left: 5%;">¡Anunciate Aquí!</button></a>
+					<a href="/registrohotel"><button class="btn btn-outline-warning" style="margin-left: 4%;">¡Anunciate Aquí!</button></a>
 				</div>
 			</div>
 			
 			<div class="container">
 				<div class="main">
-					<div class="main-center" style="margin-top: -702px;">
+					<div class="main-center" style="margin-top: -864px;">
 					<h5 style="font-weight: bold;">Filtra tu Busqueda</h5><br>
 						<form class="" method="post" action="#">
 							
 							<div>
-								<label>Nombre Hotel</label>
+								<label>Nombre/Destino del Hotel</label>
 								<div >
 								<input type="text" name="nombrehotel" id="name" style="width: 332px;" placeholder="Introduzca el hotel al que quiere ir"/>
 								</div>
-							</div>
+							</div><br>
 							<div>
 								<label >Estrellas</label><br>
 								<div style="margin-left: 10px;">
@@ -115,16 +115,28 @@
 								<div>
 									<input type="text" name="cama" style="width: 332px;" placeholder="¿Cómo quieres tu cama?"/>
 								</div>
-							</div>
+							</div><br>
 							<div>
 								<label>Personas</label>
 								<div>
 									<input type="tel" name="personas" style="width: 332px;" placeholder="¿Cuántos Sois?"/>
 								</div>
-							</div>
-	
+							</div><br>
+							<div>
+								<label>Piscina</label>
+								<div>
+									<input type="radio" name="animales" value="si"/><label>&nbsp;Si</label>&nbsp;
+									<input type="radio" name="animales" value="no"/><label>&nbsp;No</label>
+								</div>
+							</div><br>
+							<div>
+								<label>Animales</label>
+								<div>
+									<input type="radio" name="animales" value="si"/><label>&nbsp;Si</label>&nbsp;
+									<input type="radio" name="animales" value="no"/><label>&nbsp;No</label>
+								</div>
+							</div><br>
 							
-							<br>
 							<button type="submit" class="btn btn-warning">Filtrar</button>
 							
 						</form>
@@ -167,15 +179,15 @@
 						<form class="" method="post" action="#">
 							
 							<div>
-								<label>Nombre Hotel</label>
+								<label>Nombre/Destino del Hotel</label>
 								<div >
-								<input type="text" name="nombrehotel" id="name" style="width: 332px;" placeholder="Introduzca el hotel al que quiere ir"/>
+								<input type="text" name="nombrehotel" id="name" style="width: 332px;" placeholder="Introduzca el hotel al que quiere ir"/><br>
 								</div>
-							</div>
+							</div><br>
 							<div>
 								<label >Estrellas</label><br>
 								<div style="margin-left: 10px;">
-									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="1" >&nbsp;&nbsp;1 Estrella<br>
+									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="1">&nbsp;&nbsp;1 Estrella<br>
 									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="2">&nbsp;&nbsp;2 Estrellas<br>
 									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="3">&nbsp;&nbsp;3 Estrellas<br>
 									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="4">&nbsp;&nbsp;4 Estrellas<br>
@@ -187,16 +199,28 @@
 								<div>
 									<input type="text" name="cama" style="width: 332px;" placeholder="¿Cómo quieres tu cama?"/>
 								</div>
-							</div>
+							</div><br>
 							<div>
 								<label>Personas</label>
 								<div>
 									<input type="tel" name="personas" style="width: 332px;" placeholder="¿Cuántos Sois?"/>
 								</div>
-							</div>
-	
+							</div><br>
+							<div>
+								<label>Piscina</label>
+								<div>
+									<input type="radio" name="animales" value="si"/><label>&nbsp;Si</label>&nbsp;
+									<input type="radio" name="animales" value="no"/><label>&nbsp;No</label>
+								</div>
+							</div><br>
+							<div>
+								<label>Animales</label>
+								<div>
+									<input type="radio" name="animales" value="si"/><label>&nbsp;Si</label>&nbsp;
+									<input type="radio" name="animales" value="no"/><label>&nbsp;No</label>
+								</div>
+							</div><br>
 							
-							<br>
 							<button type="submit" class="btn btn-warning">Filtrar</button>
 							
 						</form>
