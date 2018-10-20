@@ -15,7 +15,7 @@ public interface IHotelRepository extends CrudRepository<Hotel, String> {
 	
 	
 	@Query(value= "SELECT * FROM Hoteles WHERE localizacion LIKE CONCAT('%', :localizacion , '%')" , nativeQuery=true)
-	public  Optional<List<Hotel>> listbynombre(@Param("localizacion")String localizacion);
+	public  Optional<List<Hotel>> listbylocalizacion(@Param("localizacion")String localizacion);
 	
 	@Query(value= "SELECT * FROM Hoteles WHERE estrellas= :estrellas" , nativeQuery=true)
 	public  Optional<List<Hotel>> listbyestrellas(@Param("estrellas")int estrellas);
@@ -23,7 +23,8 @@ public interface IHotelRepository extends CrudRepository<Hotel, String> {
 	@Query(value= "SELECT * FROM Hoteles WHERE animales= :animales" , nativeQuery=true)
 	public  Optional<List<Hotel>> listbyanimales(@Param("animales")boolean animales);
 	
-	
+	@Query(value= "SELECT * FROM Hoteles WHERE nombre LIKE CONCAT('%', :nombre , '%')" , nativeQuery=true)
+	public  Optional<List<Hotel>> listbynombre(@Param("nombre")String nombre);
 	
 	
 }
