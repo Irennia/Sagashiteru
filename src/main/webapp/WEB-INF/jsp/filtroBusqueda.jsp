@@ -44,9 +44,9 @@
 			 	/* margin-top: 30px;
 			 	margin: 0 auto; */
 			 	clear: both;
-			 	float: right;
+			 	float: left;
 			 	margin-top: -900px;
-			 	margin-right: -220px;
+			 	margin-left: -205px;
 			 	max-width: 800px;
 			    padding: 40px;
 				background:#212C88;
@@ -90,10 +90,10 @@
 		 <c:if test = "${not empty filtroBusqueda}">
 		 
 			<div class="carousel-inner" style="margin-top:200px; text-align: center; margin-bottom: 380px;">
-				<div class="item carousel-item active" style="max-width: 80%; float: left; margin-left: 70px;">
+				<div class="item carousel-item active" style="max-width: 80%; float: right; margin-left: 70px; margin-right: -200px;">
 					<div class="row">
 					<c:forEach var="o" items="${filtroBusqueda}">
-					<div class="col-md-3 column productbox" style="background-color:#ededf2; margin: 10px; padding:40px; width: 300px; text-align:center; box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);">
+					<div class="col-md-3 column productbox" style="background-color:#ededf2; margin-left: 20px; padding:40px; width: 300px; text-align:center; box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);">
 						<div class="col-lm-2">
 							<div class="thumb-wrapper">
 								<div class="img-box">
@@ -104,7 +104,7 @@
 									<p style="text-align:left;"><img src="img/localizacion.png" style="max-width: 20px; max-height: 20px; margin-right: 5px; margin-bottom: 5px;">${o.localizacion }</p>
 								</div><br>
 								<div style="text-align:center;">
-								<a href="#" class="btn btn-warning">Ver Hotel</a>
+								<a href="/hotelcompleto" class="btn btn-warning">Ver Hotel</a>
 								</div>		
 							</div>
 						</div>
@@ -116,7 +116,7 @@
 			
 			<div class="container">
 				<div class="main">
-					<div class="main-center" style="width: 40%;">
+					<div class="main-center" style="width: 37%;">
 					<h5 style="font-weight: bold;">Filtra tu Busqueda</h5><br>
 						<form class="" method="post" action="#">
 							
