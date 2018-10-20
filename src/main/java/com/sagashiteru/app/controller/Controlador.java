@@ -121,4 +121,10 @@ public class Controlador {
 		System.out.println("entra register");	
 		return "gestionhotel";
 	}
+	
+	@RequestMapping("/hotelcompleto")
+	public String hotelCompleto(HttpServletRequest req) {
+		System.out.println("entra register");	
+		return "hotelCompleto";
+	}
 }

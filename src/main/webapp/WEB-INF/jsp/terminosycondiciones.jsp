@@ -1,10 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 	<%@ include file="plantillas/head.jsp"%> 
 	<body>
-		<%@ include file="plantillas/header.jsp"%> 
+		<c:choose>
+		
+			<c:when test = "${not empty dni}">
+				<%@ include file="plantillas/headerCliente.jsp"%> 
+	 		</c:when>
+	 		<c:when test = "${not empty cif}">
+				<%@ include file="plantillas/headerHotel.jsp"%> 
+	 		</c:when>
+	 		<c:otherwise>
+          		<%@ include file="plantillas/header.jsp"%> 
+        	</c:otherwise>
+	        	
+	 	</c:choose>
+ 	
 		<div class="container" style="margin-top: 200px; margin-bottom: 100px;">
 		<h1 class="h1">Condiciones de uso</h1>
 		<h3>Sagashiteru</h3>

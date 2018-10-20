@@ -49,14 +49,8 @@ public class Controlador_Web {
 		
 		
 		System.out.println(" password  : " + password);
-		
-		
-		
+	
 		String email = req.getParameter("email"); 
-		
-		
-		
-		
 		
 		String verificacion = req.getParameter("verificacion");
 		

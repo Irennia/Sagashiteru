@@ -22,7 +22,19 @@
 
 </head>
 <body>
-	<%@ include file="plantillas/header.jsp"%>
+	<c:choose>
+		
+			<c:when test = "${not empty dni}">
+				<%@ include file="plantillas/headerCliente.jsp"%> 
+	 		</c:when>
+	 		<c:when test = "${not empty cif}">
+				<%@ include file="plantillas/headerHotel.jsp"%> 
+	 		</c:when>
+	 		<c:otherwise>
+           		<%@ include file="plantillas/header.jsp"%> 
+         	</c:otherwise>
+         	
+	 	</c:choose>
 
 
 	<div class="container register">

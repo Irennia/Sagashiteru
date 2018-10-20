@@ -65,7 +65,19 @@
 		</style>
 		</head>
 	<body>
-		<%@ include file="plantillas/header.jsp"%>
+		<c:choose>
+		
+			<c:when test = "${not empty dni}">
+				<%@ include file="plantillas/headerCliente.jsp"%> 
+	 		</c:when>
+	 		<c:when test = "${not empty cif}">
+				<%@ include file="plantillas/headerHotel.jsp"%> 
+	 		</c:when>
+	 		<c:otherwise>
+           		<%@ include file="plantillas/header.jsp"%> 
+         	</c:otherwise>
+         	
+	 	</c:choose>
 		
 		 <c:if test = "${empty filtroBusqueda}">
 			<h4 style="text-align: center; margin-top: 350px;">No existen hoteles</h4><br><br>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,7 +13,19 @@
 		<title>Registra tu Hotel</title>
 	</head>
 	<body>
-	<%@ include file="plantillas/header.jsp" %>
+	<c:choose>
+		
+		<c:when test = "${not empty dni}">
+			<%@ include file="plantillas/headerCliente.jsp"%> 
+ 		</c:when>
+ 		<c:when test = "${not empty cif}">
+			<%@ include file="plantillas/headerHotel.jsp"%> 
+ 		</c:when>
+ 		<c:otherwise>
+         	<%@ include file="plantillas/header.jsp"%> 
+       	</c:otherwise>
+        	
+ 	</c:choose>
 	
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
