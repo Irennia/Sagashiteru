@@ -140,10 +140,10 @@
 				  <div class="row">
 				    <div class="col-lg-5">
 				      <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-				        <img class="img-fluid" src="img/hotel/habitacion1.jpg" alt="Sample image" style="max-width: 500px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.31);">
+				        <img class="img-fluid" src="img/hotel/habitacion1.jpg" alt="Sample image" style="max-width: 600px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.31); margin-left: -26%;">
 				      </div>
 				    </div>
-				    <div class="col-lg-7" style="padding-top: 11px; padding-left: 75px;">
+				    <div class="col-lg-7" style="padding-left: 92px; padding-top: 23px;">
 				      <h3 class="font-weight-bold mb-3">Título Habitación</h3>
 						<p>
 							Nam libero tempore, cum soluta nobis est eligendi optio
@@ -152,6 +152,11 @@
 							aut officiis debitis.
 						</p>
 						
+						<span><strong>Fecha Entrada&nbsp;&nbsp;&nbsp;</strong></span><input type="text" name="" style="width: 100px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span><strong>Fecha Salida&nbsp;&nbsp;&nbsp;</strong></span><input type="text" name="" style="width: 100px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
+						<br>
+						<br>
 						<span style="color: green;"><strong>Precio</strong></span><br><br>
 						
 						<p><strong>Servicios</strong></p>
@@ -169,7 +174,7 @@
 						<a class="btn btn-warning btn-md">Reservar</a>
 				    </div>
 				  </div>
-				  <hr class="my-5">
+				  <hr class="my-5 mx-4">
 				</div>
 			<%-- </c:forEach> --%>
 		</div>

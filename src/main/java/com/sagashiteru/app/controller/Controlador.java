@@ -115,6 +115,31 @@ public class Controlador {
 		return "misReservas";
 	}
 	
+	/////////////////////////////////////////////////////////
+	
+	//////////////// HOTEL /////////////////////////////////
+	
+
+	@RequestMapping("/gestionhotel")
+	public String gestionhotel(HttpServletRequest req) {
+		System.out.println("entra register");	
+		return "gestionhotel";
+	}
+	
+	@RequestMapping("/perfilhotel")
+	public String perfilhotel(HttpServletRequest req) {
+		System.out.println("entra register");	
+		return "perfilhotel";
+	}
+	
+	@RequestMapping("/hotelcompleto")
+	public String hotelCompleto(HttpServletRequest req) {
+		System.out.println("entra register");	
+		return "hotelCompleto";
+	}
+	
+	//////////////////////////////////////////////////////////
+	
 	/////////////// FOOTER ///////////////////////////////////
 
 	@RequestMapping("/politicaprivacidad")
@@ -139,21 +164,4 @@ public class Controlador {
 	//////////////////////////////////////////////////////////
 	
 	
-	@RequestMapping("/gestionhotel")
-	public String gestionhotel(HttpServletRequest req) {
-		System.out.println("entra gestionhotel");	
-		return "gestionhotel";
-	}
-	
-	@RequestMapping("/perfilhotel")
-	public String perfilhotel(HttpServletRequest req) {
-		System.out.println("entra perfilhotel");	
-		return "perfilhotel";
-	}
-	
-	@RequestMapping("/hotelcompleto")
-	public String hotelCompleto(HttpServletRequest req) {
-		System.out.println("entra hotelcompleto");	
-		return "hotelCompleto";
-	}
 }
