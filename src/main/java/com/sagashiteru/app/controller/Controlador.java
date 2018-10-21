@@ -73,7 +73,7 @@ public class Controlador {
 		List<Hotel> h;
 		
 		h = hotelservice.listHotelLocalizacion(localizacion);
-		
+		req.setAttribute("filtroBusqueda", h);
 		if(h == null) {
 			System.out.println("paso 2 " + localizacion);
 			h=hotelservice.listHotelNombre(localizacion);
@@ -81,6 +81,9 @@ public class Controlador {
 			
 			session.setAttribute("filtroBusqueda", h);
 			req.setAttribute("filtroBusqueda", h);
+		}
+		for (Hotel hotel : h) {
+			System.out.println(hotel.getCif());
 		}
 		session.setAttribute("filtroBusqueda", h);
 		req.setAttribute("filtroBusqueda", h);	
@@ -104,6 +107,7 @@ public class Controlador {
 	@RequestMapping("/perfilcliente")
 	public String perfilcliente(HttpServletRequest req) {
 		System.out.println("entra perfil cliente");	
+		
 		return "perfilcliente";
 	}
 	
@@ -132,11 +136,6 @@ public class Controlador {
 		return "perfilhotel";
 	}
 	
-	@RequestMapping("/hotelcompleto")
-	public String hotelCompleto(HttpServletRequest req) {
-		System.out.println("entra register");	
-		return "hotelCompleto";
-	}
 	
 	//////////////////////////////////////////////////////////
 	

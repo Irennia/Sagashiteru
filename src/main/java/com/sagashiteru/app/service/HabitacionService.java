@@ -37,7 +37,13 @@ public class HabitacionService implements IHabitacionService {
 	@Override
 	public List<Habitacion> listarHab(String cif) {
 		
-		return habitacionRepository.listbycif(cif).get();
+		Optional<List<Habitacion>> list = habitacionRepository.listbycif(cif);
+		if(list.isPresent()) {
+			return list.get();
+		} else {
+			return null;
+		}
+		
 	}
 
 	@Override

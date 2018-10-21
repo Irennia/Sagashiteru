@@ -492,6 +492,28 @@ public class Controlador_Web {
 		
 		return "gestionhotel";
 	}
+	
+	@RequestMapping("/hotelcompleto")
+	public String hotelCompleto(HttpServletRequest req) {
+		System.out.println("entra hotel completo");
+		HttpSession session = req.getSession(true);
+		String cif = (String) req.getParameter("cif");
+		System.out.println(cif);
+		
+		Hotel h;
+		h = hotelservice.findbycif(cif);
+		
+		List<Habitacion> habitaciones = habitacionService.listarHab(cif);
+		
+		if(habitaciones == null) {
+			System.out.println("nulo");
+		}
+		session.setAttribute("habitaciones", habitaciones);
+		
+		req.setAttribute("hotel", h);
+		
+		return "hotelCompleto";
+	}
 }
 
 

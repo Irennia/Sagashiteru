@@ -1,6 +1,7 @@
 package com.sagashiteru.app.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,8 +31,15 @@ public class Hotelservice implements IHotelService {
 
 	@Override
 	public Hotel findbycif(String cif) {
+		System.out.println("Service " + cif);
+		Optional<Hotel> o = hotelrepository.findById(cif);
 		
-		return hotelrepository.findById(cif).get();
+		if(o.isPresent()) {
+			return o.get();
+		} else {
+			return null;
+		}
+		
 	}
 
 	
