@@ -19,85 +19,81 @@
 <link href="css/footer.css" rel='stylesheet' type='text/css' />
 <link href="css/gestionhotel.css" rel='stylesheet' type='text/css' />
 <title>Sagashiteru</title>
-<link rel="shortcut icon" href="img/favicon1.png"/>
+<link rel="shortcut icon" href="img/favicon1.png" />
 
 <style>
 .nav nav-tabs nav-justified-head {
-   
-    width: 400px;
-    background-color: #022557;
+	width: 400px;
+	background-color: #022557;
 }
 
 .nav-item-head a {
-    display: block;
-    color: #d59c01;
-    padding: 8px 16px;
-    text-decoration: none;
-    background-color: #022557;
+	display: block;
+	color: #d59c01;
+	padding: 8px 16px;
+	text-decoration: none;
+	background-color: #022557;
 }
 
-
-.nav-item-head > a:hover {
-    background-color: #d59c01;
-    color: #022557;
-    
+.nav-item-head>a:hover {
+	background-color: #d59c01;
+	color: #022557;
 }
 
 input[type=submit] {
-    padding:5px 15px; 
-    background:#022557; 
-    border:0 none;
-    cursor:pointer;
-    color:white;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
-    margin-top: 20px;
+	padding: 5px 15px;
+	background: #022557;
+	border: 0 none;
+	cursor: pointer;
+	color: white;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 20px;
 }
 
 input[type=submit]:hover {
-    padding:5px 15px; 
-    background:#d59c01; 
-    border:0 none;
-    cursor:pointer;
-    color:#022557;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
-    margin-top: 20px;
+	padding: 5px 15px;
+	background: #d59c01;
+	border: 0 none;
+	cursor: pointer;
+	color: #022557;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 20px;
 }
 
-fieldset { 
-    display: block;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
-    border: 3px groove (internal value);
-    border-radius: 10px;
-    border-color:transparent;
-    margin-top: 20px;
+fieldset {
+	display: block;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+	border: 3px groove(internal value);
+	border-radius: 10px;
+	border-color: transparent;
+	margin-top: 20px;
 }
 
-fieldset:hover { 
-    display: block;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
-    border: 2px groove;
-    margin-top: 20px;
-    border-color:#022557;
+fieldset:hover {
+	display: block;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+	border: 2px groove;
+	margin-top: 20px;
+	border-color: #022557;
 }
-
 </style>
 
 </head>
 <body>
-				<%@ include file="plantillas/headerHotel.jsp"%> 
-	 	
+	<%@ include file="plantillas/headerHotel.jsp"%>
+
 	<div style="margin-top: 80px;"></div>
 
 
@@ -122,9 +118,11 @@ fieldset:hover {
 			<div class="tab-content" id="myTabContent">
 
 				<div class="tab-pane fade show active" id="#inicio" role="tabpanel">
-				<div style="margin-top: 40px;"></div>
+					<div style="margin-top: 40px;"></div>
 					<h3>Bienvenido a la gestion de tu hotel</h3>
-					Aqui podras modificar los datos de tu hotel, añadir y gestionar tus habitaciones y ver las reservas efetuadas en tu hotel</div>
+					Aqui podras modificar los datos de tu hotel, añadir y gestionar tus
+					habitaciones y ver las reservas efetuadas en tu hotel
+				</div>
 
 				<div class="tab-pane fade show" id="hotel" role="tabpanel"
 					aria-labelledby="home-tab">
@@ -133,19 +131,19 @@ fieldset:hover {
 
 					<form class="row register-form" action="/AñadirHotel" method="post">
 						<div class="col-md-6">
-						
+
 							<p>Informacion general de tu hotel</p>
 							<fieldset>
 
 								<legend>¿Como se llama tu hotel?</legend>
 								<div class="form-group">
-									<input type="text"name="nombre" class="form-control" placeholder="Nombre" value=""
-										 > </input><small>Este es el nombre que veran los
-										clientes al buscar alojamiento</small>
+									<input type="text" name="nombre" class="form-control"
+										placeholder="Nombre" value=""> </input><small>Este
+										es el nombre que veran los clientes al buscar alojamiento</small>
 								</div>
 								<div class="form-group">
 									<label>Estrellas</label> <select class='col-md-12 form-control'
-										 id = "estrellas" name="estrellas">
+										id="estrellas" name="estrellas">
 										<option value="0" selected="selected">No aplicable</option>
 										<option value="1">1&nbsp;&#x272F;</option>
 										<option value="2">2&nbsp;&#x272F;&#x272F;</option>
@@ -160,11 +158,11 @@ fieldset:hover {
 								<legend>¿Cuales son los datos de contacto de tu hotel?</legend>
 								<div class="form-group">
 									<label>Nombre de contacto</label> <input type="text"
-										class="form-control" name="contacto" placeholder="" value="" ></input>
+										class="form-control" name="contacto" placeholder="" value=""></input>
 								</div>
 								<div class="form-group">
 									<label>Telefono</label> <input type="tel" class="form-control"
-											name="telefono" placeholder="" value="" ></input>
+										name="telefono" placeholder="" value=""></input>
 								</div>
 							</fieldset>
 
@@ -177,9 +175,9 @@ fieldset:hover {
 								</div>
 								<div class="form-group">
 									<label>País/región</label> <select class='form-control'
-										 name="pais" id="">
-										<option selected=selected>-- Seleccionar
-											país/región --</option>
+										name="pais" id="">
+										<option selected=selected>-- Seleccionar país/región
+											--</option>
 										<option value="Abjasia">Abjasia</option>
 										<option value="Afganistán">Afganistán</option>
 										<option value="Albania">Albania</option>
@@ -469,7 +467,8 @@ fieldset:hover {
 								<legend>Información adicional</legend>
 								<div class="form-group">
 									<label>Descripcion</label>
-									<textarea class="form-control" name="descripcion" placeholder="" value="">Escribe una breve descripcion de tu hotel</textarea>
+									<textarea class="form-control" name="descripcion"
+										placeholder="" value="">Escribe una breve descripcion de tu hotel</textarea>
 
 								</div>
 								<div class="row">
@@ -534,8 +533,8 @@ fieldset:hover {
 
 									<div class="form-group col-sm-4">
 										<div class="radio">
-											<label> <input type="radio" name="animales" value="false"
-												checked></input> <span>No</span>
+											<label> <input type="radio" name="animales"
+												value="false" checked></input> <span>No</span>
 											</label>
 										</div>
 									</div>
@@ -548,8 +547,8 @@ fieldset:hover {
 									<div class="form-group col-sm-4">
 										<div class="radio-block" id="piscina">
 											<div class="radio">
-												<label> <input type="radio" name="piscina" value="true"></input>
-													<span>Sí</span>
+												<label> <input type="radio" name="piscina"
+													value="true"></input> <span>Sí</span>
 												</label>
 											</div>
 										</div>
@@ -557,8 +556,8 @@ fieldset:hover {
 
 									<div class="form-group col-sm-4">
 										<div class="radio">
-											<label> <input type="radio" name="piscina" value="false"
-												checked></input> <span>No</span>
+											<label> <input type="radio" name="piscina"
+												value="false" checked></input> <span>No</span>
 											</label>
 										</div>
 									</div>
@@ -585,18 +584,19 @@ fieldset:hover {
 					<ul class="nav nav-tabs nav-justified" id="myTabHabi"
 						role="tablist">
 
-						<li class="nav-item-head"><a class="nav-link" id="addhabi-tab"
-							data-toggle="tab" href="#addhabi" role="tab"
+						<li class="nav-item-head"><a class="nav-link"
+							id="addhabi-tab" data-toggle="tab" href="#addhabi" role="tab"
 							aria-controls="addhabi" aria-selected="false"> Añadir
 								habitacion </a></li>
 
 
-						<li class="nav-item-head"><a class="nav-link" id="reshabi-tab"
-							data-toggle="tab" href="#reshabi" role="tab" aria-controls="home"
-							aria-selected="false"> Resumen habitaciones </a></li>
+						<li class="nav-item-head"><a class="nav-link"
+							id="reshabi-tab" data-toggle="tab" href="#reshabi" role="tab"
+							aria-controls="home" aria-selected="false"> Resumen
+								habitaciones </a></li>
 
-						<li class="nav-item-head"><a class="nav-link" id="reserva-tab"
-							data-toggle="tab" href="#reservas" role="tab"
+						<li class="nav-item-head"><a class="nav-link"
+							id="reserva-tab" data-toggle="tab" href="#reservas" role="tab"
 							aria-controls="home" aria-selected="false"> Reservas </a></li>
 
 					</ul>
@@ -608,14 +608,15 @@ fieldset:hover {
 							aria-labelledby="addhabi-tab">
 							<h4 class="register-heading">Añade los datos de tu
 								habitacion</h4>
-							<form class="row register-form" action="AñadirHabitacion" method="post">
+							<form class="row register-form" action="AñadirHabitacion"
+								method="post">
 								<div class="col-md-6">
 									<p>Informacion general de la habitacion</p>
 									<fieldset>
 										<legend>Camas</legend>
 										<div class="form-group">
 											<label>Tipo de cama</label> <select
-												class='col-md-12 form-control'  name="camas">
+												class='col-md-12 form-control' name="camas">
 												<option value=" 1 cama individual">1 Cama
 													individual&nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm de ancho</option>
 												<option value="2 camas individuales">2 Camas
@@ -635,7 +636,7 @@ fieldset:hover {
 										<div class="form-group">
 											<label>¿Cuantos clientes pueden dormir en esta
 												habitacion?</label> <select class='col-md-12 form-control'
-												 name="personas" id="personas">
+												name="personas" id="personas">
 												<option value="1">1&nbsp;&#x263B;</option>
 												<option value="2">2&nbsp;&#x263B;&#x263B;</option>
 												<option value="3">3&nbsp;&#x263B;&#x263B;&#x263B;</option>
@@ -649,7 +650,8 @@ fieldset:hover {
 										<legend>Información de la habitacion</legend>
 										<div class="form-group">
 											<label>Descripcion</label>
-											<textarea class="form-control" name="descripcion" placeholder="Escribe una breve descripcion de la habitacion" ></textarea>
+											<textarea class="form-control" name="descripcion"
+												placeholder="Escribe una breve descripcion de la habitacion"></textarea>
 
 										</div>
 										<div class="row">
@@ -705,8 +707,8 @@ fieldset:hover {
 											<div class="form-group col-sm-4">
 												<div class="radio-block" id="aire">
 													<div class="radio">
-														<label> <input type="radio" name="aire" value="true"></input>
-															<span>Sí</span>
+														<label> <input type="radio" name="aire"
+															value="true"></input> <span>Sí</span>
 														</label>
 													</div>
 												</div>
@@ -714,8 +716,8 @@ fieldset:hover {
 
 											<div class="form-group col-sm-4">
 												<div class="radio">
-													<label> <input type="radio" name="aire" value="false"
-														checked></input> <span>No</span>
+													<label> <input type="radio" name="aire"
+														value="false" checked></input> <span>No</span>
 													</label>
 												</div>
 											</div>
@@ -749,13 +751,10 @@ fieldset:hover {
 
 										<legend>Precio base por noche</legend>
 										<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<span class="input-group-text" id="basic-addon1">€/noche</span> 
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1">€/noche</span>
 											</div>
-											<input
-												type='tel' 
-												name="precio"
-												class="form&#X2D;control" 
+											<input type='tel' name="precio" class="form&#X2D;control"
 												id="precio" value="" placeholder=""></input>
 										</div>
 
@@ -773,35 +772,38 @@ fieldset:hover {
 
 
 
-							<c:forEach var="habit" items="">
 
-								<tr>
+
+							<c:forEach var="habit" items="">
 								<tr>
 									<td>Habitacion</td>
 									<td><a href="/modihabi?id_habi=">Modificar</a></td>
 									<td><a href="/borrarhabi?id_habi=">Eliminar</a></td>
 								</tr>
-
 							</c:forEach>
+
 						</div>
 
 						<div class="tab-pane fade show " id="reservas" role="tabpanel"
 							aria-labelledby="home-tab">
 							<h4 class="register-heading">Tus habitaciones reservadas</h4>
 
-							<div class="col-md-6">
+							<div class="col-md-6" style="max-width: 100%">
 								<p>Habitaciones reservadas en tu hotel</p>
-								
+
+
 								<c:forEach var="hotel" items="">
 
-								<tr>
-								<tr>
-									<td>idHabitacion</td>
-									<td>fechas</td>
-									<td>ganancia total</td>
-								</tr>
+									<tr>
+										<td>descripcion</td>
+										<td>dni</td>
+										<td>fecha reserva</td>
+										<td>fecha entrada</td>
+										<td>fecha salida</td>
+										<td>ganancia total</td>
+									</tr>
 
-							</c:forEach>
+								</c:forEach>
 							</div>
 						</div>
 					</div>
@@ -809,7 +811,7 @@ fieldset:hover {
 			</div>
 		</div>
 	</div>
-	
+
 	<div style="margin-bottom: 80px;"></div>
 	<%@ include file="plantillas/footer.jsp"%>
 
