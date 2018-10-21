@@ -18,25 +18,99 @@
 
 <link href="css/footer.css" rel='stylesheet' type='text/css' />
 <link href="css/gestionhotel.css" rel='stylesheet' type='text/css' />
-<title>Gestiona tu hotel</title>
+<title>Sagashiteru</title>
+<link rel="shortcut icon" href="img/favicon1.png"/>
+
+<style>
+.nav nav-tabs nav-justified-head {
+   
+    width: 400px;
+    background-color: #022557;
+}
+
+.nav-item-head a {
+    display: block;
+    color: #d59c01;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #022557;
+}
+
+
+.nav-item-head > a:hover {
+    background-color: #d59c01;
+    color: #022557;
+    
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#022557; 
+    border:0 none;
+    cursor:pointer;
+    color:white;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin-top: 20px;
+}
+
+input[type=submit]:hover {
+    padding:5px 15px; 
+    background:#d59c01; 
+    border:0 none;
+    cursor:pointer;
+    color:#022557;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin-top: 20px;
+}
+
+fieldset { 
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: 3px groove (internal value);
+    border-radius: 10px;
+    border-color:transparent;
+    margin-top: 20px;
+}
+
+fieldset:hover { 
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: 2px groove;
+    margin-top: 20px;
+    border-color:#022557;
+}
+
+</style>
 
 </head>
 <body>
 				<%@ include file="plantillas/headerHotel.jsp"%> 
 	 	
-	
+	<div style="margin-top: 80px;"></div>
 
 
 	<div class="container register">
 		<div class="col-md-9 register-right">
-			<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+			<ul class="nav nav-tabs nav-justified-head" id="myTab" role="tablist">
 
-				<li class="nav-item"><a class="nav-link" id="hotel-tab"
+				<li class="nav-item-head"><a class="nav-link" id="hotel-tab"
 					data-toggle="tab" href="#hotel" role="tab" aria-controls="home"
 					aria-selected="false"> Información general hotel </a></li>
 
 
-				<li class="nav-item"><a class="nav-link" id="habita-tab"
+				<li class="nav-item-head"><a class="nav-link" id="habita-tab"
 					data-toggle="tab" href="#habitaciones" role="tab"
 					aria-controls="home" aria-selected="false"> Habitaciones y
 						precios </a></li>
@@ -48,15 +122,18 @@
 			<div class="tab-content" id="myTabContent">
 
 				<div class="tab-pane fade show active" id="#inicio" role="tabpanel">
+				<div style="margin-top: 40px;"></div>
 					<h3>Bienvenido a la gestion de tu hotel</h3>
 					Aqui podras modificar los datos de tu hotel, añadir y gestionar tus habitaciones y ver las reservas efetuadas en tu hotel</div>
 
 				<div class="tab-pane fade show" id="hotel" role="tabpanel"
 					aria-labelledby="home-tab">
+					<div style="margin-top: 40px;"></div>
 					<h3 class="register-heading">Tu hotel</h3>
 
 					<form class="row register-form" action="#" method="post">
 						<div class="col-md-6">
+						
 							<p>Informacion general de tu hotel</p>
 							<fieldset>
 
@@ -502,22 +579,23 @@
 
 				<div class="tab-pane fade show " id="habitaciones" role="tabpanel"
 					aria-labelledby="home-tab">
-
+					<div style="margin-top: 40px;"></div>
 					<h3 class="register-heading">Tus habitaciones</h3>
+					<div style="margin-top: 20px;"></div>
 					<ul class="nav nav-tabs nav-justified" id="myTabHabi"
 						role="tablist">
 
-						<li class="nav-item"><a class="nav-link" id="addhabi-tab"
+						<li class="nav-item-head"><a class="nav-link" id="addhabi-tab"
 							data-toggle="tab" href="#addhabi" role="tab"
 							aria-controls="addhabi" aria-selected="false"> Añadir
 								habitacion </a></li>
 
 
-						<li class="nav-item"><a class="nav-link" id="reshabi-tab"
+						<li class="nav-item-head"><a class="nav-link" id="reshabi-tab"
 							data-toggle="tab" href="#reshabi" role="tab" aria-controls="home"
 							aria-selected="false"> Resumen habitaciones </a></li>
 
-						<li class="nav-item"><a class="nav-link" id="reserva-tab"
+						<li class="nav-item-head"><a class="nav-link" id="reserva-tab"
 							data-toggle="tab" href="#reservas" role="tab"
 							aria-controls="home" aria-selected="false"> Reservas </a></li>
 
@@ -730,6 +808,8 @@
 			</div>
 		</div>
 	</div>
+	
+	<div style="margin-bottom: 80px;"></div>
 	<%@ include file="plantillas/footer.jsp"%>
 
 </body>

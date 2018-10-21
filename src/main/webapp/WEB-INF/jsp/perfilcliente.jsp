@@ -3,6 +3,32 @@
 <!DOCTYPE html>
 <html>
 <%@ include file="plantillas/head.jsp"%>
+<style>
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#022557; 
+    border:0 none;
+    cursor:pointer;
+    color:white;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin-top: 20px;
+}
+
+input[type=submit]:hover {
+    padding:5px 15px; 
+    background:#d59c01; 
+    border:0 none;
+    cursor:pointer;
+    color:#022557;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin-top: 20px;
+}
+
+
+</style>
 
 <body>
 	<%@ include file="plantillas/headerCliente.jsp"%>
@@ -85,7 +111,7 @@
 
 
 
-
+<div style="margin-bottom: 80px;"></div>
 
 	<%@ include file="plantillas/footer.jsp"%>
 
