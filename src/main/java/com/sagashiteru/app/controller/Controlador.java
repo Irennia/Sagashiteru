@@ -97,10 +97,19 @@ public class Controlador {
 	
 	//////////////////////////////////////////////////////////
 	
+	//////////////// CLIENTE /////////////////////////////////
 	@RequestMapping("/perfilcliente")
 	public String perfilcliente(HttpServletRequest req) {
 		System.out.println("entra perfil cliente");	
 		return "perfilcliente";
+	}
+	
+	
+	@RequestMapping("/misReservas")
+	public String misReservas(HttpServletRequest req) {
+		System.err.println("entra");
+		
+		return "misReservas";
 	}
 	
 	/////////////// FOOTER ///////////////////////////////////

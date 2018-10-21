@@ -22,7 +22,7 @@
 					<li class="nav-item">
 						<ul class="nav navbar-nav">
 							<li class="dropdown" style="margin-top: 8px; margin-left: 30px; line-height: 2;">
-								<a href="" class="dropdown-toggle" data-toggle="dropdown">Hotel</a>
+								<a href="" class="dropdown-toggle" data-toggle="dropdown">${cif}</a>
 								<ul class="dropdown-menu" style="padding: 20px;">
 									<li><a href="/perfilhotel" style="color: #022557; text-decoration: none;">Perfil</a></li>
 									<li class="divider"></li>

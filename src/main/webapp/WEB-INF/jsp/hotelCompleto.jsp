@@ -140,7 +140,7 @@
 				  <div class="row">
 				    <div class="col-lg-5">
 				      <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-				        <img class="img-fluid" src="img/hotel/habitacion1.jpg" alt="Sample image" style="max-width: 500px;">
+				        <img class="img-fluid" src="img/hotel/habitacion1.jpg" alt="Sample image" style="max-width: 500px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.31);">
 				      </div>
 				    </div>
 				    <div class="col-lg-7" style="padding-top: 11px; padding-left: 75px;">
@@ -152,7 +152,7 @@
 							aut officiis debitis.
 						</p>
 						
-						<span style="color: green;">Precio</span><br><br>
+						<span style="color: green;"><strong>Precio</strong></span><br><br>
 						
 						<p><strong>Servicios</strong></p>
 							<ul class="list-inline">

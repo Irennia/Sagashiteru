@@ -21,12 +21,13 @@
 					     <li class="nav-item"> <a class="nav-link" href="/contacto" style="color: white;">Nosotros</a> </li>
 					     <li class="nav-item"> 
 					     	<ul class="nav navbar-nav">
+					     	
 						        <li class="dropdown" style="margin-top: 8px; margin-left: 30px; line-height: 2;">
-						          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #022557;">Cliente</a>
+						          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #022557;">${dni}</a>
 						          <ul class="dropdown-menu" style="padding: 20px;">
 						            <li><a href="/perfilcliente" style="color: #022557; text-decoration: none;">Perfil</a></li>
 						            <li class="divider"></li>
-						            <li><a href="#" style="color: #022557; text-decoration: none;">Mis Reservas</a></li>
+						            <li><a href="/misReservas" style="color: #022557; text-decoration: none;">Mis Reservas</a></li>
 						            <li class="divider" style="margin-top: 10px;"></li>
 						            <li><a href="/cerrarsesion"><button class="btn btn-danger" style="height: 40px;">Cerrar Sesión</button></a></li>
 						          </ul>
@@ -62,7 +63,7 @@
 								<li class="nav-item">
 									<ul class="nav navbar-nav">
 										<li class="dropdown" style="margin-top: 8px; margin-left: 30px; line-height: 2;">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #022557;">Hotel</a>
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #022557;">${cif}</a>
 											<ul class="dropdown-menu" style="padding: 20px;">
 												<li><a href="/perfilhotel" style="color: #022557; text-decoration: none;">Perfil</a></li>
 												<li class="divider"></li>
@@ -119,7 +120,7 @@
 		</div>
 		  <div class="swiper-wrapper">
 		    <div class="swiper-slide slider-bg-position" style="background:url(img/slider4.jpg)" data-hash="slide1">
-		      <h2>tú web de hoteles</h2>
+		      <h2>tú web de hoteles deluxe</h2>
 		    </div>
 		    <!-- <div class="swiper-slide slider-bg-position" style="background:url(img/slider3.jpg)" data-hash="slide2">
 		      <h2></h2>

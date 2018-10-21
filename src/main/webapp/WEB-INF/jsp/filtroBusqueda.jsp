@@ -45,17 +45,17 @@
 			 	margin: 0 auto; */
 			 	clear: both;
 			 	float: left;
-			 	margin-top: -901px;
-			 	margin-left: -198px;
-			 	width: 37%;
-			    padding: 40px;
+			 	position: fixed;
+			 	margin-top: -1461px;
+			 	margin-left: -217px;
+			 	width: 25%;
+			    padding: 31px;
 				background:#212C88;
 				color: #FFF;
 			    text-shadow: none;
 				-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
 				-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
-				box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
-			
+				box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.31);			
 			}
 			span.input-group-addon i {
 			    color: #009edf;
@@ -80,7 +80,7 @@
 	 	</c:choose>
 		
 		 <c:if test = "${empty filtroBusqueda}">
-		 	<div class="container" style="margin-top: 350px; margin-bottom: 450px; margin-left: 26%; max-width: 100%; float: right; margin-right: -163px;">
+		 	<div class="container" style="margin-top: 350px; margin-bottom: 550px; margin-left: 26%; max-width: 100%; float: right; margin-right: -163px;">
 				<h4 style="text-align: center;">No existen hoteles</h4><br><br>
 				<div style="margin-left: 43%;">
 					<h5>¿Quiéres Anunciarte?</h5><br>
@@ -90,7 +90,7 @@
 			
 			<div class="container">
 				<div class="main">
-					<div class="main-center" style="margin-top: -864px;">
+					<div class="main-center" style="margin-top: 90px; margin-bottom: 450px; margin-left: -13%; max-width: 100%; float: left;">
 					<h5 style="font-weight: bold;">Filtra tu Busqueda</h5><br>
 						<form class="" method="post" action="#">
 							
@@ -147,11 +147,11 @@
 		 
 		 <c:if test = "${not empty filtroBusqueda}">
 		 
-			<div class="carousel-inner" style="margin-top:200px; text-align: center; margin-bottom: 380px;">
+			<div class="carousel-inner" style="margin-top:173px; text-align: center; margin-bottom: 380px;">
 				<div class="item carousel-item active" style="max-width: 80%; float: right; margin-left: 70px; margin-right: -200px;">
-					<div class="row">
+					<div class="row" style="margin-bottom: 10px;">
 					<c:forEach var="o" items="${filtroBusqueda}">
-					<div class="col-md-3 column productbox" style="background-color:#ededf2; margin-left: 20px; padding:40px; width: 300px; text-align:center; box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);">
+					<div class="col-md-3 column productbox" style="background-color:#ededf2; margin-left: 20px; padding:40px; width: 300px; text-align:center; box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.31); margin-bottom: 60px;">
 						<div class="col-lm-2">
 							<div class="thumb-wrapper">
 								<div class="img-box">
