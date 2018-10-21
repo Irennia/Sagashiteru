@@ -40,31 +40,31 @@ public class Controlador {
 	
 	@RequestMapping("/noentras")
 	public String index(HttpServletRequest req) {
-		System.err.println("entra");
+		System.err.println("entra noentra");
 		return "principal";
 	}
 	
 	@RequestMapping("/sagashiteru")
 	public String index1(HttpServletRequest req) {
-		System.err.println("entra");
+		System.err.println("entra sagashiteru");
 		return index(req);
 	}
 	
 	@RequestMapping("/loginCliente")
 	public String loginCliente(HttpServletRequest req) {
-		System.err.println("entra");
+		System.err.println("entra login cliente");
 		return "loginCliente";
 	}
 	
 	@RequestMapping("/registrohotel")
 	public String registrohotel(HttpServletRequest req) {
-		System.err.println("entra");
+		System.err.println("entra registro hotel");
 		return "registrohotel";
 	}
 	
 	@RequestMapping("/filtroBusqueda")
 	public String filtroBusqueda(HttpServletRequest req) {
-		System.err.println("entra");
+		System.err.println("entra filtro busqueda");
 		
 		String localizacion = req.getParameter("localizacion");
 		System.out.println(localizacion);
@@ -87,7 +87,7 @@ public class Controlador {
 	
 	@RequestMapping("/cerrarsesion")
 	public String cerrarsesion(HttpServletRequest req) {
-		System.err.println("entra");
+		System.err.println("entra cerrar sesion");
 		
 		HttpSession session = req.getSession(true);
 		session.invalidate();
@@ -108,7 +108,7 @@ public class Controlador {
 	
 	@RequestMapping("/misReservas")
 	public String misReservas(HttpServletRequest req) {
-		System.err.println("entra");
+		System.err.println("entra mis reservas");
 		
 		return "misReservas";
 	}
@@ -117,19 +117,19 @@ public class Controlador {
 
 	@RequestMapping("/politicaprivacidad")
 	public String politicaprivacidad(HttpServletRequest req) {
-		System.out.println("entra register");	
+		System.out.println("entra privacidad");	
 		return "politicaprivacidad";
 	}
 	
 	@RequestMapping("/terminosycondiciones")
 	public String terminosycondiciones(HttpServletRequest req) {
-		System.out.println("entra register");	
+		System.out.println("entra terminos");	
 		return "terminosycondiciones";
 	}
 	
 	@RequestMapping("/contacto")
 	public String contacto(HttpServletRequest req) {
-		System.out.println("entra register");	
+		System.out.println("entra contacto");	
 		return "contacto";
 	}
 	
@@ -139,19 +139,19 @@ public class Controlador {
 	
 	@RequestMapping("/gestionhotel")
 	public String gestionhotel(HttpServletRequest req) {
-		System.out.println("entra register");	
+		System.out.println("entra gestionhotel");	
 		return "gestionhotel";
 	}
 	
 	@RequestMapping("/perfilhotel")
 	public String perfilhotel(HttpServletRequest req) {
-		System.out.println("entra register");	
+		System.out.println("entra perfilhotel");	
 		return "perfilhotel";
 	}
 	
 	@RequestMapping("/hotelcompleto")
 	public String hotelCompleto(HttpServletRequest req) {
-		System.out.println("entra register");	
+		System.out.println("entra hotelcompleto");	
 		return "hotelCompleto";
 	}
 }
