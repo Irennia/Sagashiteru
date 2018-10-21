@@ -92,7 +92,7 @@
 				<div class="main">
 					<div class="main-center" style="margin-top: 90px; margin-bottom: 450px; margin-left: -13%; max-width: 100%; float: left;">
 					<h5 style="font-weight: bold;">Filtra tu Busqueda</h5><br>
-						<form class="" method="post" action="#">
+						<form class="" method="post" action="filtroshabitacion">
 							
 							<div>
 								<label>Nombre/Destino del Hotel</label>
@@ -125,15 +125,15 @@
 							<div>
 								<label>Piscina</label>
 								<div>
-									<input type="radio" name="animales" value="si"/><label>&nbsp;Si</label>&nbsp;
-									<input type="radio" name="animales" value="no"/><label>&nbsp;No</label>
+									<input type="radio" name="piscina" value="true"/><label>&nbsp;Si</label>&nbsp;
+									<input type="radio" name="piscina" value="false"/><label>&nbsp;No</label>
 								</div>
 							</div><br>
 							<div>
 								<label>Animales</label>
 								<div>
-									<input type="radio" name="animales" value="si"/><label>&nbsp;Si</label>&nbsp;
-									<input type="radio" name="animales" value="no"/><label>&nbsp;No</label>
+									<input type="radio" name="animales" value="true"/><label>&nbsp;Si</label>&nbsp;
+									<input type="radio" name="animales" value="false"/><label>&nbsp;No</label>
 								</div>
 							</div><br>
 							
@@ -176,7 +176,7 @@
 				<div class="main">
 					<div class="main-center">
 					<h5 style="font-weight: bold;">Filtra tu Busqueda</h5><br>
-						<form class="" method="post" action="#">
+						<form class="" method="post" action="filtroshabitacion">
 							
 							<div>
 								<label>Nombre/Destino del Hotel</label>
@@ -209,15 +209,15 @@
 							<div>
 								<label>Piscina</label>
 								<div>
-									<input type="radio" name="animales" value="si"/><label>&nbsp;Si</label>&nbsp;
-									<input type="radio" name="animales" value="no"/><label>&nbsp;No</label>
+									<input type="radio" name="piscina" value="true"/><label>&nbsp;Si</label>&nbsp;
+									<input type="radio" name="piscina" value="false"/><label>&nbsp;No</label>
 								</div>
 							</div><br>
 							<div>
 								<label>Animales</label>
 								<div>
-									<input type="radio" name="animales" value="si"/><label>&nbsp;Si</label>&nbsp;
-									<input type="radio" name="animales" value="no"/><label>&nbsp;No</label>
+									<input type="radio" name="animales" value="true"/><label>&nbsp;Si</label>&nbsp;
+									<input type="radio" name="animales" value="false"/><label>&nbsp;No</label>
 								</div>
 							</div><br>
 							

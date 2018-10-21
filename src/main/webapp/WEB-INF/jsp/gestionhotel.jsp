@@ -131,7 +131,7 @@ fieldset:hover {
 					<div style="margin-top: 40px;"></div>
 					<h3 class="register-heading">Tu hotel</h3>
 
-					<form class="row register-form" action="#" method="post">
+					<form class="row register-form" action="/AñadirHotel" method="post">
 						<div class="col-md-6">
 						
 							<p>Informacion general de tu hotel</p>
@@ -139,13 +139,13 @@ fieldset:hover {
 
 								<legend>¿Como se llama tu hotel?</legend>
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Nombre"
-										value="" /> <small>Este es el nombre que veran los
+									<input type="text"name="nombre" class="form-control" placeholder="Nombre" value=""
+										 > </input><small>Este es el nombre que veran los
 										clientes al buscar alojamiento</small>
 								</div>
 								<div class="form-group">
 									<label>Estrellas</label> <select class='col-md-12 form-control'
-										id='stars' name='stars'>
+										 id = "estrellas" name="estrellas">
 										<option value="0" selected="selected">No aplicable</option>
 										<option value="1">1&nbsp;&#x272F;</option>
 										<option value="2">2&nbsp;&#x272F;&#x272F;</option>
@@ -160,11 +160,11 @@ fieldset:hover {
 								<legend>¿Cuales son los datos de contacto de tu hotel?</legend>
 								<div class="form-group">
 									<label>Nombre de contacto</label> <input type="text"
-										class="form-control" placeholder="" value="" />
+										class="form-control" name="contacto" placeholder="" value="" ></input>
 								</div>
 								<div class="form-group">
 									<label>Telefono</label> <input type="tel" class="form-control"
-										placeholder="" value="" />
+											name="telefono" placeholder="" value="" ></input>
 								</div>
 							</fieldset>
 
@@ -173,12 +173,12 @@ fieldset:hover {
 								<legend>¿Donde se encuentra tu hotel?</legend>
 								<div class="form-group">
 									<label>Calle</label> <input type="text" class="form-control"
-										placeholder="" value="" />
+										name="calle" placeholder="" value=""></input>
 								</div>
 								<div class="form-group">
 									<label>País/región</label> <select class='form-control'
-										id='pais' name='pais'>
-										<option value="" selected=selected>-- Seleccionar
+										 name="pais" id="">
+										<option selected=selected>-- Seleccionar
 											país/región --</option>
 										<option value="Abjasia">Abjasia</option>
 										<option value="Afganistán">Afganistán</option>
@@ -455,12 +455,12 @@ fieldset:hover {
 								</div>
 								<div class="form-group">
 									<label>Ciudad</label> <input type="text" class="form-control"
-										placeholder="" value="" />
+										name="localizacion" placeholder="" value=""></input>
 								</div>
 
 								<div class="form-group">
 									<label>Codigo postal</label> <input type="text"
-										class="form-control" placeholder="" value="" />
+										class="form-control" name="codigo" placeholder="" value=""></input>
 								</div>
 
 							</fieldset>
@@ -469,7 +469,7 @@ fieldset:hover {
 								<legend>Información adicional</legend>
 								<div class="form-group">
 									<label>Descripcion</label>
-									<textarea class="form-control" placeholder="" value="">Escribe una breve descripcion de tu hotel</textarea>
+									<textarea class="form-control" name="descripcion" placeholder="" value="">Escribe una breve descripcion de tu hotel</textarea>
 
 								</div>
 								<div class="row">
@@ -480,7 +480,7 @@ fieldset:hover {
 										<div class="radio-block" id="servhabitaciones">
 											<div class="radio">
 												<label> <input type="radio" name="servhabitaciones"
-													value="1"> <span>Sí</span>
+													value="true"></input> <span>Sí</span>
 												</label>
 											</div>
 										</div>
@@ -489,7 +489,7 @@ fieldset:hover {
 									<div class="form-group col-sm-4">
 										<div class="radio">
 											<label> <input type="radio" name="servhabitaciones"
-												value="0" checked> <span>No</span>
+												value="false" checked></input> <span>No</span>
 											</label>
 										</div>
 									</div>
@@ -502,7 +502,7 @@ fieldset:hover {
 									<div class="form-group col-sm-4">
 										<div class="radio-block" id="wifi">
 											<div class="radio">
-												<label> <input type="radio" name="wifi" value="1">
+												<label> <input type="radio" name="wifi" value="true"></input>
 													<span>Sí</span>
 												</label>
 											</div>
@@ -511,8 +511,8 @@ fieldset:hover {
 
 									<div class="form-group col-sm-4">
 										<div class="radio">
-											<label> <input type="radio" name="wifi" value="0"
-												checked> <span>No</span>
+											<label> <input type="radio" name="wifi" value="false"
+												checked></input> <span>No</span>
 											</label>
 										</div>
 									</div>
@@ -526,7 +526,7 @@ fieldset:hover {
 										<div class="radio-block" id="animales">
 											<div class="radio">
 												<label> <input type="radio" name="animales"
-													value="1"> <span>Sí</span>
+													value="true"></input> <span>Sí</span>
 												</label>
 											</div>
 										</div>
@@ -534,8 +534,8 @@ fieldset:hover {
 
 									<div class="form-group col-sm-4">
 										<div class="radio">
-											<label> <input type="radio" name="animales" value="0"
-												checked> <span>No</span>
+											<label> <input type="radio" name="animales" value="false"
+												checked></input> <span>No</span>
 											</label>
 										</div>
 									</div>
@@ -548,7 +548,7 @@ fieldset:hover {
 									<div class="form-group col-sm-4">
 										<div class="radio-block" id="piscina">
 											<div class="radio">
-												<label> <input type="radio" name="piscina" value="1">
+												<label> <input type="radio" name="piscina" value="true"></input>
 													<span>Sí</span>
 												</label>
 											</div>
@@ -557,8 +557,8 @@ fieldset:hover {
 
 									<div class="form-group col-sm-4">
 										<div class="radio">
-											<label> <input type="radio" name="piscina" value="0"
-												checked> <span>No</span>
+											<label> <input type="radio" name="piscina" value="false"
+												checked></input> <span>No</span>
 											</label>
 										</div>
 									</div>
@@ -608,19 +608,19 @@ fieldset:hover {
 							aria-labelledby="addhabi-tab">
 							<h4 class="register-heading">Añade los datos de tu
 								habitacion</h4>
-							<form class="row register-form" action="#" method="post">
+							<form class="row register-form" action="AñadirHabitacion" method="post">
 								<div class="col-md-6">
 									<p>Informacion general de la habitacion</p>
 									<fieldset>
 										<legend>Camas</legend>
 										<div class="form-group">
 											<label>Tipo de cama</label> <select
-												class='col-md-12 form-control' id='stars' name='stars'>
-												<option value="1 cama individual">1 Cama
+												class='col-md-12 form-control'  name="camas">
+												<option value=" 1 cama individual">1 Cama
 													individual&nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm de ancho</option>
 												<option value="2 camas individuales">2 Camas
 													individuales&nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm de ancho</option>
-												<option value="1 cama doble">1 Cama
+												<option value="1 cama doble">1 Cama doble
 													doble&nbsp;&nbsp;/&nbsp;&nbsp;131-150 cm de ancho</option>
 												<option value="1 cama doble y 1 cama individual">1
 													Cama doble&nbsp;&nbsp;/&nbsp;&nbsp;131-150 cm de ancho y 1
@@ -635,7 +635,7 @@ fieldset:hover {
 										<div class="form-group">
 											<label>¿Cuantos clientes pueden dormir en esta
 												habitacion?</label> <select class='col-md-12 form-control'
-												id='stars' name='stars'>
+												 name="personas" id="personas">
 												<option value="1">1&nbsp;&#x263B;</option>
 												<option value="2">2&nbsp;&#x263B;&#x263B;</option>
 												<option value="3">3&nbsp;&#x263B;&#x263B;&#x263B;</option>
@@ -649,7 +649,7 @@ fieldset:hover {
 										<legend>Información de la habitacion</legend>
 										<div class="form-group">
 											<label>Descripcion</label>
-											<textarea class="form-control" placeholder="" value="">Escribe una breve descripcion de la habitacion</textarea>
+											<textarea class="form-control" name="descripcion" placeholder="Escribe una breve descripcion de la habitacion" ></textarea>
 
 										</div>
 										<div class="row">
@@ -660,7 +660,7 @@ fieldset:hover {
 												<div class="radio-block" id="fumador">
 													<div class="radio">
 														<label> <input type="radio" name="fumador"
-															value="1"> <span>Sí</span>
+															value="true"></input> <span>Sí</span>
 														</label>
 													</div>
 												</div>
@@ -669,7 +669,7 @@ fieldset:hover {
 											<div class="form-group col-sm-4">
 												<div class="radio">
 													<label> <input type="radio" name="fumador"
-														value="0" checked> <span>No</span>
+														value="false" checked></input> <span>No</span>
 													</label>
 												</div>
 											</div>
@@ -682,7 +682,7 @@ fieldset:hover {
 											<div class="form-group col-sm-4">
 												<div class="radio-block" id="tv">
 													<div class="radio">
-														<label> <input type="radio" name="tv" value="1">
+														<label> <input type="radio" name="tv" value="true"></input>
 															<span>Sí</span>
 														</label>
 													</div>
@@ -691,8 +691,8 @@ fieldset:hover {
 
 											<div class="form-group col-sm-4">
 												<div class="radio">
-													<label> <input type="radio" name="tv" value="0"
-														checked> <span>No</span>
+													<label> <input type="radio" name="tv" value="false"
+														checked></input> <span>No</span>
 													</label>
 												</div>
 											</div>
@@ -705,7 +705,7 @@ fieldset:hover {
 											<div class="form-group col-sm-4">
 												<div class="radio-block" id="aire">
 													<div class="radio">
-														<label> <input type="radio" name="aire" value="1">
+														<label> <input type="radio" name="aire" value="true"></input>
 															<span>Sí</span>
 														</label>
 													</div>
@@ -714,8 +714,8 @@ fieldset:hover {
 
 											<div class="form-group col-sm-4">
 												<div class="radio">
-													<label> <input type="radio" name="aire" value="0"
-														checked> <span>No</span>
+													<label> <input type="radio" name="aire" value="false"
+														checked></input> <span>No</span>
 													</label>
 												</div>
 											</div>
@@ -729,7 +729,7 @@ fieldset:hover {
 												<div class="radio-block" id="secador">
 													<div class="radio">
 														<label> <input type="radio" name="secador"
-															value="1"> <span>Sí</span>
+															value="true"></input> <span>Sí</span>
 														</label>
 													</div>
 												</div>
@@ -738,7 +738,7 @@ fieldset:hover {
 											<div class="form-group col-sm-4">
 												<div class="radio">
 													<label> <input type="radio" name="secador"
-														value="0" checked> <span>No</span>
+														value="false" checked></input> <span>No</span>
 													</label>
 												</div>
 											</div>
@@ -753,9 +753,10 @@ fieldset:hover {
 											<span class="input-group-text" id="basic-addon1">€/noche</span> 
 											</div>
 											<input
-												type='tel' id='precio noche'
-												name='precio noche' value=''
-												class="form&#X2D;control" placeholder='0'>
+												type='tel' 
+												name="precio"
+												class="form&#X2D;control" 
+												id="precio" value="" placeholder=""></input>
 										</div>
 
 									</fieldset>
