@@ -97,6 +97,11 @@ public class Controlador {
 	
 	//////////////////////////////////////////////////////////
 	
+	@RequestMapping("/perfilcliente")
+	public String perfilcliente(HttpServletRequest req) {
+		System.out.println("entra perfil cliente");	
+		return "perfilcliente";
+	}
 	
 	/////////////// FOOTER ///////////////////////////////////
 
