@@ -245,9 +245,41 @@ public class Controlador_Web {
 
 			System.out.println("piscinas : " + piscinas);
 			
+			List<Hotel> lista = new ArrayList<>();
+			if(hotelservice.listHotelLocalizacion(nombre).isEmpty()) {
+				if(hotelservice.listHotelNombre(nombre).isEmpty()){
+				return "filtroBusqueda"	;
+					
+				}else {
+					List<Hotel> list = 	hotelservice.listHotelNombre(nombre);
+					for (Hotel hotel : list) {
+						if(hotel.isAnimales()==animales) {
+							if(hotel.isPiscina()==piscinas) {
+								lista.add(hotel);
+							}
+						}
+					}
+					
+				}
+			}else {
+		List<Hotel> list = 	hotelservice.listHotelLocalizacion(nombre);
+		for (Hotel hotel : list) {
+			if(hotel.isAnimales()==animales) {
+				if(hotel.isPiscina()==piscinas) {
+					lista.add(hotel);
+				}
+			}
+		}
+			
+			}
+			
+		if(lista.isEmpty()) {
+			
+			return "filtroBusqueda";
+		}else {
 			
 			
-			
+		}
 
 			return "filtroBusqueda";
 
@@ -783,8 +815,7 @@ public class Controlador_Web {
 		
 		
 		int id_habitacion = (int) session.getAttribute("id_habitacion");
-		Habitacion habitacion =habitacionService.findById(id_habitacion);
-		session.setAttribute("habitacion", habitacion);
+		
 		System.out.println(id_habitacion);
 		
 		Reserva reserva = (Reserva) session.getAttribute("reserva");
@@ -909,6 +940,7 @@ public class Controlador_Web {
 	session.setAttribute("fechas", fechas);
 	session.setAttribute("id_habitacion",id_habitacion);
 	
+	session.setAttribute("habitacion", habitacion);
 	Hotel hotel = hotelservice.findbycif(habitacion.getCif());
 	session.setAttribute("hotelreserva", hotel);
 	
