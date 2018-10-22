@@ -119,7 +119,7 @@
 						<br>
 						<span style="color: green;"><strong>${h.precio}&nbsp;€</strong></span><br><br>
 						<input type="hidden" value="${h.id_habitacion}" name="id_habitacion">
-						<input type="hidden" value="${cliente.dni}" name="dni">
+			
 						<p><strong>Servicios</strong></p>
 							<ul class="list-inline">
 							  <li class="list-inline-item" >Fumador</li>
@@ -129,20 +129,21 @@
 							  <li class="list-inline-item">Aire</li>
 							  <li class="list-inline-item">Secador</li>
 							</ul>
-						</form> 
+						
 							
 						<c:if test = "${empty dni}">
 							<a href="/loginCliente"><button class="btn btn-warning btn-md" type="submit">Reservar</button></a>
 						</c:if>
 						<c:if test = "${not empty dni}">
-							<a href="/reserva"><button class="btn btn-warning btn-md" type="submit">Reservar</button></a>
+						<button class="btn btn-warning btn-md" type="submit">Reservar</button>
 						</c:if>
-						
+						</form>
 				    </div>
 				  </div>
 				  <hr class="my-5">
 				</div>
 			</c:forEach>
+		
 		</div>
 		
 		<script>

@@ -47,11 +47,11 @@
 		
 			<form action="/confirmarreserva" class="text-center border border-light p-5">
 			    <p class="h4 mb-4">Confirma la Reserva</p>
-			    <input type="text" class="form-control mb-4" placeholder="hotel">
-			    <input type="text" class="form-control mb-4" placeholder="habitacion">
-			    <input type="text" class="form-control mb-4" placeholder="fechaentrada">
-			    <input type="text" class="form-control mb-4" placeholder="fechasalida">
-				<span style="color: green;" style="text-align: left;"><strong>precio&nbsp;€</strong></span><br>	
+			    <span  class="form-control mb-4" > ${hotelreserva.nombre} </span>
+			   <span  class="form-control mb-4" > ${id_habitacion} </span>
+			     <span  class="form-control mb-4" > ${fechap} </span>
+			     <span  class="form-control mb-4" > ${fechaf} </span>
+				<span style="color: green;" style="text-align: left;"><strong>${precio}&nbsp;€</strong></span><br>	
 			    <br>
 			    
 			    <%-- <c:if test="${empty }"> --%>

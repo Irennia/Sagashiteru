@@ -1,5 +1,11 @@
 package com.sagashiteru.app.controller;
 
+import java.security.Timestamp;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -16,9 +22,11 @@ import com.sagashiteru.app.iservice.IClienteService;
 import com.sagashiteru.app.iservice.IHabitacionService;
 import com.sagashiteru.app.iservice.IHotelService;
 import com.sagashiteru.app.iservice.IReservaService;
+import com.sagashiteru.app.model.Calendario;
 import com.sagashiteru.app.model.Cliente;
 import com.sagashiteru.app.model.Habitacion;
 import com.sagashiteru.app.model.Hotel;
+import com.sagashiteru.app.model.Reserva;
 import com.sagashiteru.app.service.Hotelservice;
 
 import javassist.bytecode.stackmap.BasicBlock.Catch;
@@ -760,19 +768,153 @@ public class Controlador_Web {
 	
 	
 	
-	@RequestMapping("/reserva")
-	public String reserva(HttpServletRequest req) {
-		System.out.println("entra en reserva");	
-		
-		
-		return "confirmarReserva";
-	}
+	
 	
 	@RequestMapping("/confirmarreserva")
 	public String confirmarReserva(HttpServletRequest req) {
 		System.out.println("entra en confirmar reserva");	
 		
+		try{
+			HttpSession session = req.getSession(true);
+			System.out.println("entra");
+		Cliente cliente = (Cliente) session.getAttribute("cliente");
+		
+		
+		
+		int id_habitacion = (int) session.getAttribute("id_habitacion");
+		System.out.println(id_habitacion);
+		
+		Reserva reserva = (Reserva) session.getAttribute("reserva");
+		List<Date> fechas = 	(List<Date>) session.getAttribute("fechas");
+		
+		for (Date date : fechas) {
+			
+			Calendario c = new Calendario();
+			c.setId_reserva(reserva.getId_reserva());
+			c.setFecha(date);
+			c.setId_habitacion(id_habitacion);
+			System.out.println(c.getFecha());
+			calendarioService.add(c);
+		}
+	String mensaje = "Se ha agragdao correcta mente la reserva";
+	req.setAttribute("mensaje", mensaje);
+		reservaService.add(reserva);
+		
+	List<Reserva> rs =	reservaService.listbyDni(cliente.getDni());
+		session.setAttribute("rs", rs);
 		
 		return "misReservas";
+	}catch(NullPointerException e) {
+		
+		
+		
+		return "principal";
+	}catch(Exception r	) {
+		return "principal";
+		
 	}
+	}
+
+	@RequestMapping("/reservahabitacion")
+	public String reservarhabitacion(HttpServletRequest req) {
+		try {
+			System.out.println("reserva abitacion");
+		HttpSession session = req.getSession(true);
+		Cliente cliente =(Cliente) session.getAttribute("cliente");
+		System.out.println(cliente.getDni());
+		 
+		
+		
+		Calendario calendario = new Calendario();
+		System.out.println("antes del hotel");
+		
+	
+		
+		Reserva reserva = new Reserva();
+		
+		Date daten = new Date();
+		daten = new java.sql.Timestamp(daten.getTime());
+		System.out.println(daten);
+		System.out.println(daten);
+		
+		Date datep;
+		Date datef;
+		String fechap =req.getParameter("fechap");
+		session.setAttribute("fechap", fechap);
+		System.out.println(fechap);
+		String fechaf = req.getParameter("fechaf");
+		session.setAttribute("fechaf", fechaf);
+		System.out.println(fechaf);
+		int id_habitacion = Integer.parseInt(req.getParameter("id_habitacion"));
+		Habitacion habitacion = habitacionService.findById(id_habitacion);
+		System.out.println(id_habitacion);
+		String dni = cliente.getDni();
+		
+		
+		
+		System.out.println("passeo fechas");
+		DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd");
+			datep = inputFormat.parse(fechap);
+			datef = inputFormat.parse(fechaf);
+			
+			System.out.println("milisegundos");
+			long millis = datep.toInstant().toEpochMilli();
+		    long millis2 = datef.toInstant().toEpochMilli();
+			
+		    long result = millis2-millis;
+		    
+		    long oneDay = 86400000;
+	        
+	        long dias = result/oneDay;
+	        
+	        double precio = habitacion.getPrecio()*dias;
+	        
+	        session.setAttribute("precio", precio);
+	        System.out.println(precio);
+	        System.out.println("lista");
+	        List<Date> fechas = new ArrayList<>() ;
+	        System.out.println("despues lista");
+	        
+	        
+	        fechas.add(datep);
+	        fechas.add(datef);
+	        for (int i = 0; i < dias; i++) {
+	        	
+	        	millis = millis+oneDay;
+	        	Date d = new Date(millis);
+	        	fechas.add(d);
+	        	
+			}
+			
+	       for (Date date : fechas) {
+			
+	    	  if(calendarioService.reserva(datef, id_habitacion)) {
+	    		String mensaje = "Fecha ocupada";
+	    		req.setAttribute("mensaje", mensaje);
+	    		  return "hotelcompleto";
+	    	  }
+		}
+	
+		reserva.setDni(dni);
+		reserva.setFecha_fin(datef);
+		reserva.setFecha_inicio(datep);
+		reserva.setFecha_reserva(daten);
+		
+		System.out.println(reserva.getDni()+ " " + reserva.getFecha_reserva()+ " " + reserva.getFecha_inicio()+ " " + reserva.getFecha_fin());
+		
+	session.setAttribute("reserva", reserva);
+	session.setAttribute("fechas", fechas);
+	session.setAttribute("id_habitacion",id_habitacion);
+	
+	Hotel hotel = hotelservice.findbycif(habitacion.getCif());
+	session.setAttribute("hotelreserva", hotel);
+	
+		return "confirmarReserva";
+		}catch(ParseException e) {
+			return "principal";
+		}catch(NullPointerException t) {
+			
+			return "principal";
+		}
+}
 }
