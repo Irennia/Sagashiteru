@@ -182,5 +182,12 @@ public class Controlador {
 	
 	//////////////////////////////////////////////////////////
 	
-	
+
+	@RequestMapping("/reserva")
+	public String reserva(HttpServletRequest req) {
+		System.out.println("entra en reserva");	
+		
+		
+		return "confirmarReserva";
+	}
 }

@@ -18,7 +18,7 @@
 		  <div class="text-white text-center py-5 px-4 my-5">
 		    <div style="padding-top: 40px;">
 		      <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Mis Reservas</strong></h2>
-		      <a class="btn btn-outline-warning btn-md">Volver al Perfil</a>
+		      <a href="/perfilcliente" class="btn btn-outline-warning btn-md">Volver al Perfil</a>
 		    </div>
 		  </div>
 		</div>

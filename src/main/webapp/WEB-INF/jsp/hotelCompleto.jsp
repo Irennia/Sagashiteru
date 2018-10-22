@@ -56,9 +56,7 @@
 			        <h3 class="card-title">Datos de Contacto</h3>
 			        <div style="margin-left: 20px;">
 				        <p class="card-text">
-				        	<span>C/ Anabel Segura, 11</span><br>
-				        	<span>28108 Alcobendas</span><br>
-				        	<span>Madrid, España</span><br>
+				        	<span>${hotel.direccion}</span>
 				        	<span>${hotel.telefono}</span><br>
 				        	<span>${hotel.email}</span><br>		        	
 				        </p>
@@ -109,7 +107,7 @@
 				        <img class="img-fluid" src="img/hotel/habitacion1.jpg" alt="Sample image" style="max-width: 600px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.31); margin-left: -26%;">
 				      </div>
 				    </div>
-				    <div class="col-lg-7" style="padding-left: 92px; padding-top: 62px;">
+				    <div class="col-lg-7" style="padding-left: 92px; padding-top: 47px;">
 				      <h3 class="font-weight-bold mb-3">${h.descripcion}</h3>
 						
 						<span><strong>Fecha Entrada&nbsp;&nbsp;&nbsp;</strong></span><input type="text" name="" style="width: 100px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
@@ -118,7 +116,7 @@
 						<br>
 						<br>
 						<span style="color: green;"><strong>${h.precio}&nbsp;€</strong></span><br><br>
-						
+						<input type="hidden" value="${h.id_habitacion}" name="id_habitacion">
 						<p><strong>Servicios</strong></p>
 							<ul class="list-inline">
 							  <li class="list-inline-item">Fumador</li>
@@ -134,7 +132,7 @@
 							<a href="/loginCliente" class="btn btn-warning btn-md">Reservar</a>
 						</c:if>
 						<c:if test = "${not empty dni}">
-							<a href="" class="btn btn-warning btn-md">Reservar</a>
+							<a href="/reserva" class="btn btn-warning btn-md">Reservar</a>
 						</c:if>
 						
 				    </div>
