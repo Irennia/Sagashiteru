@@ -107,11 +107,11 @@
 							<div>
 								<label >Estrellas</label><br>
 								<div style="margin-left: 10px;">
-									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="1">&nbsp;&nbsp;1 Estrella<br>
-									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="2">&nbsp;&nbsp;2 Estrellas<br>
-									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="3">&nbsp;&nbsp;3 Estrellas<br>
-									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="4">&nbsp;&nbsp;4 Estrellas<br>
-									<input type="checkbox" name="estrellas" style="margin-left: 10px;" value="5">&nbsp;&nbsp;5 Estrellas<br><br>
+									<input type="radio" name="estrellas" style="margin-left: 10px;" value="1">&nbsp;&nbsp;1 Estrella<br>
+									<input type="radio" name="estrellas" style="margin-left: 10px;" value="2">&nbsp;&nbsp;2 Estrellas<br>
+									<input type="radio" name="estrellas" style="margin-left: 10px;" value="3">&nbsp;&nbsp;3 Estrellas<br>
+									<input type="radio" name="estrellas" style="margin-left: 10px;" value="4">&nbsp;&nbsp;4 Estrellas<br>
+									<input type="radio" name="estrellas" style="margin-left: 10px;" value="5">&nbsp;&nbsp;5 Estrellas<br><br>
 								</div>
 							</div>
 							<div>
