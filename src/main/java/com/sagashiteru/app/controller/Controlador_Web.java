@@ -451,7 +451,7 @@ public class Controlador_Web {
 	}
 
 	@RequestMapping("/listarHabitaciones")
-	public void listarHabitaciones(HttpServletRequest req) {
+	public String listarHabitaciones(HttpServletRequest req) {
 		HttpSession session = req.getSession(true);
 		String cif = (String) session.getAttribute("cif");
 
