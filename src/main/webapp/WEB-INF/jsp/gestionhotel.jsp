@@ -39,12 +39,11 @@
 	background-color: #d59c01;
 	color: #022557;
 }
-.nav-link.active
- {
+
+.nav-link.active {
 	background-color: #d59c01 !important;
 	color: #022557 !important;
 }
-
 
 input[type=submit] {
 	padding: 5px 15px;
@@ -57,13 +56,16 @@ input[type=submit] {
 	margin-top: 20px;
 }
 
-a:not([href]):not([tabindex]){
-color: white !important;
+a:not([href]):not([tabindex]) {
+    color: white !important;
 }
 
-a:not([href]):not([tabindex]):hover{
-	color: #022557 !important;
+a:not([href]):not([tabindex]):hover {
+    color: #022557 !important;
+    text-decoration: none;
 }
+
+
 input[type=submit]:hover {
 	padding: 5px 15px;
 	background: #d59c01;
@@ -145,8 +147,6 @@ fieldset:hover {
 	border-radius: 5px;
 	margin-top: 20px;
 }
-
-
 </style>
 
 </head>
@@ -197,8 +197,8 @@ fieldset:hover {
 								<legend>¿Como se llama tu hotel?</legend>
 								<div class="form-group">
 									<input type="text" name="nombre" class="form-control"
-										placeholder="Nombre" value=""> </input><small>Este
-										es el nombre que veran los clientes al buscar alojamiento</small>
+										placeholder="Nombre" value=""> </input><small>Este es
+										el nombre que veran los clientes al buscar alojamiento</small>
 								</div>
 								<div class="form-group">
 									<label>Estrellas</label> <select class='col-md-12 form-control'
@@ -650,9 +650,9 @@ fieldset:hover {
 
 
 						<li class="nav-item-head"><a class="nav-link"
-							id="reshabi-tab" data-toggle="tab"  href="/listarHabitaciones" data-target="#reshabi" role="tab"
-							aria-controls="home" aria-selected="false"> Resumen
-								habitaciones </a></li>
+							id="reshabi-tab" data-toggle="tab" href="/listarHabitaciones"
+							data-target="#reshabi" role="tab" aria-controls="home"
+							aria-selected="false"> Resumen habitaciones </a></li>
 
 						<li class="nav-item-head"><a class="nav-link"
 							id="reserva-tab" data-toggle="tab" href="#reservas" role="tab"
@@ -834,15 +834,203 @@ fieldset:hover {
 
 
 							<c:forEach var="habit" items="${habitaciones}">
-								
+
 								<tr>
-								<div style="display: flex;margin: 10px;padding: 20px;flex-direction: row;justify-content: flex-end;">
-									<div style="margin-top: 25px;flex-grow: 8"><td >${habit.descripcion}</td></div>
-									<td><a style="margin-right: 45px;" class="boton" role="button" data-toggle="modal" data-target="#modalModiForm">Modificar</a></td>
-									<td><a class="botonrojo" role="button" href="/borrarhabi?id_habi=">Eliminar</a></td>
+									<div
+										style="display: flex; margin: 10px; padding: 20px; flex-direction: row; justify-content: flex-end;">
+										<div style="margin-top: 25px; flex-grow: 8">
+											<td>${habit.descripcion}</td>
+										</div>
+										<td><a style="margin-right: 45px;" class="boton"
+											role="button" data-toggle="modal"
+											data-target="#${habit.id_habitacion}">Modificar</a></td>
+										<td><a class="botonrojo" role="button"
+											href="/borrarhabi?id_habi=">Eliminar</a></td>
 									</div>
 									<div style="margin-bottom: 20px;"></div>
 								</tr>
+
+
+								<div class="modal fade" id="${habit.id_habitacion}"
+									tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+									aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header text-center">
+												<h4 class="modal-title w-100 font-weight-bold">Modifica
+													tu habitacion</h4>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body mx-3">
+												<form action="/pruebahi" method="post">
+													<input type="hidden" value="${habit.id_habitacion}"
+														name="idhabi"></input>
+													<p>Informacion general de la habitacion</p>
+													<fieldset>
+														<legend>Camas</legend>
+														<div class="form-group">
+															<label>Tipo de cama</label> <select
+																class='col-md-12 form-control' name="camas">
+																<option value=" 1 cama individual">1 Cama
+																	individual&nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm de ancho</option>
+																<option value="2 camas individuales">2 Camas
+																	individuales&nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm de ancho</option>
+																<option value="1 cama doble">1 Cama doble
+																	doble&nbsp;&nbsp;/&nbsp;&nbsp;131-150 cm de ancho</option>
+																<option value="1 cama doble y 1 cama individual">1
+																	Cama doble&nbsp;&nbsp;/&nbsp;&nbsp;131-150 cm de ancho
+																	y 1 Cama individual&nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm
+																	de ancho</option>
+																<option value="1 Cama doble grande">1 Cama
+																	doble grande&nbsp;&nbsp;/&nbsp;&nbsp;151-180 cm de
+																	ancho</option>
+																<option value="2 Camas dobles grandes">2 Camas
+																	dobles grandes&nbsp;&nbsp;/&nbsp;&nbsp;151-180 cm de
+																	ancho</option>
+															</select>
+														</div>
+														<div class="form-group">
+															<label>¿Cuantos clientes pueden dormir en esta
+																habitacion?</label> <select class='col-md-12 form-control'
+																name="personas" id="personas">
+																<option value="1">1&nbsp;&#x263B;</option>
+																<option value="2">2&nbsp;&#x263B;&#x263B;</option>
+																<option value="3">3&nbsp;&#x263B;&#x263B;&#x263B;</option>
+																<option value="4">4&nbsp;&#x263B;&#x263B;&#x263B;&#x263B;</option>
+															</select>
+														</div>
+													</fieldset>
+
+													<fieldset>
+
+														<legend>Información de la habitacion</legend>
+														<div class="form-group">
+															<label>Descripcion</label>
+															<textarea class="form-control" name="descripcion"
+																placeholder="Escribe una breve descripcion de la habitacion"></textarea>
+
+														</div>
+														<div class="row">
+															<div class="form-group col-sm-4">
+																<label>Habitacion fumadores</label>
+															</div>
+															<div class="form-group col-sm-4">
+																<div class="radio-block" id="fumador">
+																	<div class="radio">
+																		<label> <input type="radio" name="fumador"
+																			value="true"></input> <span>Sí</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="form-group col-sm-4">
+																<div class="radio">
+																	<label> <input type="radio" name="fumador"
+																		value="false" checked></input> <span>No</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="form-group col-sm-4">
+																<label>TV</label>
+															</div>
+															<div class="form-group col-sm-4">
+																<div class="radio-block" id="tv">
+																	<div class="radio">
+																		<label> <input type="radio" name="tv"
+																			value="true"></input> <span>Sí</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="form-group col-sm-4">
+																<div class="radio">
+																	<label> <input type="radio" name="tv"
+																		value="false" checked></input> <span>No</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="form-group col-sm-4">
+																<label>Aire acondicionado</label>
+															</div>
+															<div class="form-group col-sm-4">
+																<div class="radio-block" id="aire">
+																	<div class="radio">
+																		<label> <input type="radio" name="aire"
+																			value="true"></input> <span>Sí</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="form-group col-sm-4">
+																<div class="radio">
+																	<label> <input type="radio" name="aire"
+																		value="false" checked></input> <span>No</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="form-group col-sm-4">
+																<label>Secador de pelo</label>
+															</div>
+															<div class="form-group col-sm-4">
+																<div class="radio-block" id="secador">
+																	<div class="radio">
+																		<label> <input type="radio" name="secador"
+																			value="true"></input> <span>Sí</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="form-group col-sm-4">
+																<div class="radio">
+																	<label> <input type="radio" name="secador"
+																		value="false" checked></input> <span>No</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</fieldset>
+
+													<fieldset>
+
+														<legend>Precio base por noche</legend>
+														<div class="input-group mb-3">
+															<div class="input-group-prepend">
+																<span class="input-group-text" id="basic-addon1">€/noche</span>
+															</div>
+															<input type='tel' name="precio" class="form&#X2D;control"
+																id="precio" value="" placeholder=""></input>
+														</div>
+
+													</fieldset>
+
+													<div class="modal-footer d-flex justify-content-center">
+														<input style="margin-top: 20px" type="submit" class=""
+															value="Cambiar" />
+													</div>
+												</form>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+
 							</c:forEach>
 
 						</div>
@@ -856,7 +1044,7 @@ fieldset:hover {
 
 
 								<c:forEach var="hotel" items="">
-									
+
 									<tr>
 									<tr>
 										<td>descripcion</td>
@@ -866,7 +1054,7 @@ fieldset:hover {
 										<td>fecha salida</td>
 										<td>ganancia total</td>
 									</tr>
-									
+
 
 								</c:forEach>
 							</div>
@@ -876,181 +1064,13 @@ fieldset:hover {
 			</div>
 		</div>
 	</div>
-	
+
 
 
 	<div style="margin-bottom: 80px;"></div>
 	<%@ include file="plantillas/footer.jsp"%>
-	
-		<div class="modal fade" id="modalModiForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Modifica tu habitacion</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body mx-3">
-                  <form action="AñadirHabitacion"method="post">
-									<p>Informacion general de la habitacion</p>
-									<fieldset>
-										<legend>Camas</legend>
-										<div class="form-group">
-											<label>Tipo de cama</label> <select
-												class='col-md-12 form-control' name="camas">
-												<option value=" 1 cama individual">1 Cama
-													individual&nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm de ancho</option>
-												<option value="2 camas individuales">2 Camas
-													individuales&nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm de ancho</option>
-												<option value="1 cama doble">1 Cama doble
-													doble&nbsp;&nbsp;/&nbsp;&nbsp;131-150 cm de ancho</option>
-												<option value="1 cama doble y 1 cama individual">1
-													Cama doble&nbsp;&nbsp;/&nbsp;&nbsp;131-150 cm de ancho y 1
-													Cama individual&nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm de ancho
-												</option>
-												<option value="1 Cama doble grande">1 Cama doble
-													grande&nbsp;&nbsp;/&nbsp;&nbsp;151-180 cm de ancho</option>
-												<option value="2 Camas dobles grandes">2 Camas
-													dobles grandes&nbsp;&nbsp;/&nbsp;&nbsp;151-180 cm de ancho</option>
-											</select>
-										</div>
-										<div class="form-group">
-											<label>¿Cuantos clientes pueden dormir en esta
-												habitacion?</label> <select class='col-md-12 form-control'
-												name="personas" id="personas">
-												<option value="1">1&nbsp;&#x263B;</option>
-												<option value="2">2&nbsp;&#x263B;&#x263B;</option>
-												<option value="3">3&nbsp;&#x263B;&#x263B;&#x263B;</option>
-												<option value="4">4&nbsp;&#x263B;&#x263B;&#x263B;&#x263B;</option>
-											</select>
-										</div>
-									</fieldset>
-								
-									<fieldset>
 
-										<legend>Información de la habitacion</legend>
-										<div class="form-group">
-											<label>Descripcion</label>
-											<textarea class="form-control" name="descripcion"
-												placeholder="Escribe una breve descripcion de la habitacion"></textarea>
 
-										</div>
-										<div class="row">
-											<div class="form-group col-sm-4">
-												<label>Habitacion fumadores</label>
-											</div>
-											<div class="form-group col-sm-4">
-												<div class="radio-block" id="fumador">
-													<div class="radio">
-														<label> <input type="radio" name="fumador"
-															value="true"></input> <span>Sí</span>
-														</label>
-													</div>
-												</div>
-											</div>
-
-											<div class="form-group col-sm-4">
-												<div class="radio">
-													<label> <input type="radio" name="fumador"
-														value="false" checked></input> <span>No</span>
-													</label>
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="form-group col-sm-4">
-												<label>TV</label>
-											</div>
-											<div class="form-group col-sm-4">
-												<div class="radio-block" id="tv">
-													<div class="radio">
-														<label> <input type="radio" name="tv" value="true"></input>
-															<span>Sí</span>
-														</label>
-													</div>
-												</div>
-											</div>
-
-											<div class="form-group col-sm-4">
-												<div class="radio">
-													<label> <input type="radio" name="tv" value="false"
-														checked></input> <span>No</span>
-													</label>
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="form-group col-sm-4">
-												<label>Aire acondicionado</label>
-											</div>
-											<div class="form-group col-sm-4">
-												<div class="radio-block" id="aire">
-													<div class="radio">
-														<label> <input type="radio" name="aire"
-															value="true"></input> <span>Sí</span>
-														</label>
-													</div>
-												</div>
-											</div>
-
-											<div class="form-group col-sm-4">
-												<div class="radio">
-													<label> <input type="radio" name="aire"
-														value="false" checked></input> <span>No</span>
-													</label>
-												</div>
-											</div>
-										</div>
-
-										<div class="row" >
-											<div class="form-group col-sm-4">
-												<label>Secador de pelo</label>
-											</div>
-											<div class="form-group col-sm-4">
-												<div class="radio-block" id="secador">
-													<div class="radio">
-														<label> <input type="radio" name="secador"
-															value="true"></input> <span>Sí</span>
-														</label>
-													</div>
-												</div>
-											</div>
-
-											<div class="form-group col-sm-4">
-												<div class="radio">
-													<label> <input type="radio" name="secador"
-														value="false" checked></input> <span>No</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</fieldset>
-									
-									<fieldset>
-
-										<legend>Precio base por noche</legend>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text" id="basic-addon1">€/noche</span>
-											</div>
-											<input type='tel' name="precio" class="form&#X2D;control"
-												id="precio" value="" placeholder=""></input>
-										</div>
-	
-									</fieldset>
-									
-									<div class="modal-footer d-flex justify-content-center">
-									<input style="margin-top:20px" type="submit" class="" value="Cambiar" />
-									</div>
-									</form>
-									
-            </div>
-        </div>
-    </div>
-</div>
 
 </body>
 </html>

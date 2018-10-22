@@ -14,6 +14,7 @@ import com.sagashiteru.app.iservice.IClienteService;
 import com.sagashiteru.app.iservice.IHabitacionService;
 import com.sagashiteru.app.iservice.IHotelService;
 import com.sagashiteru.app.iservice.IReservaService;
+import com.sagashiteru.app.model.Habitacion;
 import com.sagashiteru.app.model.Hotel;
 
 @Controller
@@ -181,10 +182,99 @@ public class Controlador {
 	
 	@RequestMapping("/pruebahi")
 	public String pruebahi(HttpServletRequest req) {
-		System.err.println("entrapruebahi");
-		System.out.println(req.getParameter("hi"));	
-		HttpSession session = req.getSession(true);
-		return "gestionhotel";
+		try {
+			HttpSession session = req.getSession(true);
+
+			System.out.println("entra");
+			String cif = (String) session.getAttribute("cif");
+			System.out.println(cif);
+			
+				
+			int id = Integer.parseInt(req.getParameter("idhabi"));
+			
+			System.out.println(id);
+			
+			
+
+			Hotel h = hotelservice.findbycif(cif);
+			System.out.println();
+			
+			System.out.println("hasta aqui hola");
+
+			Habitacion hab = habitacionService.findById(id);
+			System.out.println(hab.getDescripcion());
+
+			System.out.println("hasta aqui hola2");
+			
+
+			if(req.getParameter("aire").isEmpty()){	
+			}else { 
+				Boolean aire = Boolean.parseBoolean(req.getParameter("aire"));
+				hab.setAire(aire);	
+			}
+			System.out.println("hasta aqui hola3");
+			
+			if(req.getParameter("camas").isEmpty()){	
+			}else{ 
+				String camas = req.getParameter("camas");
+				hab.setTipo_cama(camas);	
+			}
+			System.out.println("hasta aqui hola4");
+			if(req.getParameter("descripcion").isEmpty()){	
+			}else{ 
+				String descripcion = req.getParameter("descripcion");
+				hab.setDescripcion(descripcion);	
+			}
+			System.out.println("hasta aqui hola5");
+			if(req.getParameter("personas").isEmpty()){	
+			}else{ 
+				int personas = Integer.parseInt(req.getParameter("personas"));
+				hab.setPersonas(personas);	
+			}
+			System.out.println("hasta aqui hola6");
+			if(req.getParameter("fumador").isEmpty()){	
+			}else{ 
+				Boolean fumadores = Boolean.parseBoolean(req.getParameter("fumador"));
+				hab.setFumador(fumadores);	
+			}
+			System.out.println("hasta aqui hola7");
+			if(req.getParameter("tv").isEmpty()){	
+			}else{ 
+				Boolean tv = Boolean.parseBoolean(req.getParameter("tv"));
+				hab.setTv(tv);	
+			}
+			System.out.println("hasta aqui hola8");
+			if(req.getParameter("secador").isEmpty()){	
+			}else{ 
+				Boolean secador = Boolean.parseBoolean(req.getParameter("secador"));
+				hab.setSecador(secador);	
+			}
+			System.out.println("hasta aqui hola9");
+			if(req.getParameter("precio").isEmpty()){	
+			}else{ 
+				int precio = Integer.parseInt(req.getParameter("precio"));
+				hab.setPrecio(precio);	
+			}
+			
+			
+			System.err.println("hasta aqui1");
+			
+			System.err.println("hasta aqui2");
+			habitacionService.add(hab);
+			System.err.println("hasta aqui3");
+			
+			System.out.println(hab.getId_habitacion() + " " + hab.getCif() + " " + hab.getDescripcion() + " " + hab.getTipo_cama()+ " " +hab.getPersonas()+ " " +hab.getPrecio()+ " " +hab.isAire()+ " " +hab.isFumador()+ " " +hab.isSecador()+ " " +hab.isTv());
+
+			return "gestionhotel";
+		} catch (NullPointerException e) {
+			String mensaje = "upps ha ocurrido un error";
+			System.out.println(e);
+			return "gestionhotel";
+		} catch (Exception j) {
+			String mensaje = "upps ha ocurrido un error";
+			System.out.println(j);
+			return "gestionhotel";
+		}
 	}
 	
 	
