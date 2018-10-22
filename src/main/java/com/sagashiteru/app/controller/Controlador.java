@@ -41,24 +41,28 @@ public class Controlador {
 	@RequestMapping("/noentras")
 	public String index(HttpServletRequest req) {
 		System.err.println("entra noentra");
+		HttpSession session = req.getSession(true);
 		return "principal";
 	}
 	
 	@RequestMapping("/sagashiteru")
 	public String index1(HttpServletRequest req) {
 		System.err.println("entra sagashiteru");
+		HttpSession session = req.getSession(true);
 		return index(req);
 	}
 	
 	@RequestMapping("/loginCliente")
 	public String loginCliente(HttpServletRequest req) {
 		System.err.println("entra login cliente");
+		HttpSession session = req.getSession(true);
 		return "loginCliente";
 	}
 	
 	@RequestMapping("/registrohotel")
 	public String registrohotel(HttpServletRequest req) {
 		System.err.println("entra registro hotel");
+		HttpSession session = req.getSession(true);
 		return "registrohotel";
 	}
 	
@@ -99,8 +103,9 @@ public class Controlador {
 	@RequestMapping("/cerrarsesion")
 	public String cerrarsesion(HttpServletRequest req) {
 		System.err.println("entra cerrar sesion");
-		
 		HttpSession session = req.getSession(true);
+		
+		
 		session.invalidate();
 		
 		return index(req);
@@ -133,12 +138,18 @@ public class Controlador {
 	@RequestMapping("/gestionhotel")
 	public String gestionhotel(HttpServletRequest req) {
 		System.out.println("entra register");	
+		HttpSession session = req.getSession(true);
+		
+	
+		
+		
 		return "gestionhotel";
 	}
 	
 	@RequestMapping("/perfilhotel")
 	public String perfilhotel(HttpServletRequest req) {
 		System.out.println("entra register");	
+		HttpSession session = req.getSession(true);
 		return "perfilhotel";
 	}
 	
@@ -150,18 +161,21 @@ public class Controlador {
 	@RequestMapping("/politicaprivacidad")
 	public String politicaprivacidad(HttpServletRequest req) {
 		System.out.println("entra privacidad");	
+		HttpSession session = req.getSession(true);
 		return "politicaprivacidad";
 	}
 	
 	@RequestMapping("/terminosycondiciones")
 	public String terminosycondiciones(HttpServletRequest req) {
 		System.out.println("entra terminos");	
+		HttpSession session = req.getSession(true);
 		return "terminosycondiciones";
 	}
 	
 	@RequestMapping("/contacto")
 	public String contacto(HttpServletRequest req) {
 		System.out.println("entra contacto");	
+		HttpSession session = req.getSession(true);
 		return "contacto";
 	}
 	

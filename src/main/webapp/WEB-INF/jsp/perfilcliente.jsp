@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <%@ include file="plantillas/head.jsp"%>
@@ -53,12 +54,13 @@ input[type=submit]:hover {
 			<div class="form-group" style="width: 400px; margin-top: 20px;">
 				<h5>Cambia tu Email</h5>
 				<br>
-				<form class="row register-form" action="#" method="post">
-					<input type="text" class="form-control"
-						placeholder="Escribe tu mail antiguo" value="" /> <input
+				<form class="row register-form" action="/cambiaEmail" method="post">
+					<input type="text" class="form-control" name="email"
+						placeholder="Escribe tu mail antiguo"  ></input> <input
+						name="verificacion"
 						type="text" class="form-control"
-						placeholder="Escribe tu nuevo mail" value=""
-						style="margin-top: 30px;" /> <input style="margin-top: 50px;"
+						placeholder="Escribe tu nuevo mail"
+						style="margin-top: 30px;" ></input> <input style="margin-top: 50px;"
 						type="submit" class="" value="Cambiar" />
 				</form>
 				<hr
@@ -67,20 +69,21 @@ input[type=submit]:hover {
 					style="width: 2px; margin: 0px 6px; background-color: #022557; margin-top: 30px;"></div>
 				<h5>Cambia tu Password</h5>
 				<br>
-				<form class="row register-form" action="#" method="post">
+				<form class="row register-form" action="/cambiaPassword" method="post">
 					<input type="password" class="form-control"
-						placeholder="Escribe tu password antigua" value="" id="mypass" />
-					<br> <input type="checkbox" id="mypass"
+						placeholder="Escribe tu password antigua" name="password"  ></input>
+					<br> <input type="checkbox" 
 						onclick="mypassFunction()" style="margin-top: 15px;"><br>
 					<label for="mypass" style="margin-top: 10px">Mostrar
-						password</label><br> <input type="password" class="form-control"
-						placeholder="Escribe tu nueva password" value="" id="mynewpass"
-						style="margin-top: 30px;" /><br> <input type="checkbox"
+						password</label><br> <input type="password"  name="passwordnueva" class="form-control"
+						placeholder="Escribe tu nueva password" 
+						style="margin-top: 30px;" ></input><br> <input type="checkbox"
 						id="mynewpass" onclick="mynewpassFunction()"
 						style="margin-top: 15px;"> <label for="mynewpass"
 						style="margin-top: 10px">Mostrar password nueva</label><br> <input
 						type="password" class="form-control"
-						placeholder="Confirma tu nueva password" value="" /> <input
+						name="verificacion"
+						placeholder="Confirma tu nueva password"  /> <input
 						style="margin-top: 50px;" type="submit" class="" value="Cambiar" />
 				</form>
 
@@ -90,16 +93,17 @@ input[type=submit]:hover {
 			<div class="form-group" style="width: 400px; margin-top: 20px;">
 				<h5>Datos adicionales</h5>
 				<br>
-				<form class="row register-form" action="#" method="post">
+				<form class="row register-form" action="/datosCliente" method="post">
 					<label>Nombre:</label> <input type="text" class="form-control"
-						placeholder="Danos un nombre" value="" id="nombrecliente" /> <label>Apellidos:</label>
-					<input type="text" class="form-control" placeholder="Y tu apellido"
-						value="" id="apellidocliente" /><br> <label
+						placeholder="Danos un nombre" name="nombre" value="${cliente.nombre} " ></input> <label>Apellidos:</label>
+					<input type="text" class="form-control" value="${cliente.apellidos}" placeholder="Y tu apellido"
+						name="apellidos" id="apellidocliente" ></input><br> <label
 						style="margin-top: 20px;">Telefono:</label> <input type="tel"
+						value="${cliente.telefono}"
 						class="form-control" placeholder="Quizas tengamos que contactarte"
-						value="" id="telcliente" /> <label style="margin-top: 20px;">Numero
+						name="telefono" id="telcliente" ></input> <label style="margin-top: 20px;">Numero
 						de tarjeta:</label> <input type="tel" class="form-control"
-						placeholder="Importante para realizar reservas" value=""
+						placeholder="Importante para realizar reservas" value="${cliente.tarjeta}" name="tarjeta"
 						id="tarjetacliente" /> <input style="margin-top: 50px;"
 						type="submit" class="" value="Cambiar" />
 				</form>
