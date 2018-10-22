@@ -244,7 +244,7 @@ public class Controlador_Web {
 			Boolean piscinas = Boolean.parseBoolean(req.getParameter("piscina"));
 
 			System.out.println("piscinas : " + piscinas);
-			
+			List<Hotel> verificada = new ArrayList<>();
 			List<Hotel> lista = new ArrayList<>();
 			if(hotelservice.listHotelLocalizacion(nombre).isEmpty()) {
 				if(hotelservice.listHotelNombre(nombre).isEmpty()){
@@ -267,6 +267,7 @@ public class Controlador_Web {
 			if(hotel.isAnimales()==animales) {
 				if(hotel.isPiscina()==piscinas) {
 					lista.add(hotel);
+					
 				}
 			}
 		}
@@ -277,17 +278,37 @@ public class Controlador_Web {
 			
 			return "filtroBusqueda";
 		}else {
+			for (Hotel hotel : lista) {
+			List<Habitacion> habs = 	habitacionService.listarHab(hotel.getCif());
+				
+				for (Habitacion h : habs) {
+					if(h.getPersonas()==personas) {
+						verificada.add(hotel);
+					}
+					
+				}
 			
+			}
+			if(verificada.isEmpty()) {
+				return "filtroBusqueda";
+			}else {
+				
+				session.setAttribute("filtroBusqueda", verificada);
+				return "filtroBusqueda";
+			}
 			
 		}
 
-			return "filtroBusqueda";
+			
 
 		} catch (NullPointerException e) {
 			HttpSession session = req.getSession(true);
 			System.out.println("no values");
 			return "filtroBusqueda";
 
+		}catch(Exception r) {
+			HttpSession session = req.getSession(true);
+			return "filtroBusqueda";
 		}
 
 	}
@@ -835,7 +856,10 @@ public class Controlador_Web {
 		reservaService.add(reserva);
 		
 	List<Reserva> rs =	reservaService.listbyDni(cliente.getDni());
-		session.setAttribute("rs", rs);
+	for (Reserva r : rs) {
+		System.out.println("SOOOORRR " + r.getFecha_reserva());
+	}	
+	session.setAttribute("rs", rs);
 		
 		return "misReservas";
 	}catch(NullPointerException e) {

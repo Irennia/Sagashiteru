@@ -34,7 +34,7 @@
 			    <div class="col-md-7 text-md-left ml-3 mt-3">
 			      <h4 class="h4 mb-4" style="margin-top: 37px;"><strong>Nombre Hotel</strong></h4>
 			
-			      <p class="font-weight-normal"><strong>Fecha Reserva -</strong> DD/MM/AAAA</p><br>
+			      <p class="font-weight-normal"><span>${r.fecha_reserva} </span><strong>Fecha Reserva -</strong> DD/MM/AAAA</p><br>
 			      <span style="color: green;"><strong>Precio Total</strong></span>
 			        <div style="float: right; margin-top: -67px; margin-right: 46px;">
 				      <p class="font-weight-normal"><strong>Fecha Entrada</strong> DD/MM/AAAA</p>

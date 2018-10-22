@@ -213,7 +213,7 @@
 				<div class="main">
 					<div class="main-center">
 					<h5 style="font-weight: bold;">Filtra tu Busqueda</h5><br>
-						<form class="" method="post" action="filtroshabitacion">
+						<form class="" method="post" action="/filtroshabitacion">
 							
 							<div>
 								<label>Nombre/Destino del Hotel</label>
