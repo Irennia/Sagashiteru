@@ -475,7 +475,7 @@ public class Controlador_Web {
 			hab.setPrecio(precio);
 			hab.setTipo_cama(camas);
 			hab.setTv(tv);
-
+			hab.setSecador(secador);
 			System.out.println(camas + personas + descripcion + fumadores + tv + aire + secador + precio);
 			h.getHabitaciones().add(hab);
 
