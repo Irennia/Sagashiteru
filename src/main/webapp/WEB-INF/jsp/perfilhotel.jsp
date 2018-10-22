@@ -35,7 +35,7 @@ input[type=submit]:hover {
 
 
 	<div class="container"
-		style="margin-top: 150px; display: flex; flex-direction: column; justify-content: space-between;">
+		style="margin-top: 150px; display: flex; flex-direction: column; justify-content: space-between; margin-bottom: 158px;">
 		<div>
 			<h4>Tus datos actuales</h4>
 		</div>

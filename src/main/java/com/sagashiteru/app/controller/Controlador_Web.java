@@ -716,8 +716,8 @@ public class Controlador_Web {
 			if (email.equals(hotel.getEmail())) {
 				System.out.println("compara");
 				
-System.out.println("verifica");
-hotel.setEmail(verificacion);
+					System.out.println("verifica");
+					hotel.setEmail(verificacion);
 
 					hotelservice.Add(hotel);
 

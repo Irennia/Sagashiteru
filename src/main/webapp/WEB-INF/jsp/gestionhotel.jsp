@@ -143,7 +143,7 @@ fieldset:hover {
 	<div style="margin-top: 80px;"></div>
 
 
-	<div class="container register">
+	<div class="container register" style="margin-bottom: 597px;">
 		<div class="col-md-9 register-right">
 			<ul class="nav nav-tabs nav-justified-head" id="myTab" role="tablist">
 
