@@ -65,6 +65,8 @@ public class Controlador {
 	@RequestMapping("/filtroBusqueda")
 	public String filtroBusqueda(HttpServletRequest req) {
 		System.err.println("entra filtro busqueda");
+		
+		try {
 		HttpSession session = req.getSession(true);
 		
 		String localizacion = req.getParameter("localizacion");
@@ -88,6 +90,10 @@ public class Controlador {
 		session.setAttribute("filtroBusqueda", h);
 		req.setAttribute("filtroBusqueda", h);	
 		return "filtroBusqueda";
+		}catch(NullPointerException e) {
+			HttpSession session = req.getSession(true);
+			return "filtroBusqueda";
+		}
 	}
 	
 	@RequestMapping("/cerrarsesion")

@@ -198,12 +198,20 @@ public class Controlador_Web {
 	try {
 		HttpSession session = req.getSession(true);
 		
+		
+		
+		
+		
 		String cif = req.getParameter("cif");
 	String password = req.getParameter("password");
 	Hotel c = hotelservice.findbycif(cif);
 	if(c!=null) {
 		if(c.getPassword().equals(password)){
 			session.setAttribute("cif", c.getCif());
+			
+			
+			
+			
 			String mensaje = "Bienvenido ";
 			req.setAttribute("mensaje", mensaje);
 			System.out.println("entra login");
@@ -482,7 +490,7 @@ public class Controlador_Web {
 	}
 	
 	@RequestMapping("/listarHabitaciones")
-	public String listarHabitaciones(HttpServletRequest req) {
+	public void listarHabitaciones(HttpServletRequest req) {
 		HttpSession session = req.getSession(true);
 		String cif = (String) session.getAttribute("cif");
 		
@@ -490,7 +498,7 @@ public class Controlador_Web {
 		
 		session.setAttribute("habitaciones", habitaciones);
 		
-		return "gestionhotel";
+		
 	}
 	
 	@RequestMapping("/hotelcompleto")
