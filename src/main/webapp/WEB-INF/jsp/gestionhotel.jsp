@@ -39,6 +39,12 @@
 	background-color: #d59c01;
 	color: #022557;
 }
+.nav-link.active
+ {
+	background-color: #d59c01 !important;
+	color: #022557 !important;
+}
+
 
 input[type=submit] {
 	padding: 5px 15px;
@@ -51,6 +57,13 @@ input[type=submit] {
 	margin-top: 20px;
 }
 
+a:not([href]):not([tabindex]){
+color: white !important;
+}
+
+a:not([href]):not([tabindex]):hover{
+	color: #022557 !important;
+}
 input[type=submit]:hover {
 	padding: 5px 15px;
 	background: #d59c01;

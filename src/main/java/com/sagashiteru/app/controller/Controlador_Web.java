@@ -456,6 +456,7 @@ public class Controlador_Web {
 	@RequestMapping("/listarHabitaciones")
 	public String listarHabitaciones(HttpServletRequest req) {
 		HttpSession session = req.getSession(true);
+		System.out.println("entra listar");
 		String cif = (String) session.getAttribute("cif");
 
 		List<Habitacion> habitaciones = habitacionService.listarHab(cif);

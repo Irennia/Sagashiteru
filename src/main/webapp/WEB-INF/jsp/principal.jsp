@@ -67,7 +67,7 @@
 											<ul class="dropdown-menu" style="padding: 20px;">
 												<li><a href="/perfilhotel" style="color: #022557; text-decoration: none;">Perfil</a></li>
 												<li class="divider"></li>
-												<li><a href="/gestionhotel" style="color: #022557; text-decoration: none;">Gestión</a></li>
+												<li><a href="/listarHabitaciones" style="color: #022557; text-decoration: none;">Gestión</a></li>
 												<li class="divider" style="margin-top: 10px;"></li>
 												<li><a href="/cerrarsesion"><button class="btn btn-danger" style="height: 40px;">Cerrar Sesión</button></a></li>
 											</ul></li>

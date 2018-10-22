@@ -179,6 +179,14 @@ public class Controlador {
 		return "contacto";
 	}
 	
+	@RequestMapping("/pruebahi")
+	public String pruebahi(HttpServletRequest req) {
+		System.err.println("entrapruebahi");
+		System.out.println(req.getParameter("hi"));	
+		HttpSession session = req.getSession(true);
+		return "gestionhotel";
+	}
+	
 	
 	//////////////////////////////////////////////////////////
 	
