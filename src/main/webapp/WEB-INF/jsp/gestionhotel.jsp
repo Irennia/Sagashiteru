@@ -88,6 +88,52 @@ fieldset:hover {
 	margin-top: 20px;
 	border-color: #022557;
 }
+
+.boton {
+	padding: 5px 15px;
+	background: #022557;
+	border: 0 none;
+	cursor: pointer;
+	color: white;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+.boton:hover {
+	padding: 5px 15px;
+	background: #d59c01;
+	border: 0 none;
+	cursor: pointer;
+	color: #022557;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+.botonrojo {
+	padding: 5px 15px;
+	background: red;
+	border: 0 none;
+	cursor: pointer;
+	color: white;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+.botonrojo:hover {
+	padding: 5px 15px;
+	background: #FBEFF2;
+	border: 0 none;
+	cursor: pointer;
+	color: red;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+
 </style>
 
 </head>
@@ -591,7 +637,7 @@ fieldset:hover {
 
 
 						<li class="nav-item-head"><a class="nav-link"
-							id="reshabi-tab" data-toggle="tab" href="#reshabi" role="tab"
+							id="reshabi-tab" data-toggle="tab"  href="/listarHabitaciones" data-target="#reshabi" role="tab"
 							aria-controls="home" aria-selected="false"> Resumen
 								habitaciones </a></li>
 
@@ -774,11 +820,15 @@ fieldset:hover {
 
 
 
-							<c:forEach var="habit" items="">
+							<c:forEach var="habit" items="${habitaciones}">
+								
 								<tr>
-									<td>Habitacion</td>
-									<td><a href="/modihabi?id_habi=">Modificar</a></td>
-									<td><a href="/borrarhabi?id_habi=">Eliminar</a></td>
+								<div style="display: flex;margin: 10px;padding: 20px;flex-direction: row;justify-content: flex-end;">
+									<div style="margin-top: 25px;flex-grow: 8"><td >${habit.descripcion}</td></div>
+									<td><a style="margin-right: 45px;" class="boton" role="button" href="/modihabi?id_habi=">Modificar</a></td>
+									<td><a class="botonrojo" role="button" href="/borrarhabi?id_habi=">Eliminar</a></td>
+									</div>
+									<div style="margin-bottom: 20px;"></div>
 								</tr>
 							</c:forEach>
 
@@ -793,7 +843,8 @@ fieldset:hover {
 
 
 								<c:forEach var="hotel" items="">
-
+									
+									<tr>
 									<tr>
 										<td>descripcion</td>
 										<td>dni</td>
@@ -802,6 +853,7 @@ fieldset:hover {
 										<td>fecha salida</td>
 										<td>ganancia total</td>
 									</tr>
+									
 
 								</c:forEach>
 							</div>

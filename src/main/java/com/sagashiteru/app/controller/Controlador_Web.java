@@ -458,7 +458,8 @@ public class Controlador_Web {
 		List<Habitacion> habitaciones = habitacionService.listarHab(cif);
 
 		session.setAttribute("habitaciones", habitaciones);
-
+		
+		return "gestionhotel";
 	}
 
 	@RequestMapping("/hotelcompleto")
