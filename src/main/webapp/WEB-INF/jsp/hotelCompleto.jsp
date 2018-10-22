@@ -110,9 +110,9 @@
 				    <div class="col-lg-7" style="padding-left: 92px; padding-top: 47px;">
 				      <h3 class="font-weight-bold mb-3">${h.descripcion}</h3>
 						
-						<span><strong>Fecha Entrada&nbsp;&nbsp;&nbsp;</strong></span><input type="text" name="" style="width: 100px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
+						<span><strong>Fecha Entrada&nbsp;&nbsp;&nbsp;</strong></span><input type="date" name="" min="2018/01/31" max="9999/12/31" style="width: 150px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<span><strong>Fecha Salida&nbsp;&nbsp;&nbsp;</strong></span><input type="text" name="" style="width: 100px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
+						<span><strong>Fecha Salida&nbsp;&nbsp;&nbsp;</strong></span><input type="date" name="" min="2018/01/31" max="9999/12/31" style="width: 150px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
 						<br>
 						<br>
 						<span style="color: green;"><strong>${h.precio}&nbsp;€</strong></span><br><br>

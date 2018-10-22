@@ -190,4 +190,12 @@ public class Controlador {
 		
 		return "confirmarReserva";
 	}
+	
+	@RequestMapping("/confirmarreserva")
+	public String confirmarReserva(HttpServletRequest req) {
+		System.out.println("entra en confirmar reserva");	
+		
+		
+		return "confirmarReserva";
+	}
 }
