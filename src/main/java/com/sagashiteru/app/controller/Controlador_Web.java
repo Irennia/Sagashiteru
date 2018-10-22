@@ -502,15 +502,15 @@ public class Controlador_Web {
 
 			hotelservice.Add(h);
 
-			return "gestionhotel";
+			return listarHabitaciones(req);
 		} catch (NullPointerException e) {
 			String mensaje = "upps ha ocurrido un error";
 			System.out.println("null");
-			return "gestionhotel";
+			return listarHabitaciones(req);
 		} catch (Exception j) {
 			String mensaje = "upps ha ocurrido un error";
 			System.out.println("error");
-			return "gestionhotel";
+			return listarHabitaciones(req);
 		}
 	}
 
