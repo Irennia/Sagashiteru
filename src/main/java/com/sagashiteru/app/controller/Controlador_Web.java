@@ -226,20 +226,16 @@ public class Controlador_Web {
 			HttpSession session = req.getSession(true);
 			System.out.println();
 
-			String[] estrellas = req.getParameterValues("estrellas");
+			String estrella = req.getParameter("estrellas");
 
-			int estrella = 0;
+			int personas = Integer.parseInt(req.getParameter("personas"));
+			
+			String cama = req.getParameter("camas");
 
-			for (int i = 0; i < estrellas.length; i++) {
-				System.out.println(estrellas[i]);
-				if (estrellas[i] != null) {
-					estrella = Integer.parseInt(estrellas[i]);
-					System.out.println("estrella :" + estrella);
-					break;
-				}
-			}
-
-			System.out.println(estrellas + "  estrellas");
+			String nombre = req.getParameter("nombre");
+			
+			
+			System.out.println(estrella + "  estrellas");
 
 			Boolean animales = Boolean.parseBoolean(req.getParameter("animales"));
 
@@ -248,6 +244,10 @@ public class Controlador_Web {
 			Boolean piscinas = Boolean.parseBoolean(req.getParameter("piscina"));
 
 			System.out.println("piscinas : " + piscinas);
+			
+			
+			
+			
 
 			return "filtroBusqueda";
 
@@ -778,10 +778,13 @@ public class Controlador_Web {
 			HttpSession session = req.getSession(true);
 			System.out.println("entra");
 		Cliente cliente = (Cliente) session.getAttribute("cliente");
+	
 		
 		
 		
 		int id_habitacion = (int) session.getAttribute("id_habitacion");
+		Habitacion habitacion =habitacionService.findById(id_habitacion);
+		session.setAttribute("habitacion", habitacion);
 		System.out.println(id_habitacion);
 		
 		Reserva reserva = (Reserva) session.getAttribute("reserva");
@@ -917,4 +920,5 @@ public class Controlador_Web {
 			return "principal";
 		}
 }
+	
 }
