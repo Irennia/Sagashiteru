@@ -13,7 +13,6 @@
            		<%@ include file="plantillas/header.jsp"%> 
          	</c:otherwise>
 	 	</c:choose>
-	 	
 	 	<div class="card card-image" style="background-color: #022557">
 		  <div class="text-white text-center py-5 px-4 my-5">
 		    <div style="padding-top: 40px;">
@@ -22,6 +21,35 @@
 		    </div>
 		  </div>
 		</div>
+	 	<c:if test="${empty rs}">
+	 		<h3 style="text-align: center; margin-top: 200px;">No tienes reservas</h3>
+	 	</c:if>
+	 	<c:if test="${not empty rs}">
+	 		<c:forEach var="r" items="${rs}">
+		 	<div class="container" style="max-width: 70%; margin-top: 100px; box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.31); padding: 0px;">
+				<div class="jumbotron text-center hoverable p-4">
+				  <div class="row">
+				    <div class="col-md-4 offset-md-1 mx-3 my-3">
+				      <div class="view overlay">
+				        <img src="img/hotel/habitacion2.jpg" class="img-fluid" alt="Sample image for first version of blog listing">
+				      </div>
+				    </div>
+				    <div class="col-md-7 text-md-left ml-3 mt-3">
+				      <h4 class="h4 mb-4" style="margin-top: 37px;"><strong>${hotelreserva.nombre}</strong></h4>
+				
+				      <p class="font-weight-normal"><strong>${hotelreserva.fecha_reserva}</strong></p><br>
+				      <span style="color: green;"><strong>${hotelreserva.precio}</strong></span>
+				        <div style="float: right; margin-top: -67px; margin-right: 46px;">
+					      <p class="font-weight-normal"><strong>${hotelreserva.fecha_inicio}</strong></p>
+					      <p class="font-weight-normal"><strong>${hotelreserva.fecha_fin}</strong></p>
+					    </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</c:forEach>
+	 	</c:if>
+	 	
 	 	<c:forEach var="r" items="${rs}">
 	 	<div class="container" style="max-width: 70%; margin-top: 100px; box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.31); padding: 0px;">
 			<div class="jumbotron text-center hoverable p-4">
@@ -32,13 +60,13 @@
 			      </div>
 			    </div>
 			    <div class="col-md-7 text-md-left ml-3 mt-3">
-			      <h4 class="h4 mb-4" style="margin-top: 37px;"><strong>Nombre Hotel</strong></h4>
+			      <h4 class="h4 mb-4" style="margin-top: 37px;"><strong>${hotelreserva.nombre}</strong></h4>
 			
-			      <p class="font-weight-normal"><strong>Fecha Reserva -</strong> DD/MM/AAAA</p><br>
-			      <span style="color: green;"><strong>Precio Total</strong></span>
+			      <p class="font-weight-normal"><strong>${hotelreserva.fecha_reserva}</strong></p><br>
+			      <span style="color: green;"><strong>${hotelreserva.precio}</strong></span>
 			        <div style="float: right; margin-top: -67px; margin-right: 46px;">
-				      <p class="font-weight-normal"><strong>Fecha Entrada</strong> DD/MM/AAAA</p>
-				      <p class="font-weight-normal"><strong>Fecha Salida</strong> DD/MM/AAAA</p>
+				      <p class="font-weight-normal"><strong>${hotelreserva.fecha_inicio}</strong> DD/MM/AAAA</p>
+				      <p class="font-weight-normal"><strong>${hotelreserva.fecha_fin}</strong> DD/MM/AAAA</p>
 				    </div>
 			    </div>
 			  </div>
@@ -46,7 +74,7 @@
 		</div>
 		</c:forEach>
 		
-		<div style="margin-bottom: 200px;"></div>
+		<div style="margin-bottom: 330px;"></div>
 		
 		<%@ include file="plantillas/footer.jsp" %>
 	</body>
