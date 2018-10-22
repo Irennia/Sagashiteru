@@ -22,7 +22,7 @@
 		    </div>
 		  </div>
 		</div>
-	 	<%-- <c:forEach var="r" items=""> --%>
+	 	<c:forEach var="r" items="${rs}">
 	 	<div class="container" style="max-width: 70%; margin-top: 100px; box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.31); padding: 0px;">
 			<div class="jumbotron text-center hoverable p-4">
 			  <div class="row">
@@ -44,7 +44,7 @@
 			  </div>
 			</div>
 		</div>
-		<%-- </c:forEach> --%>
+		</c:forEach>
 		
 		<div style="margin-bottom: 200px;"></div>
 		
