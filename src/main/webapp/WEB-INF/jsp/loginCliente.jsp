@@ -64,6 +64,9 @@
                                      <input type="password" name ="password" class="form-control" placeholder="Password *"  ></input>
                                  </div>
                                 <input type="submit" class="btnRegister"  value="Log In"/>
+                                <span>${mensaje}</span>
+                                <span>${mensaje1}</span>
+                                
                              </div>
                            </form>
                         
@@ -88,6 +91,7 @@
                                     <input type="password" name ="verificacion" class="form-control" placeholder="Password *"  ></input>
                                  </div>
                                  <input type="submit" class="btnRegister"  value="Registrate"/>
+                                 
                              </div>
                          
                          </form>

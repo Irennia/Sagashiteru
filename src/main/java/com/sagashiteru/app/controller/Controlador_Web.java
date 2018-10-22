@@ -72,7 +72,7 @@ public class Controlador_Web {
 
 					mensaje = "Usuario registrado correctamente";
 
-					req.setAttribute("mensaje", mensaje);
+					req.setAttribute("mensaje1", mensaje);
 					return "loginCliente";
 
 				}
