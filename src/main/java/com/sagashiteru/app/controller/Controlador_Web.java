@@ -19,6 +19,7 @@ import com.sagashiteru.app.iservice.IReservaService;
 import com.sagashiteru.app.model.Cliente;
 import com.sagashiteru.app.model.Habitacion;
 import com.sagashiteru.app.model.Hotel;
+import com.sagashiteru.app.service.Hotelservice;
 
 import javassist.bytecode.stackmap.BasicBlock.Catch;
 
@@ -181,7 +182,7 @@ public class Controlador_Web {
 			if (c != null) {
 				if (c.getPassword().equals(password)) {
 					session.setAttribute("cif", c.getCif());
-
+					
 					session.setAttribute("hotel", c);
 					String mensaje = "Bienvenido ";
 					req.setAttribute("mensaje", mensaje);
@@ -259,7 +260,9 @@ public class Controlador_Web {
 			String cif = (String) session.getAttribute("cif");
 
 			Hotel h = hotelservice.findbycif(cif);
-
+			
+			
+			
 			String nombre = null;
 			int estrellas = 0;
 			String contacto = null;
@@ -636,6 +639,125 @@ public class Controlador_Web {
 			return "perfilcliente";
 		}
 	}
+	
+	@RequestMapping("/cambiaPasswordhotel")
+	public String cambiaPasswordhotel(HttpServletRequest req) {
+		try {
+			HttpSession session = req.getSession(true);
+			Hotel cliente = (Hotel) session.getAttribute("hotel");
+			System.out.println(cliente.getPassword());
+			
+			if (req.getParameter("password").isEmpty()) {
+				String mensaje = "password vacio";
+				req.setAttribute("mensaje", mensaje);
+			} else {
+				System.out.println("primer paso");
+				String password = req.getParameter("password");
+				System.out.println(password);
+				System.out.println("password base datos : " + cliente.getPassword());
+				if (password.equals(cliente.getPassword())) {
+					System.out.println("verifica");
+						if (req.getParameter("passwordnueva").isEmpty()) {
+						} else {
+							String passwordnueva = req.getParameter("passwordnueva");
+							System.out.println(passwordnueva);
+								if(req.getParameter("verificacion").isEmpty()){}else{
+									String verificacion = req.getParameter("verificacion");
+									System.out.println(verificacion);
+									if(verificacion.equals(passwordnueva)) {
+										cliente.setPassword(passwordnueva);
+										System.out.println("verificacion");
+										session.setAttribute("hotel", cliente);
+										String mensaje = "password correcto";
+										req.setAttribute("mensaje", mensaje);
+										hotelservice.Add(cliente);
+									}else {
+										String mensaje = "password no coincide";
+									req.setAttribute("mensaje", mensaje);
+									}
+								}
+						}
+						
+					}
+
+				}
+
+		
+	
+			return "perfilhotel";
+		} catch (NullPointerException e) {
+			HttpSession session = req.getSession(true);
+			String mensaje = "upss a occurrido algun error";
+			req.setAttribute("mensaje", mensaje);
+			return "perfilhotel";
+		} catch (Exception t) {
+			HttpSession session = req.getSession(true);
+			String mensaje = "upss a occurrido algun error";
+			req.setAttribute("mensaje", mensaje);
+			return "perfilhotel";
+		}
+	}
+	
+	@RequestMapping("/cambiaEmailhotel")
+	public String cambiaEmailhotel(HttpServletRequest req) {
+		try {
+			HttpSession session = req.getSession(true);
+			
+			Hotel hotel = (Hotel) session.getAttribute("hotel");
+			System.out.println(" session " +hotel.getEmail());
+			
+			String email = req.getParameter("email");
+			System.out.println(email);
+			
+			String verificacion = req.getParameter("verificacion");
+			System.out.println(verificacion);
+			System.out.println(hotel.getEmail());
+			
+			if (email.equals(hotel.getEmail())) {
+				System.out.println("compara");
+				
+System.out.println("verifica");
+hotel.setEmail(verificacion);
+
+					hotelservice.Add(hotel);
+
+					session.setAttribute("hotel", hotel);
+
+					String mensaje = "Informacion añadida correctamente";
+					req.setAttribute("mensaje", mensaje);
+
+				
+			}
+
+			return "perfilhotel";
+		} catch (NullPointerException e) {
+
+			HttpSession session = req.getSession(true);
+			String mensaje = "Ups ha ocucurrido algun error";
+			req.setAttribute("mensaje", mensaje);
+
+			return "perfilhotel";
+
+		} catch (Exception r) {
+			HttpSession session = req.getSession(true);
+			String mensaje = "Ups ha ocucurrido algun error";
+			req.setAttribute("mensaje", mensaje);
+			return "perfilhotel";
+		}
+
+	}
+
+	
+	@RequestMapping("/reservarHabs")
+	public String reservarHab(HttpServletRequest req) {
+		
+		
+		
+		return null;
+		
+	}
+	
+	
 	
 	@RequestMapping("/reserva")
 	public String reserva(HttpServletRequest req) {

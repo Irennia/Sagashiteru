@@ -53,11 +53,11 @@ input[type=submit]:hover {
 			<div class="form-group" style="width: 400px; margin-top: 20px;">
 				<h5>Cambia tu Email</h5>
 				<br> 
-				<form class="row register-form" action="#" method="post">
+				<form class="row register-form" action="/cambiaEmailhotel" method="post">
 				<input type="text" class="form-control"
-					placeholder="Escribe tu mail antiguo" value="" /> <input
+					placeholder="Escribe tu mail antiguo" name="email" ></input> <input
 					type="text" class="form-control"
-					placeholder="Escribe tu nuevo mail" value="" style="margin-top: 30px;"/>
+					placeholder="Escribe tu nuevo mail" name="verificacion" style="margin-top: 30px;"/>
 					
 					<input style="margin-top: 50px;" type="submit" class="" value="Cambiar" />
 				</form>
@@ -67,19 +67,19 @@ input[type=submit]:hover {
 			<div class="form-group" style="width: 400px; margin-top: 20px;">
 				<h5>Cambia tu Password</h5>
 				<br>
-				<form class="row register-form" action="#" method="post">
-				 <input type="password" class="form-control"
-					placeholder="Escribe tu password antigua" value="" id="mypass"/> <br>
+				<form class="row register-form" action="/cambiaPasswordhotel" method="post">
+				 <input type="password" name="password" class="form-control"
+					placeholder="Escribe tu password antigua"  id="mypass"></input> <br>
 				<input type="checkbox" id="mypass" onclick="mypassFunction()" style="margin-top: 15px;"><br>	
 				<label for="mypass" style="margin-top: 10px">Mostrar password</label><br>
 					<input
 					type="password" class="form-control"
-					placeholder="Escribe tu nueva password" value="" id="mynewpass" style="margin-top: 30px;" /><br>
+					placeholder="Escribe tu nueva password" name="passwordnueva" id="mynewpass" style="margin-top: 30px;" ></input><br>
 				<input type="checkbox" id="mynewpass"  onclick="mynewpassFunction()" style="margin-top: 15px;">
 				<label for="mynewpass" style="margin-top: 10px">Mostrar password nueva</label><br>
 					 <input
-					type="password" class="form-control"
-					placeholder="Confirma tu nueva password" value="" />
+					type="password" class="form-control" name="verificacion"
+					placeholder="Confirma tu nueva password"  ></input>
 					
 					<input style="margin-top: 50px;" type="submit" class="" value="Cambiar" />
 				</form>
