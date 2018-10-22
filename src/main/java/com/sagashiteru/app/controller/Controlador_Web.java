@@ -548,7 +548,7 @@ public class Controlador_Web {
 			if (email.equals(cliente.getMail())) {
 				System.out.println("compara");
 				
-System.out.println("verifica");
+					System.out.println("verifica");
 					cliente.setMail(verificacion);
 
 					clienteService.add(cliente);
@@ -635,5 +635,21 @@ System.out.println("verifica");
 			req.setAttribute("mensaje", mensaje);
 			return "perfilcliente";
 		}
+	}
+	
+	@RequestMapping("/reserva")
+	public String reserva(HttpServletRequest req) {
+		System.out.println("entra en reserva");	
+		
+		
+		return "confirmarReserva";
+	}
+	
+	@RequestMapping("/confirmarreserva")
+	public String confirmarReserva(HttpServletRequest req) {
+		System.out.println("entra en confirmar reserva");	
+		
+		
+		return "misReservas";
 	}
 }

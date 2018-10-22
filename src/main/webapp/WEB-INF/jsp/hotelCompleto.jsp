@@ -56,7 +56,7 @@
 			        <h3 class="card-title">Datos de Contacto</h3>
 			        <div style="margin-left: 20px;">
 				        <p class="card-text">
-				        	<span>${hotel.direccion}</span>
+				        	<span>${hotel.direccion}</span><br>
 				        	<span>${hotel.telefono}</span><br>
 				        	<span>${hotel.email}</span><br>		        	
 				        </p>
@@ -107,32 +107,35 @@
 				        <img class="img-fluid" src="img/hotel/habitacion1.jpg" alt="Sample image" style="max-width: 600px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.31); margin-left: -26%;">
 				      </div>
 				    </div>
+				    
 				    <div class="col-lg-7" style="padding-left: 92px; padding-top: 47px;">
+				    <form action="/reservahabitacion">
 				      <h3 class="font-weight-bold mb-3">${h.descripcion}</h3>
 						
-						<span><strong>Fecha Entrada&nbsp;&nbsp;&nbsp;</strong></span><input type="date" name="" min="2018/01/31" max="9999/12/31" style="width: 150px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
+						<span><strong>Fecha Entrada&nbsp;&nbsp;&nbsp;</strong></span><input type="date" name="fechap" min="2018/01/31" max="9999/12/31" style="width: 150px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<span><strong>Fecha Salida&nbsp;&nbsp;&nbsp;</strong></span><input type="date" name="" min="2018/01/31" max="9999/12/31" style="width: 150px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
+						<span><strong>Fecha Salida&nbsp;&nbsp;&nbsp;</strong></span><input type="date" name="fechaf" min="2018/01/31" max="9999/12/31" style="width: 150px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">
 						<br>
 						<br>
 						<span style="color: green;"><strong>${h.precio}&nbsp;€</strong></span><br><br>
 						<input type="hidden" value="${h.id_habitacion}" name="id_habitacion">
+						<input type="hidden" value="${cliente.dni}" name="dni">
 						<p><strong>Servicios</strong></p>
 							<ul class="list-inline">
-							  <li class="list-inline-item">Fumador</li>
+							  <li class="list-inline-item" >Fumador</li>
 							  <li class="list-inline-item">TV</li>
 							  <li class="list-inline-item">Tipo Cama</li>
 							  <li class="list-inline-item">Personas</li>
 							  <li class="list-inline-item">Aire</li>
 							  <li class="list-inline-item">Secador</li>
 							</ul>
-						
+						</form> 
 							
 						<c:if test = "${empty dni}">
-							<a href="/loginCliente" class="btn btn-warning btn-md">Reservar</a>
+							<a href="/loginCliente"><button class="btn btn-warning btn-md" type="submit">Reservar</button></a>
 						</c:if>
 						<c:if test = "${not empty dni}">
-							<a href="/reserva" class="btn btn-warning btn-md">Reservar</a>
+							<a href="/reserva"><button class="btn btn-warning btn-md" type="submit">Reservar</button></a>
 						</c:if>
 						
 				    </div>

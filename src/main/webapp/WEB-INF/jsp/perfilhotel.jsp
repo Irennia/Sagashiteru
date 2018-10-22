@@ -41,10 +41,10 @@ input[type=submit]:hover {
 		</div>
 		<div class="container"
 			style="display: flex; flex-direction: row; justify-content: space-around;">
+			<input type="hidden" value="${hotel}">
+ 			<div>CIF:&nbsp;${hotel.cif}</div>
 
-			<div>CIF:</div>
-
-			<div>E-mail:</div>
+			<div>E-mail:&nbsp;${hotel.email}</div>
 		</div>
 		<div class="divider"
 				style="width: 1x; margin-top: 3em;  border-style: outset; border-radius: 10px; border-color: orange;"></div>
