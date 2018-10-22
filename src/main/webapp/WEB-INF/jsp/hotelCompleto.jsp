@@ -109,7 +109,7 @@
 				    </div>
 				    
 				    <div class="col-lg-7" style="padding-left: 92px; padding-top: 47px;">
-				    <form action="/reservahabitacion">
+				    <form action="/reservahabitacion" method="post">
 				      <h3 class="font-weight-bold mb-3">${h.descripcion}</h3>
 						
 						<span><strong>Fecha Entrada&nbsp;&nbsp;&nbsp;</strong></span><input type="date" name="fechap" min="2018/01/31" max="9999/12/31" style="width: 150px; height: 25px;" placeholder="&nbsp;dd/mm/aaaa">

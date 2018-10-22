@@ -45,7 +45,7 @@
 	 	
 	 	<div class="container" style="margin-top: 200px; width: 29%;">
 		
-			<form action="/confirmarreserva" class="text-center border border-light p-5">
+			<form action="/confirmarreserva" method="post" class="text-center border border-light p-5">
 				<input type="hidden" value="${habitacion}">
 			    <p class="h4 mb-4">Confirma la Reserva</p>
 			    <span  class="form-control mb-4" > ${hotelreserva.nombre} </span>

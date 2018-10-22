@@ -65,8 +65,8 @@
 			      <p class="font-weight-normal"><span>${r.fecha_reserva} </span><strong>Fecha Reserva -</strong> DD/MM/AAAA</p><br>
 			      <span style="color: green;"><strong>Precio Total</strong></span>
 			        <div style="float: right; margin-top: -67px; margin-right: 46px;">
-				      <p class="font-weight-normal"><strong>${hotelreserva.fecha_inicio}</strong> DD/MM/AAAA</p>
-				      <p class="font-weight-normal"><strong>${hotelreserva.fecha_fin}</strong> DD/MM/AAAA</p>
+				      <p class="font-weight-normal"><strong>${r.fecha_inicio}</strong></p>
+				      <p class="font-weight-normal"><strong>${r.fecha_fin}</strong></p>
 				    </div>
 			    </div>
 			  </div>
