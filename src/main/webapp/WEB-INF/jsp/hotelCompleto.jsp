@@ -43,10 +43,11 @@
 			  </div>
 			</div>
 		</div>
-		
+		<br><br><br><br><br><br>
 		<div class="container">
 		
-			<p style="text-align:left; font-weight: bold; font-size: 40px; margin-top: 150px; color: #022557;">${hotel.nombre}</p><br><br><br><br><br>
+			<span style="text-align:left; font-weight: bold; font-size: 40px; margin-top: 150px; color: #022557;">${hotel.nombre}</span><span><small style="color: green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estrellas</small></span>
+			<br><br><br><br><br><br><br>
 			<div style="margin-top: -73px;">
 				<p>${hotel.descripcion}</p>
 			</div>
@@ -75,8 +76,6 @@
 		  </div>
 		  
 		  <div class="row" style="justify-content: center; padding-top: 25px; padding-bottom: 25px;">
-		   
-		      <h5 class="font-weight-bold my-2" style="color: #455b37; margin-right: 20px;">Estrellas</h5>
 		    
 		   
 		      <h5 class="font-weight-bold my-2" style="color: #455b37; margin-right: 20px; margin-left: 20px;">Wifi</h5>
