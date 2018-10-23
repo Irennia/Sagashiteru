@@ -34,45 +34,24 @@
 				        <img src="img/hotel/habitacion2.jpg" class="img-fluid" alt="Sample image for first version of blog listing">
 				      </div>
 				    </div>
+				    
 				    <div class="col-md-7 text-md-left ml-3 mt-3">
 				      <h4 class="h4 mb-4" style="margin-top: 37px;"><strong>${hotelreserva.nombre}</strong></h4>
 				
 				      <p class="font-weight-normal"><strong>${r.fecha_reserva}</strong></p><br>
-				      <span style="color: green;"><strong>${precio}</strong></span>
+				      <span style="color: green;"><strong>${precio}&nbsp;€</strong></span>
 				        <div style="float: right; margin-top: -67px; margin-right: 46px;">
 					      <p class="font-weight-normal"><strong>${r.fecha_inicio}</strong></p>
 					      <p class="font-weight-normal"><strong>${r.fecha_fin}</strong></p>
 					    </div>
 				    </div>
+				   
 				  </div>
 				</div>
 			</div>
-		</c:forEach>
+		 </c:forEach>
+		
 	 	</c:if>
-	 	
-	 	<c:forEach var="r" items="${rs}">
-	 	<div class="container" style="max-width: 70%; margin-top: 100px; box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.31); padding: 0px;">
-			<div class="jumbotron text-center hoverable p-4">
-			  <div class="row">
-			    <div class="col-md-4 offset-md-1 mx-3 my-3">
-			      <div class="view overlay">
-			        <img src="img/hotel/habitacion2.jpg" class="img-fluid" alt="Sample image for first version of blog listing">
-			      </div>
-			    </div>
-			    <div class="col-md-7 text-md-left ml-3 mt-3">
-			      <h4 class="h4 mb-4" style="margin-top: 37px;"><strong>${hotelreserva.nombre}</strong></h4>
-			
-			      <p class="font-weight-normal"><span>${r.fecha_reserva} </span><strong>Fecha Reserva -</strong> DD/MM/AAAA</p><br>
-			      <span style="color: green;"><strong>Precio Total</strong></span>
-			        <div style="float: right; margin-top: -67px; margin-right: 46px;">
-				      <p class="font-weight-normal"><strong>${r.fecha_inicio}</strong></p>
-				      <p class="font-weight-normal"><strong>${r.fecha_fin}</strong></p>
-				    </div>
-			    </div>
-			  </div>
-			</div>
-		</div>
-		</c:forEach>
 		
 		<div style="margin-bottom: 330px;"></div>
 		
